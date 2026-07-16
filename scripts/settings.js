@@ -5,7 +5,10 @@ export const MODULE_ID = "pf2e-critical-forge-arsenal";
 const SETTING_LOCALIZATION = Object.freeze({
   enableExpandedSlashingCriticalHits: "ExpandedSlashingCriticalHits",
   enableExpandedPiercingCriticalHits: "ExpandedPiercingCriticalHits",
-  enableExpandedBludgeoningCriticalHits: "ExpandedBludgeoningCriticalHits"
+  enableExpandedBludgeoningCriticalHits: "ExpandedBludgeoningCriticalHits",
+  enableExpandedSlashingCriticalFumbles: "ExpandedSlashingCriticalFumbles",
+  enableExpandedPiercingCriticalFumbles: "ExpandedPiercingCriticalFumbles",
+  enableExpandedBludgeoningCriticalFumbles: "ExpandedBludgeoningCriticalFumbles"
 });
 
 export function registerArsenalSettings(onPackSettingChanged) {

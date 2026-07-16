@@ -29,7 +29,7 @@ const { EXPANDED_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arsenal");
-assert.equal(manifest.version, "0.1.3");
+assert.equal(manifest.version, "0.2.0");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 
@@ -44,32 +44,33 @@ assert.ok(
   "PF2e must be declared as the required system."
 );
 
-assert.equal(EXPANDED_PACK_CONFIGS.length, 3);
+assert.equal(EXPANDED_PACK_CONFIGS.length, 6);
 const disabledPacks = buildCriticalForgeExpandedPacks(() => false);
 const enabledKeys = new Set([
   "enableExpandedSlashingCriticalHits",
-  "enableExpandedBludgeoningCriticalHits"
+  "enableExpandedPiercingCriticalFumbles"
 ]);
 const mixedPacks = buildCriticalForgeExpandedPacks((settingKey) => enabledKeys.has(settingKey));
 
-assert.equal(disabledPacks.length, 3);
+assert.equal(disabledPacks.length, 6);
 assert.ok(disabledPacks.every((pack) => pack.enabled === false));
 assert.deepEqual(
   mixedPacks.map((pack) => pack.enabled),
-  [true, false, true]
+  [true, false, false, false, true, false]
 );
 
 const expectedPackIds = new Set(Object.values(EXPANDED_PACK_IDS));
 assert.deepEqual(new Set(disabledPacks.map((pack) => pack.id)), expectedPackIds);
 
 const cardIds = new Set();
+const categoryCounts = new Map();
 const damageCounts = new Map();
 const impactCounts = new Map();
 const toneCounts = new Map();
 
 for (const pack of disabledPacks) {
   assert.equal(pack.schemaVersion, 1);
-  assert.equal(pack.version, "0.1.3");
+  assert.equal(pack.version, "0.2.0");
   assert.equal(pack.cards.length, 5);
   assert.equal(pack.enabled, false);
   assert.ok(getLocalization(de, pack.titleKey), pack.titleKey);
@@ -80,20 +81,27 @@ for (const pack of disabledPacks) {
   for (const card of pack.cards) {
     assert.equal(card.schemaVersion, 1);
     assert.equal(card.packId, pack.id);
-    assert.equal(card.category, "criticalHit");
+    assert.ok(["criticalHit", "criticalFumble"].includes(card.category));
     assert.ok(!cardIds.has(card.id), `Duplicate card id: ${card.id}`);
     cardIds.add(card.id);
 
+    categoryCounts.set(card.category, (categoryCounts.get(card.category) ?? 0) + 1);
     assert.equal(card.filters.damageTypes.length, 1);
     const damageType = card.filters.damageTypes[0];
     assert.ok(["slashing", "piercing", "bludgeoning"].includes(damageType));
     assert.equal(pack.metadata.damageType, damageType);
-    damageCounts.set(damageType, (damageCounts.get(damageType) ?? 0) + 1);
+    damageCounts.set(
+      `${card.category}:${damageType}`,
+      (damageCounts.get(`${card.category}:${damageType}`) ?? 0) + 1
+    );
     impactCounts.set(card.impact, (impactCounts.get(card.impact) ?? 0) + 1);
     toneCounts.set(card.tone, (toneCounts.get(card.tone) ?? 0) + 1);
 
     assert.ok(card.effect, `${card.id} must contain an effect.`);
     assert.ok(["source", "target"].includes(card.effect.target));
+    if (card.category === "criticalFumble") {
+      assert.equal(card.effect.target, "source", `${card.id} must affect the attacker.`);
+    }
     assert.equal(card.effect.definition.schemaVersion, 1);
     assert.ok(card.effect.definition.duration);
     assert.ok(card.effect.definition.components.length > 0);
@@ -106,12 +114,16 @@ for (const pack of disabledPacks) {
   }
 }
 
-assert.equal(cardIds.size, 15);
-assert.deepEqual(Object.fromEntries(damageCounts), {
-  slashing: 5,
-  piercing: 5,
-  bludgeoning: 5
+assert.equal(cardIds.size, 30);
+assert.deepEqual(Object.fromEntries(categoryCounts), {
+  criticalHit: 15,
+  criticalFumble: 15
 });
+for (const category of ["criticalHit", "criticalFumble"]) {
+  for (const damageType of ["slashing", "piercing", "bludgeoning"]) {
+    assert.equal(damageCounts.get(`${category}:${damageType}`), 5);
+  }
+}
 assert.ok((impactCounts.get("light") ?? 0) > 0);
 assert.ok((impactCounts.get("moderate") ?? 0) > 0);
 assert.ok((impactCounts.get("strong") ?? 0) > 0);
@@ -119,13 +131,17 @@ assert.ok((toneCounts.get("neutral") ?? 0) > 0);
 assert.ok((toneCounts.get("serious") ?? 0) > 0);
 assert.ok((toneCounts.get("dramatic") ?? 0) > 0);
 
+const settingSuffixes = {
+  enableExpandedSlashingCriticalHits: "ExpandedSlashingCriticalHits",
+  enableExpandedPiercingCriticalHits: "ExpandedPiercingCriticalHits",
+  enableExpandedBludgeoningCriticalHits: "ExpandedBludgeoningCriticalHits",
+  enableExpandedSlashingCriticalFumbles: "ExpandedSlashingCriticalFumbles",
+  enableExpandedPiercingCriticalFumbles: "ExpandedPiercingCriticalFumbles",
+  enableExpandedBludgeoningCriticalFumbles: "ExpandedBludgeoningCriticalFumbles"
+};
 for (const dictionary of [de, en]) {
   for (const config of EXPANDED_PACK_CONFIGS) {
-    const settingSuffix = {
-      enableExpandedSlashingCriticalHits: "ExpandedSlashingCriticalHits",
-      enableExpandedPiercingCriticalHits: "ExpandedPiercingCriticalHits",
-      enableExpandedBludgeoningCriticalHits: "ExpandedBludgeoningCriticalHits"
-    }[config.settingKey];
+    const settingSuffix = settingSuffixes[config.settingKey];
     assert.ok(dictionary.PF2ECFA?.Settings?.[settingSuffix]?.Name);
     assert.ok(dictionary.PF2ECFA?.Settings?.[settingSuffix]?.Hint);
   }
@@ -151,4 +167,4 @@ assert.match(settingsScript, /default: false/);
 assert.match(settingsScript, /type: Boolean/);
 assert.doesNotMatch(settingsScript, /BooleanField/);
 
-console.log("PF2E Critical Forge: Arsenal 0.1.3 structural validation passed.");
+console.log("PF2E Critical Forge: Arsenal 0.2.0 structural validation passed.");

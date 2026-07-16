@@ -12,6 +12,18 @@
       "ExpandedBludgeoningCriticalHits": {
         "Title": "Critical Forge Expanded: Kritische Wuchttreffer",
         "Description": "Zusätzliche Karten für kritische Waffenangriffe mit Wuchtschaden. Die Aktivierung dieses Decks erfolgt in den Moduleinstellungen von PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedSlashingCriticalFumbles": {
+        "Title": "Critical Forge Expanded: Kritische Hiebpatzer",
+        "Description": "Zusätzliche Karten für kritische Fehlschläge bei Waffenangriffen mit Hiebschaden. Die Aktivierung dieses Decks erfolgt in den Moduleinstellungen von PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedPiercingCriticalFumbles": {
+        "Title": "Critical Forge Expanded: Kritische Stichpatzer",
+        "Description": "Zusätzliche Karten für kritische Fehlschläge bei Waffenangriffen mit Stichschaden. Die Aktivierung dieses Decks erfolgt in den Moduleinstellungen von PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedBludgeoningCriticalFumbles": {
+        "Title": "Critical Forge Expanded: Kritische Wuchtpatzer",
+        "Description": "Zusätzliche Karten für kritische Fehlschläge bei Waffenangriffen mit Wuchtschaden. Die Aktivierung dieses Decks erfolgt in den Moduleinstellungen von PF2E Critical Forge: Arsenal."
       }
     },
     "Cards": {
@@ -74,6 +86,66 @@
       "ConcussiveImpact": {
         "Title": "Erschütternder Einschlag",
         "Description": "Für einen gewaltsamen Herzschlag steht die Welt still. Das Ziel ist Betäubt 1."
+      },
+      "OverdrawnArc": {
+        "Title": "Zu weit durchgezogen",
+        "Description": "Der verfehlte Hieb läuft zu weit durch. Der Angreifer ist 1 Runde lang auf dem falschen Fuß."
+      },
+      "TwistedEdge": {
+        "Title": "Verkantete Schneide",
+        "Description": "Die Waffe verdreht sich ungünstig im Griff. Der Angreifer erleidet 1 Runde lang einen Situationsmalus von –1 auf Angriffswürfe."
+      },
+      "ArsenalOpenFlank": {
+        "Title": "Offene Flanke",
+        "Description": "Der weite Fehlschlag zieht die Deckung zur Seite. Der Angreifer erleidet 1 Runde lang einen Situationsmalus von –1 auf seine RK."
+      },
+      "TangledFollowThrough": {
+        "Title": "Verhedderte Nachbewegung",
+        "Description": "Waffe, Kleidung und Beinarbeit geraten gleichzeitig aneinander. Der Angreifer ist 1 Runde lang Unbeholfen 1."
+      },
+      "SlashingLostTempo": {
+        "Title": "Verlorener Takt",
+        "Description": "Der misslungene Hieb verschlingt den Kampfrhythmus des Angreifers. Er ist 1 Runde lang Verlangsamt 1."
+      },
+      "OverextendedLunge": {
+        "Title": "Überstreckter Ausfall",
+        "Description": "Der fehlgeschlagene Stich reicht über das sichere Gleichgewicht hinaus. Der Angreifer ist 1 Runde lang auf dem falschen Fuß."
+      },
+      "LostLine": {
+        "Title": "Verlorene Linie",
+        "Description": "Die Spitze verlässt ihre Linie. Der Angreifer erleidet 1 Runde lang einen Situationsmalus von –1 auf Angriffswürfe und Wahrnehmung."
+      },
+      "LockedShoulder": {
+        "Title": "Blockierte Schulter",
+        "Description": "Der misslungene Stoß erschüttert Arm und Schulter. Der Angreifer ist 1 Runde lang Entkräftet 1."
+      },
+      "MisjudgedDistance": {
+        "Title": "Falsche Distanz",
+        "Description": "Ein falsch gesetzter Schritt verdirbt Distanz und Rückzug. Alle Bewegungsraten des Angreifers sind 1 Runde lang um 1,5 m reduziert, und er erleidet einen Situationsmalus von –1 auf Reflexwürfe."
+      },
+      "SightlineSnared": {
+        "Title": "Verfangene Sichtlinie",
+        "Description": "Spitze, Schaft, Sehne oder Ärmel geraten in die Sichtlinie. Der Angreifer ist 1 Runde lang Geblendet."
+      },
+      "RecoilShock": {
+        "Title": "Rückstoßschock",
+        "Description": "Der Fehlschlag schickt eine schmerzhafte Erschütterung durch den Griff. Der Angreifer erleidet 1 Runde lang einen Situationsmalus von –1 auf Angriffswürfe."
+      },
+      "ReboundingGuardFumble": {
+        "Title": "Zurückgeschlagene Deckung",
+        "Description": "Die Waffe federt aus der Linie zurück. Der Angreifer ist 1 Runde lang auf dem falschen Fuß."
+      },
+      "NumbArms": {
+        "Title": "Taube Arme",
+        "Description": "Der Einschlag läuft durch Waffe und Arme zurück. Der Angreifer ist 1 Runde lang Entkräftet 1."
+      },
+      "DustInTheEyes": {
+        "Title": "Staub in den Augen",
+        "Description": "Der wilde Einschlag wirbelt Staub, Splitter oder Funken auf. Der Angreifer ist 1 Runde lang Geblendet."
+      },
+      "GroundWins": {
+        "Title": "Der Boden gewinnt",
+        "Description": "Der verfehlte Nahkampfschlag zieht das Gleichgewicht des Angreifers mit sich. Er geht zu Boden."
       }
     },
     "Effects": {
@@ -121,6 +193,51 @@
       },
       "ConcussiveImpact": {
         "Name": "Erschütternder Einschlag"
+      },
+      "OverdrawnArc": {
+        "Name": "Zu weit durchgezogen"
+      },
+      "TwistedEdge": {
+        "Name": "Verkantete Schneide"
+      },
+      "ArsenalOpenFlank": {
+        "Name": "Offene Flanke"
+      },
+      "TangledFollowThrough": {
+        "Name": "Verhedderte Nachbewegung"
+      },
+      "SlashingLostTempo": {
+        "Name": "Verlorener Takt"
+      },
+      "OverextendedLunge": {
+        "Name": "Überstreckter Ausfall"
+      },
+      "LostLine": {
+        "Name": "Verlorene Linie"
+      },
+      "LockedShoulder": {
+        "Name": "Blockierte Schulter"
+      },
+      "MisjudgedDistance": {
+        "Name": "Falsche Distanz"
+      },
+      "SightlineSnared": {
+        "Name": "Verfangene Sichtlinie"
+      },
+      "RecoilShock": {
+        "Name": "Rückstoßschock"
+      },
+      "ReboundingGuardFumble": {
+        "Name": "Zurückgeschlagene Deckung"
+      },
+      "NumbArms": {
+        "Name": "Taube Arme"
+      },
+      "DustInTheEyes": {
+        "Name": "Staub in den Augen"
+      },
+      "GroundWins": {
+        "Name": "Der Boden gewinnt"
       }
     },
     "Notifications": {
@@ -139,6 +256,18 @@
       "ExpandedBludgeoningCriticalHits": {
         "Name": "Critical Forge Expanded: Kritische Wuchttreffer",
         "Hint": "Aktiviert die fünf zusätzlichen Karten für kritische Treffer mit Wuchtschaden."
+      },
+      "ExpandedSlashingCriticalFumbles": {
+        "Name": "Critical Forge Expanded: Kritische Hiebpatzer",
+        "Hint": "Aktiviert die fünf zusätzlichen Karten für kritische Fehlschläge bei Angriffen mit Hiebschaden."
+      },
+      "ExpandedPiercingCriticalFumbles": {
+        "Name": "Critical Forge Expanded: Kritische Stichpatzer",
+        "Hint": "Aktiviert die fünf zusätzlichen Karten für kritische Fehlschläge bei Angriffen mit Stichschaden."
+      },
+      "ExpandedBludgeoningCriticalFumbles": {
+        "Name": "Critical Forge Expanded: Kritische Wuchtpatzer",
+        "Hint": "Aktiviert die fünf zusätzlichen Karten für kritische Fehlschläge bei Angriffen mit Wuchtschaden."
       }
     }
   }

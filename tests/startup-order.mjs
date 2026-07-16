@@ -71,10 +71,10 @@ assert.equal(registeredSettings.size, 0);
 
 init();
 
-assert.equal(registeredSettings.size, 3);
+assert.equal(registeredSettings.size, 6);
 assert.equal(registeredPackBatches.length, 1, "Packs should register once after init completes.");
-assert.equal(registeredPackBatches[0].packs.length, 3);
+assert.equal(registeredPackBatches[0].packs.length, 6);
 assert.ok(registeredPackBatches[0].packs.every((pack) => pack.enabled === false));
 assert.equal(registeredPackBatches[0].options.replace, false);
 
-console.log("PF2E Critical Forge: Arsenal startup-order validation passed.");
+console.log("PF2E Critical Forge: Arsenal 0.2.0 startup-order validation passed.");

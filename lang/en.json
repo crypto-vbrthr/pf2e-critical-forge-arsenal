@@ -12,6 +12,18 @@
       "ExpandedBludgeoningCriticalHits": {
         "Title": "Critical Forge Expanded: Bludgeoning Critical Hits",
         "Description": "Additional cards for critical weapon attacks that deal bludgeoning damage. Activate this deck in the module settings for PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedSlashingCriticalFumbles": {
+        "Title": "Critical Forge Expanded: Slashing Critical Fumbles",
+        "Description": "Additional cards for critical failures on weapon attacks that deal slashing damage. Activate this deck in the module settings for PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedPiercingCriticalFumbles": {
+        "Title": "Critical Forge Expanded: Piercing Critical Fumbles",
+        "Description": "Additional cards for critical failures on weapon attacks that deal piercing damage. Activate this deck in the module settings for PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedBludgeoningCriticalFumbles": {
+        "Title": "Critical Forge Expanded: Bludgeoning Critical Fumbles",
+        "Description": "Additional cards for critical failures on weapon attacks that deal bludgeoning damage. Activate this deck in the module settings for PF2E Critical Forge: Arsenal."
       }
     },
     "Cards": {
@@ -74,6 +86,66 @@
       "ConcussiveImpact": {
         "Title": "Concussive Impact",
         "Description": "For one violent heartbeat the world stops moving. The target is stunned 1."
+      },
+      "OverdrawnArc": {
+        "Title": "Overdrawn Arc",
+        "Description": "The missed cut travels too far. The attacker is off-guard for 1 round."
+      },
+      "TwistedEdge": {
+        "Title": "Twisted Edge",
+        "Description": "The weapon turns awkwardly in the grip. The attacker takes a –1 circumstance penalty to attack rolls for 1 round."
+      },
+      "ArsenalOpenFlank": {
+        "Title": "Open Flank",
+        "Description": "The sweeping miss carries the guard aside. The attacker takes a –1 circumstance penalty to AC for 1 round."
+      },
+      "TangledFollowThrough": {
+        "Title": "Tangled Follow-Through",
+        "Description": "Weapon, clothing, and footwork disagree at once. The attacker is clumsy 1 for 1 round."
+      },
+      "SlashingLostTempo": {
+        "Title": "Lost Tempo",
+        "Description": "The failed cut consumes the attacker’s rhythm. They are slowed 1 for 1 round."
+      },
+      "OverextendedLunge": {
+        "Title": "Overextended Lunge",
+        "Description": "The failed thrust reaches beyond safe balance. The attacker is off-guard for 1 round."
+      },
+      "LostLine": {
+        "Title": "Lost Line",
+        "Description": "The point wanders from its line. The attacker takes a –1 circumstance penalty to attack rolls and Perception for 1 round."
+      },
+      "LockedShoulder": {
+        "Title": "Locked Shoulder",
+        "Description": "The failed thrust jars arm and shoulder. The attacker is enfeebled 1 for 1 round."
+      },
+      "MisjudgedDistance": {
+        "Title": "Misjudged Distance",
+        "Description": "A badly judged step spoils distance and recovery. All Speeds are reduced by 5 feet and the attacker takes a –1 circumstance penalty to Reflex saves for 1 round."
+      },
+      "SightlineSnared": {
+        "Title": "Sightline Snared",
+        "Description": "Point, shaft, string, or sleeve crosses the sightline. The attacker is dazzled for 1 round."
+      },
+      "RecoilShock": {
+        "Title": "Recoil Shock",
+        "Description": "The miss sends a punishing vibration through the grip. The attacker takes a –1 circumstance penalty to attack rolls for 1 round."
+      },
+      "ReboundingGuardFumble": {
+        "Title": "Rebounding Guard",
+        "Description": "The weapon rebounds out of line. The attacker is off-guard for 1 round."
+      },
+      "NumbArms": {
+        "Title": "Numb Arms",
+        "Description": "The impact travels back through weapon and arms. The attacker is enfeebled 1 for 1 round."
+      },
+      "DustInTheEyes": {
+        "Title": "Dust in the Eyes",
+        "Description": "The wild impact throws up dust, splinters, or sparks. The attacker is dazzled for 1 round."
+      },
+      "GroundWins": {
+        "Title": "The Ground Wins",
+        "Description": "The missed melee blow drags the attacker’s balance down with it. They fall prone."
       }
     },
     "Effects": {
@@ -121,6 +193,51 @@
       },
       "ConcussiveImpact": {
         "Name": "Concussive Impact"
+      },
+      "OverdrawnArc": {
+        "Name": "Overdrawn Arc"
+      },
+      "TwistedEdge": {
+        "Name": "Twisted Edge"
+      },
+      "ArsenalOpenFlank": {
+        "Name": "Open Flank"
+      },
+      "TangledFollowThrough": {
+        "Name": "Tangled Follow-Through"
+      },
+      "SlashingLostTempo": {
+        "Name": "Lost Tempo"
+      },
+      "OverextendedLunge": {
+        "Name": "Overextended Lunge"
+      },
+      "LostLine": {
+        "Name": "Lost Line"
+      },
+      "LockedShoulder": {
+        "Name": "Locked Shoulder"
+      },
+      "MisjudgedDistance": {
+        "Name": "Misjudged Distance"
+      },
+      "SightlineSnared": {
+        "Name": "Sightline Snared"
+      },
+      "RecoilShock": {
+        "Name": "Recoil Shock"
+      },
+      "ReboundingGuardFumble": {
+        "Name": "Rebounding Guard"
+      },
+      "NumbArms": {
+        "Name": "Numb Arms"
+      },
+      "DustInTheEyes": {
+        "Name": "Dust in the Eyes"
+      },
+      "GroundWins": {
+        "Name": "The Ground Wins"
       }
     },
     "Notifications": {
@@ -139,6 +256,18 @@
       "ExpandedBludgeoningCriticalHits": {
         "Name": "Critical Forge Expanded: Bludgeoning Critical Hits",
         "Hint": "Enable the five additional cards for critical hits that deal bludgeoning damage."
+      },
+      "ExpandedSlashingCriticalFumbles": {
+        "Name": "Critical Forge Expanded: Slashing Critical Fumbles",
+        "Hint": "Enable the five additional cards for critical failures on attacks that deal slashing damage."
+      },
+      "ExpandedPiercingCriticalFumbles": {
+        "Name": "Critical Forge Expanded: Piercing Critical Fumbles",
+        "Hint": "Enable the five additional cards for critical failures on attacks that deal piercing damage."
+      },
+      "ExpandedBludgeoningCriticalFumbles": {
+        "Name": "Critical Forge Expanded: Bludgeoning Critical Fumbles",
+        "Hint": "Enable the five additional cards for critical failures on attacks that deal bludgeoning damage."
       }
     }
   }

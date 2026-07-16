@@ -3,7 +3,10 @@ export const EXPANDED_CARD_ID_PREFIX = "pf2e-critical-forge-arsenal.expanded";
 export const EXPANDED_PACK_IDS = Object.freeze({
   slashing: "pf2e-critical-forge-arsenal.expanded.weapon-critical.slashing",
   piercing: "pf2e-critical-forge-arsenal.expanded.weapon-critical.piercing",
-  bludgeoning: "pf2e-critical-forge-arsenal.expanded.weapon-critical.bludgeoning"
+  bludgeoning: "pf2e-critical-forge-arsenal.expanded.weapon-critical.bludgeoning",
+  slashingFumble: "pf2e-critical-forge-arsenal.expanded.weapon-fumble.slashing",
+  piercingFumble: "pf2e-critical-forge-arsenal.expanded.weapon-fumble.piercing",
+  bludgeoningFumble: "pf2e-critical-forge-arsenal.expanded.weapon-fumble.bludgeoning"
 });
 
 export const DURATIONS = Object.freeze({
@@ -24,6 +27,19 @@ const FILTER_KEYS = Object.freeze([
   "excludedTargetTraits"
 ]);
 
+const PACK_IDS_BY_CATEGORY = Object.freeze({
+  criticalHit: Object.freeze({
+    slashing: EXPANDED_PACK_IDS.slashing,
+    piercing: EXPANDED_PACK_IDS.piercing,
+    bludgeoning: EXPANDED_PACK_IDS.bludgeoning
+  }),
+  criticalFumble: Object.freeze({
+    slashing: EXPANDED_PACK_IDS.slashingFumble,
+    piercing: EXPANDED_PACK_IDS.piercingFumble,
+    bludgeoning: EXPANDED_PACK_IDS.bludgeoningFumble
+  })
+});
+
 function freezeFilters(damageType, filters = {}) {
   const result = {};
 
@@ -35,11 +51,11 @@ function freezeFilters(damageType, filters = {}) {
   return Object.freeze(result);
 }
 
-function freezeEffect(effect, localizationKey, fallbackTitle) {
+function freezeEffect(effect, localizationKey, fallbackTitle, defaultTarget) {
   if (!effect) return null;
 
   return Object.freeze({
-    target: effect.target ?? "target",
+    target: effect.target ?? defaultTarget,
     nameKey: `PF2ECFA.Effects.${localizationKey}.Name`,
     fallbackName: effect.fallbackName ?? fallbackTitle,
     definition: Object.freeze({
@@ -52,11 +68,11 @@ function freezeEffect(effect, localizationKey, fallbackTitle) {
   });
 }
 
-/** Define one immutable Critical Forge Expanded weapon-critical card. */
-export function defineWeaponCriticalCard({
+function defineWeaponCard({
   id,
   localizationKey,
   damageType,
+  category,
   tone,
   impact,
   fallbackTitle,
@@ -66,15 +82,17 @@ export function defineWeaponCriticalCard({
   filters = {},
   effect
 }) {
-  const packId = EXPANDED_PACK_IDS[damageType];
-  if (!packId) throw new Error(`Unsupported Expanded weapon-critical damage type: ${damageType}`);
+  const packId = PACK_IDS_BY_CATEGORY[category]?.[damageType];
+  if (!packId) {
+    throw new Error(`Unsupported Expanded weapon card: ${category}/${damageType}`);
+  }
 
+  const isFumble = category === "criticalFumble";
   return Object.freeze({
     schemaVersion: 1,
-    // Keep the original 0.1.0 card ids stable for history and exported references.
     id: `${EXPANDED_CARD_ID_PREFIX}.${id}`,
     packId,
-    category: "criticalHit",
+    category,
     tone,
     impact,
     titleKey: `PF2ECFA.Cards.${localizationKey}.Title`,
@@ -82,11 +100,28 @@ export function defineWeaponCriticalCard({
     fallbackTitle,
     fallbackDescription,
     weight,
-    tags: Object.freeze(["weapon", "critical-hit", damageType, ...tags]),
+    tags: Object.freeze([
+      "weapon",
+      isFumble ? "critical-fumble" : "critical-hit",
+      damageType,
+      ...tags
+    ]),
     filters: freezeFilters(damageType, filters),
-    effect: freezeEffect(effect, localizationKey, fallbackTitle),
+    effect: freezeEffect(effect, localizationKey, fallbackTitle, isFumble ? "source" : "target"),
     metadata: Object.freeze({
-      collection: "expanded-weapon-criticals-1"
+      collection: isFumble
+        ? "expanded-weapon-fumbles-1"
+        : "expanded-weapon-criticals-1"
     })
   });
+}
+
+/** Define one immutable Critical Forge Expanded weapon-critical card. */
+export function defineWeaponCriticalCard(options) {
+  return defineWeaponCard({ ...options, category: "criticalHit" });
+}
+
+/** Define one immutable Critical Forge Expanded weapon-fumble card. */
+export function defineWeaponFumbleCard(options) {
+  return defineWeaponCard({ ...options, category: "criticalFumble" });
 }

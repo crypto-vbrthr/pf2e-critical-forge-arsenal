@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0
+
+- Added three independently selectable weapon-fumble packs for slashing, piercing, and bludgeoning attacks.
+- Added 15 localized critical-fumble cards with source-side effects.
+- Added fumble effects for off-guard, attack and AC penalties, clumsy, enfeebled, dazzled, slowed, movement penalties, Reflex penalties, and prone.
+- Generalized the Expanded card factory to support both critical-hit and critical-fumble categories while preserving all existing card and pack ids.
+- Expanded settings, startup, localization, and Critical Forge validator coverage to all six packs and 30 cards.
+
 ## 0.1.3
 
 - Fixed Arsenal settings registration in Foundry VTT by using the supported `Boolean` setting type.

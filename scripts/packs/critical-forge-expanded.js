@@ -2,6 +2,9 @@ import { EXPANDED_PACK_IDS } from "./expanded/card-factory.js";
 import { SLASHING_CARDS } from "./expanded/cards/slashing-cards.js";
 import { PIERCING_CARDS } from "./expanded/cards/piercing-cards.js";
 import { BLUDGEONING_CARDS } from "./expanded/cards/bludgeoning-cards.js";
+import { SLASHING_FUMBLE_CARDS } from "./expanded/cards/slashing-fumble-cards.js";
+import { PIERCING_FUMBLE_CARDS } from "./expanded/cards/piercing-fumble-cards.js";
+import { BLUDGEONING_FUMBLE_CARDS } from "./expanded/cards/bludgeoning-fumble-cards.js";
 
 export const EXPANDED_PACK_CONFIGS = Object.freeze([
   Object.freeze({
@@ -48,6 +51,51 @@ export const EXPANDED_PACK_CONFIGS = Object.freeze([
       category: "weapon-critical-hit",
       damageType: "bludgeoning"
     })
+  }),
+  Object.freeze({
+    settingKey: "enableExpandedSlashingCriticalFumbles",
+    id: EXPANDED_PACK_IDS.slashingFumble,
+    titleKey: "PF2ECFA.Packs.ExpandedSlashingCriticalFumbles.Title",
+    descriptionKey: "PF2ECFA.Packs.ExpandedSlashingCriticalFumbles.Description",
+    fallbackTitle: "Critical Forge Expanded: Slashing Critical Fumbles",
+    fallbackDescription: "Additional critical-fumble cards for attacks that deal slashing damage.",
+    cards: SLASHING_FUMBLE_CARDS,
+    metadata: Object.freeze({
+      theme: "general-expansion",
+      family: "critical-forge-expanded",
+      category: "weapon-critical-fumble",
+      damageType: "slashing"
+    })
+  }),
+  Object.freeze({
+    settingKey: "enableExpandedPiercingCriticalFumbles",
+    id: EXPANDED_PACK_IDS.piercingFumble,
+    titleKey: "PF2ECFA.Packs.ExpandedPiercingCriticalFumbles.Title",
+    descriptionKey: "PF2ECFA.Packs.ExpandedPiercingCriticalFumbles.Description",
+    fallbackTitle: "Critical Forge Expanded: Piercing Critical Fumbles",
+    fallbackDescription: "Additional critical-fumble cards for attacks that deal piercing damage.",
+    cards: PIERCING_FUMBLE_CARDS,
+    metadata: Object.freeze({
+      theme: "general-expansion",
+      family: "critical-forge-expanded",
+      category: "weapon-critical-fumble",
+      damageType: "piercing"
+    })
+  }),
+  Object.freeze({
+    settingKey: "enableExpandedBludgeoningCriticalFumbles",
+    id: EXPANDED_PACK_IDS.bludgeoningFumble,
+    titleKey: "PF2ECFA.Packs.ExpandedBludgeoningCriticalFumbles.Title",
+    descriptionKey: "PF2ECFA.Packs.ExpandedBludgeoningCriticalFumbles.Description",
+    fallbackTitle: "Critical Forge Expanded: Bludgeoning Critical Fumbles",
+    fallbackDescription: "Additional critical-fumble cards for attacks that deal bludgeoning damage.",
+    cards: BLUDGEONING_FUMBLE_CARDS,
+    metadata: Object.freeze({
+      theme: "general-expansion",
+      family: "critical-forge-expanded",
+      category: "weapon-critical-fumble",
+      damageType: "bludgeoning"
+    })
   })
 ]);
 
@@ -63,7 +111,7 @@ export function buildCriticalForgeExpandedPacks(isEnabled = () => false) {
     descriptionKey: config.descriptionKey,
     fallbackTitle: config.fallbackTitle,
     fallbackDescription: config.fallbackDescription,
-    version: "0.1.3",
+    version: "0.2.0",
     priority: 10,
     enabled: Boolean(isEnabled(config.settingKey)),
     metadata: config.metadata,
