@@ -1,24 +1,145 @@
 {
   "PF2ECFA": {
     "Packs": {
-      "Expanded": {
-        "Title": "Critical Forge Expanded",
-        "Description": "Eine allgemeine Erweiterung mit zusätzlichen Karten für kritische Treffer, Fehlschläge, Zauberangriffe und Rettungswürfe."
+      "ExpandedSlashingCriticalHits": {
+        "Title": "Critical Forge Expanded: Kritische Hiebtreffer",
+        "Description": "Zusätzliche Karten für kritische Waffenangriffe mit Hiebschaden. Die Aktivierung dieses Decks erfolgt in den Moduleinstellungen von PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedPiercingCriticalHits": {
+        "Title": "Critical Forge Expanded: Kritische Stichtreffer",
+        "Description": "Zusätzliche Karten für kritische Waffenangriffe mit Stichschaden. Die Aktivierung dieses Decks erfolgt in den Moduleinstellungen von PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedBludgeoningCriticalHits": {
+        "Title": "Critical Forge Expanded: Kritische Wuchttreffer",
+        "Description": "Zusätzliche Karten für kritische Waffenangriffe mit Wuchtschaden. Die Aktivierung dieses Decks erfolgt in den Moduleinstellungen von PF2E Critical Forge: Arsenal."
       }
     },
     "Cards": {
       "OpeningInTheGuard": {
         "Title": "Lücke in der Deckung",
         "Description": "Der kritische Hieb reißt eine Lücke in die Deckung des Ziels. Es ist 1 Runde lang auf dem falschen Fuß."
+      },
+      "DraggingCut": {
+        "Title": "Schleifender Schnitt",
+        "Description": "Der Schnitt verfängt sich in Muskeln, Panzerung oder Ausrüstung. Alle Bewegungsraten des Ziels sind 1 Runde lang um 1,5 m reduziert."
+      },
+      "BrokenRhythm": {
+        "Title": "Gebrochener Rhythmus",
+        "Description": "Die weit geführte Wunde zerstört den Rhythmus des Ziels. Es erleidet 1 Runde lang einen Situationsmalus von –1 auf Angriffswürfe und Reflexwürfe."
+      },
+      "TornProtection": {
+        "Title": "Aufgerissener Schutz",
+        "Description": "Rüstung, Haut oder magischer Schutz reißen entlang des Schnitts auf. Das Ziel erhält 1 Runde lang Schwäche 2 gegen Hiebschaden."
+      },
+      "CrimsonTrail": {
+        "Title": "Blutige Spur",
+        "Description": "Die Wunde klafft weit auf und verursacht 2W4 Punkte anhaltenden Blutungsschaden."
+      },
+      "NeedleShock": {
+        "Title": "Nervenschock",
+        "Description": "Der präzise Treffer erschüttert den Griff des Ziels. Es erleidet 1 Runde lang einen Situationsmalus von –1 auf Angriffswürfe."
+      },
+      "PiercedStep": {
+        "Title": "Durchbohrter Schritt",
+        "Description": "Die Spitze trifft Gliedmaß, Kleidung oder Standfläche. Die Bewegungsrate am Boden des Ziels ist 1 Runde lang um 1,5 m reduziert."
+      },
+      "NerveFlare": {
+        "Title": "Nervenblitz",
+        "Description": "Ein greller Schmerz unterbricht jeden klaren Gedanken. Das Ziel ist 1 Runde lang Benommen 1."
+      },
+      "ThreadTheGap": {
+        "Title": "Durch die Lücke",
+        "Description": "Der Stich findet einen Fehler, der offen bleibt. Das Ziel erhält 1 Runde lang Schwäche 2 gegen Stichschaden."
+      },
+      "Transfixed": {
+        "Title": "Festgenagelt",
+        "Description": "Der Treffer hält das Ziel beinahe fest. Es ist 1 Runde lang auf dem falschen Fuß und erleidet einen Situationsmalus von –3 m auf seine Bewegungsrate am Boden."
+      },
+      "ReboundingGuard": {
+        "Title": "Rückfedernde Deckung",
+        "Description": "Die perfekte Nachbewegung führt den Angreifer unmittelbar zurück in Deckung. Er erhält 1 Runde lang einen Situationsbonus von +1 auf seine RK."
+      },
+      "RingingSenses": {
+        "Title": "Dröhnende Sinne",
+        "Description": "Der Einschlag lässt die Sinne des Ziels dröhnen. Es erleidet 1 Runde lang einen Situationsmalus von –1 auf Wahrnehmung."
+      },
+      "BuckledStance": {
+        "Title": "Eingeknickter Stand",
+        "Description": "Der Schlag lässt den Stand des Ziels einknicken. Es ist 1 Runde lang auf dem falschen Fuß und seine Bewegungsrate am Boden ist um 1,5 m reduziert."
+      },
+      "CrushedBreath": {
+        "Title": "Geraubter Atem",
+        "Description": "Der Einschlag treibt Atem und Kraft aus dem Körper. Das Ziel erleidet 1 Runde lang einen Situationsmalus von –1 auf Zähigkeitswürfe und Athletikwürfe."
+      },
+      "ConcussiveImpact": {
+        "Title": "Erschütternder Einschlag",
+        "Description": "Für einen gewaltsamen Herzschlag steht die Welt still. Das Ziel ist Betäubt 1."
       }
     },
     "Effects": {
       "OpeningInTheGuard": {
         "Name": "Lücke in der Deckung"
+      },
+      "DraggingCut": {
+        "Name": "Schleifender Schnitt"
+      },
+      "BrokenRhythm": {
+        "Name": "Gebrochener Rhythmus"
+      },
+      "TornProtection": {
+        "Name": "Aufgerissener Schutz"
+      },
+      "CrimsonTrail": {
+        "Name": "Blutige Spur"
+      },
+      "NeedleShock": {
+        "Name": "Nervenschock"
+      },
+      "PiercedStep": {
+        "Name": "Durchbohrter Schritt"
+      },
+      "NerveFlare": {
+        "Name": "Nervenblitz"
+      },
+      "ThreadTheGap": {
+        "Name": "Durch die Lücke"
+      },
+      "Transfixed": {
+        "Name": "Festgenagelt"
+      },
+      "ReboundingGuard": {
+        "Name": "Rückfedernde Deckung"
+      },
+      "RingingSenses": {
+        "Name": "Dröhnende Sinne"
+      },
+      "BuckledStance": {
+        "Name": "Eingeknickter Stand"
+      },
+      "CrushedBreath": {
+        "Name": "Geraubter Atem"
+      },
+      "ConcussiveImpact": {
+        "Name": "Erschütternder Einschlag"
       }
     },
     "Notifications": {
-      "RegistrationFailed": "PF2E Critical Forge: Arsenal konnte seine Kartenpakete nicht registrieren. Details stehen in der Browserkonsole."
+      "RegistrationFailed": "PF2E Critical Forge: Arsenal konnte seine Kartenpakete nicht registrieren. Details stehen in der Browserkonsole.",
+      "PackSelectionUpdated": "Die Auswahl der Arsenal-Kartenpakete wurde aktualisiert."
+    },
+    "Settings": {
+      "ExpandedSlashingCriticalHits": {
+        "Name": "Critical Forge Expanded: Kritische Hiebtreffer",
+        "Hint": "Aktiviert die fünf zusätzlichen Karten für kritische Treffer mit Hiebschaden."
+      },
+      "ExpandedPiercingCriticalHits": {
+        "Name": "Critical Forge Expanded: Kritische Stichtreffer",
+        "Hint": "Aktiviert die fünf zusätzlichen Karten für kritische Treffer mit Stichschaden."
+      },
+      "ExpandedBludgeoningCriticalHits": {
+        "Name": "Critical Forge Expanded: Kritische Wuchttreffer",
+        "Hint": "Aktiviert die fünf zusätzlichen Karten für kritische Treffer mit Wuchtschaden."
+      }
     }
   }
 }

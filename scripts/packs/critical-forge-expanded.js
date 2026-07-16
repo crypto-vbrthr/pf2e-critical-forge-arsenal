@@ -1,80 +1,72 @@
-const PACK_ID = "pf2e-critical-forge-arsenal.expanded";
+import { EXPANDED_PACK_IDS } from "./expanded/card-factory.js";
+import { SLASHING_CARDS } from "./expanded/cards/slashing-cards.js";
+import { PIERCING_CARDS } from "./expanded/cards/piercing-cards.js";
+import { BLUDGEONING_CARDS } from "./expanded/cards/bludgeoning-cards.js";
 
-const EMPTY_FILTERS = Object.freeze({
-  damageTypes: Object.freeze([]),
-  weaponGroups: Object.freeze([]),
-  attackTraits: Object.freeze([]),
-  saveTypes: Object.freeze([]),
-  spellTraditions: Object.freeze([]),
-  spellTraits: Object.freeze([]),
-  sourceTraits: Object.freeze([]),
-  targetTraits: Object.freeze([]),
-  excludedSourceTraits: Object.freeze([]),
-  excludedTargetTraits: Object.freeze([])
-});
+export const EXPANDED_PACK_CONFIGS = Object.freeze([
+  Object.freeze({
+    settingKey: "enableExpandedSlashingCriticalHits",
+    id: EXPANDED_PACK_IDS.slashing,
+    titleKey: "PF2ECFA.Packs.ExpandedSlashingCriticalHits.Title",
+    descriptionKey: "PF2ECFA.Packs.ExpandedSlashingCriticalHits.Description",
+    fallbackTitle: "Critical Forge Expanded: Slashing Critical Hits",
+    fallbackDescription: "Additional critical-hit cards for attacks that deal slashing damage.",
+    cards: SLASHING_CARDS,
+    metadata: Object.freeze({
+      theme: "general-expansion",
+      family: "critical-forge-expanded",
+      category: "weapon-critical-hit",
+      damageType: "slashing"
+    })
+  }),
+  Object.freeze({
+    settingKey: "enableExpandedPiercingCriticalHits",
+    id: EXPANDED_PACK_IDS.piercing,
+    titleKey: "PF2ECFA.Packs.ExpandedPiercingCriticalHits.Title",
+    descriptionKey: "PF2ECFA.Packs.ExpandedPiercingCriticalHits.Description",
+    fallbackTitle: "Critical Forge Expanded: Piercing Critical Hits",
+    fallbackDescription: "Additional critical-hit cards for attacks that deal piercing damage.",
+    cards: PIERCING_CARDS,
+    metadata: Object.freeze({
+      theme: "general-expansion",
+      family: "critical-forge-expanded",
+      category: "weapon-critical-hit",
+      damageType: "piercing"
+    })
+  }),
+  Object.freeze({
+    settingKey: "enableExpandedBludgeoningCriticalHits",
+    id: EXPANDED_PACK_IDS.bludgeoning,
+    titleKey: "PF2ECFA.Packs.ExpandedBludgeoningCriticalHits.Title",
+    descriptionKey: "PF2ECFA.Packs.ExpandedBludgeoningCriticalHits.Description",
+    fallbackTitle: "Critical Forge Expanded: Bludgeoning Critical Hits",
+    fallbackDescription: "Additional critical-hit cards for attacks that deal bludgeoning damage.",
+    cards: BLUDGEONING_CARDS,
+    metadata: Object.freeze({
+      theme: "general-expansion",
+      family: "critical-forge-expanded",
+      category: "weapon-critical-hit",
+      damageType: "bludgeoning"
+    })
+  })
+]);
 
 /**
- * General-purpose expansion pack for PF2E Critical Forge.
- *
- * It starts with one deliberately simple card so registration, localization,
- * editor visibility, filtering, and effect application can be tested end to end.
+ * Build current pack definitions without coupling the data module to Foundry settings.
+ * @param {(settingKey: string) => boolean} isEnabled
  */
-export const CRITICAL_FORGE_EXPANDED_PACK = Object.freeze({
-  schemaVersion: 1,
-  id: PACK_ID,
-  titleKey: "PF2ECFA.Packs.Expanded.Title",
-  descriptionKey: "PF2ECFA.Packs.Expanded.Description",
-  fallbackTitle: "Critical Forge Expanded",
-  fallbackDescription:
-    "A general expansion with additional cards for critical hits, fumbles, spell attacks, and saving throws.",
-  version: "0.0.4",
-  priority: 10,
-  enabled: false,
-  metadata: {
-    theme: "general-expansion",
-    development: true
-  },
-  cards: Object.freeze([
-    Object.freeze({
-      schemaVersion: 1,
-      id: `${PACK_ID}.opening-in-the-guard`,
-      packId: PACK_ID,
-      category: "criticalHit",
-      tone: "neutral",
-      impact: "light",
-      titleKey: "PF2ECFA.Cards.OpeningInTheGuard.Title",
-      descriptionKey: "PF2ECFA.Cards.OpeningInTheGuard.Description",
-      fallbackTitle: "Opening in the Guard",
-      fallbackDescription:
-        "The critical slash tears open the target's guard, leaving it off-guard for 1 round.",
-      weight: 1,
-      tags: Object.freeze(["physical", "slashing", "control", "development-test"]),
-      filters: Object.freeze({
-        ...EMPTY_FILTERS,
-        damageTypes: Object.freeze(["slashing"])
-      }),
-      effect: Object.freeze({
-        target: "target",
-        nameKey: "PF2ECFA.Effects.OpeningInTheGuard.Name",
-        fallbackName: "Opening in the Guard",
-        definition: Object.freeze({
-          schemaVersion: 1,
-          duration: Object.freeze({
-            value: 1,
-            unit: "rounds",
-            expiry: "turn-end"
-          }),
-          components: Object.freeze([
-            Object.freeze({
-              type: "condition",
-              slug: "off-guard"
-            })
-          ])
-        })
-      }),
-      metadata: Object.freeze({
-        development: true
-      })
-    })
-  ])
-});
+export function buildCriticalForgeExpandedPacks(isEnabled = () => false) {
+  return EXPANDED_PACK_CONFIGS.map((config) => Object.freeze({
+    schemaVersion: 1,
+    id: config.id,
+    titleKey: config.titleKey,
+    descriptionKey: config.descriptionKey,
+    fallbackTitle: config.fallbackTitle,
+    fallbackDescription: config.fallbackDescription,
+    version: "0.1.3",
+    priority: 10,
+    enabled: Boolean(isEnabled(config.settingKey)),
+    metadata: config.metadata,
+    cards: config.cards
+  }));
+}

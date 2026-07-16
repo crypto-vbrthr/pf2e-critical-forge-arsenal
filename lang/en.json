@@ -1,24 +1,145 @@
 {
   "PF2ECFA": {
     "Packs": {
-      "Expanded": {
-        "Title": "Critical Forge Expanded",
-        "Description": "A general expansion with additional cards for critical hits, fumbles, spell attacks, and saving throws."
+      "ExpandedSlashingCriticalHits": {
+        "Title": "Critical Forge Expanded: Slashing Critical Hits",
+        "Description": "Additional cards for critical weapon attacks that deal slashing damage. Activate this deck in the module settings for PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedPiercingCriticalHits": {
+        "Title": "Critical Forge Expanded: Piercing Critical Hits",
+        "Description": "Additional cards for critical weapon attacks that deal piercing damage. Activate this deck in the module settings for PF2E Critical Forge: Arsenal."
+      },
+      "ExpandedBludgeoningCriticalHits": {
+        "Title": "Critical Forge Expanded: Bludgeoning Critical Hits",
+        "Description": "Additional cards for critical weapon attacks that deal bludgeoning damage. Activate this deck in the module settings for PF2E Critical Forge: Arsenal."
       }
     },
     "Cards": {
       "OpeningInTheGuard": {
         "Title": "Opening in the Guard",
         "Description": "The critical slash tears open the target's guard. It is off-guard for 1 round."
+      },
+      "DraggingCut": {
+        "Title": "Dragging Cut",
+        "Description": "The cut catches muscle, hide, or equipment. All of the target's Speeds are reduced by 5 feet for 1 round."
+      },
+      "BrokenRhythm": {
+        "Title": "Broken Rhythm",
+        "Description": "The sweeping wound ruins the target's timing. It takes a –1 circumstance penalty to attack rolls and Reflex saves for 1 round."
+      },
+      "TornProtection": {
+        "Title": "Torn Protection",
+        "Description": "Armor, hide, or magical protection parts along the cut. The target gains weakness 2 to slashing damage for 1 round."
+      },
+      "CrimsonTrail": {
+        "Title": "Crimson Trail",
+        "Description": "The wound opens wide and inflicts 2d4 persistent bleed damage."
+      },
+      "NeedleShock": {
+        "Title": "Needle Shock",
+        "Description": "The precise hit jars the target's grip. It takes a –1 circumstance penalty to attack rolls for 1 round."
+      },
+      "PiercedStep": {
+        "Title": "Pierced Step",
+        "Description": "The point catches limb, clothing, or footing. The target's land Speed is reduced by 5 feet for 1 round."
+      },
+      "NerveFlare": {
+        "Title": "Nerve Flare",
+        "Description": "A flash of pain disrupts thought. The target is stupefied 1 for 1 round."
+      },
+      "ThreadTheGap": {
+        "Title": "Thread the Gap",
+        "Description": "The strike finds a flaw that remains exposed. The target gains weakness 2 to piercing damage for 1 round."
+      },
+      "Transfixed": {
+        "Title": "Transfixed",
+        "Description": "The target is caught in place. It is off-guard and takes a –10-foot circumstance penalty to land Speed for 1 round."
+      },
+      "ReboundingGuard": {
+        "Title": "Rebounding Guard",
+        "Description": "The perfect follow-through carries the attacker back into guard. It gains a +1 circumstance bonus to AC for 1 round."
+      },
+      "RingingSenses": {
+        "Title": "Ringing Senses",
+        "Description": "The impact leaves the target's senses ringing. It takes a –1 circumstance penalty to Perception for 1 round."
+      },
+      "BuckledStance": {
+        "Title": "Buckled Stance",
+        "Description": "The blow folds the target's stance. It is off-guard and its land Speed is reduced by 5 feet for 1 round."
+      },
+      "CrushedBreath": {
+        "Title": "Crushed Breath",
+        "Description": "The impact drives out breath and strength. The target takes a –1 circumstance penalty to Fortitude saves and Athletics checks for 1 round."
+      },
+      "ConcussiveImpact": {
+        "Title": "Concussive Impact",
+        "Description": "For one violent heartbeat the world stops moving. The target is stunned 1."
       }
     },
     "Effects": {
       "OpeningInTheGuard": {
         "Name": "Opening in the Guard"
+      },
+      "DraggingCut": {
+        "Name": "Dragging Cut"
+      },
+      "BrokenRhythm": {
+        "Name": "Broken Rhythm"
+      },
+      "TornProtection": {
+        "Name": "Torn Protection"
+      },
+      "CrimsonTrail": {
+        "Name": "Crimson Trail"
+      },
+      "NeedleShock": {
+        "Name": "Needle Shock"
+      },
+      "PiercedStep": {
+        "Name": "Pierced Step"
+      },
+      "NerveFlare": {
+        "Name": "Nerve Flare"
+      },
+      "ThreadTheGap": {
+        "Name": "Thread the Gap"
+      },
+      "Transfixed": {
+        "Name": "Transfixed"
+      },
+      "ReboundingGuard": {
+        "Name": "Rebounding Guard"
+      },
+      "RingingSenses": {
+        "Name": "Ringing Senses"
+      },
+      "BuckledStance": {
+        "Name": "Buckled Stance"
+      },
+      "CrushedBreath": {
+        "Name": "Crushed Breath"
+      },
+      "ConcussiveImpact": {
+        "Name": "Concussive Impact"
       }
     },
     "Notifications": {
-      "RegistrationFailed": "PF2E Critical Forge: Arsenal could not register its card packs. See the browser console for details."
+      "RegistrationFailed": "PF2E Critical Forge: Arsenal could not register its card packs. See the browser console for details.",
+      "PackSelectionUpdated": "The Arsenal card-pack selection has been updated."
+    },
+    "Settings": {
+      "ExpandedSlashingCriticalHits": {
+        "Name": "Critical Forge Expanded: Slashing Critical Hits",
+        "Hint": "Enable the five additional cards for critical hits that deal slashing damage."
+      },
+      "ExpandedPiercingCriticalHits": {
+        "Name": "Critical Forge Expanded: Piercing Critical Hits",
+        "Hint": "Enable the five additional cards for critical hits that deal piercing damage."
+      },
+      "ExpandedBludgeoningCriticalHits": {
+        "Name": "Critical Forge Expanded: Bludgeoning Critical Hits",
+        "Hint": "Enable the five additional cards for critical hits that deal bludgeoning damage."
+      }
     }
   }
 }
