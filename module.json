@@ -1,0 +1,49 @@
+{
+  "id": "pf2e-critical-forge-arsenal",
+  "title": "PF2E Critical Forge: Arsenal",
+  "description": "Additional card packs for PF2E Critical Forge.",
+  "version": "0.0.4",
+  "authors": [
+    {
+      "name": "Bully"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "pf2e-critical-forge",
+        "type": "module",
+        "compatibility": {
+          "minimum": "0.8.0-rc.2"
+        }
+      }
+    ],
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "languages": [
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "readme": "README.md",
+  "license": "LICENSE"
+}

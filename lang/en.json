@@ -1,0 +1,24 @@
+{
+  "PF2ECFA": {
+    "Packs": {
+      "Expanded": {
+        "Title": "Critical Forge Expanded",
+        "Description": "A general expansion with additional cards for critical hits, fumbles, spell attacks, and saving throws."
+      }
+    },
+    "Cards": {
+      "OpeningInTheGuard": {
+        "Title": "Opening in the Guard",
+        "Description": "The critical slash tears open the target's guard. It is off-guard for 1 round."
+      }
+    },
+    "Effects": {
+      "OpeningInTheGuard": {
+        "Name": "Opening in the Guard"
+      }
+    },
+    "Notifications": {
+      "RegistrationFailed": "PF2E Critical Forge: Arsenal could not register its card packs. See the browser console for details."
+    }
+  }
+}

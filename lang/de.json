@@ -1,0 +1,24 @@
+{
+  "PF2ECFA": {
+    "Packs": {
+      "Expanded": {
+        "Title": "Critical Forge Expanded",
+        "Description": "Eine allgemeine Erweiterung mit zusätzlichen Karten für kritische Treffer, Fehlschläge, Zauberangriffe und Rettungswürfe."
+      }
+    },
+    "Cards": {
+      "OpeningInTheGuard": {
+        "Title": "Lücke in der Deckung",
+        "Description": "Der kritische Hieb reißt eine Lücke in die Deckung des Ziels. Es ist 1 Runde lang auf dem falschen Fuß."
+      }
+    },
+    "Effects": {
+      "OpeningInTheGuard": {
+        "Name": "Lücke in der Deckung"
+      }
+    },
+    "Notifications": {
+      "RegistrationFailed": "PF2E Critical Forge: Arsenal konnte seine Kartenpakete nicht registrieren. Details stehen in der Browserkonsole."
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "pf2e-critical-forge-arsenal",
+  "version": "0.0.4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/validate.mjs"
+  }
+}

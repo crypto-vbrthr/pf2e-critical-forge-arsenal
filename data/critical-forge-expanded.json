@@ -1,0 +1,35 @@
+{
+  "format": "pf2e-critical-forge.card-pack",
+  "formatVersion": 1,
+  "generator": {
+    "module": "pf2e-critical-forge-arsenal",
+    "version": "0.0.3"
+  },
+  "pack": {
+    "id": "critical-forge-expanded",
+    "nameKey": "PF2ECFA.Packs.Expanded.Name",
+    "descriptionKey": "PF2ECFA.Packs.Expanded.Description",
+    "fallbackName": "Critical Forge Expanded",
+    "fallbackDescription": "A general expansion with additional cards for critical hits, fumbles, spell attacks, and saving throws.",
+    "version": "0.0.1",
+    "author": "Bully",
+    "enabled": false,
+    "cards": [
+      {
+        "id": "expanded.slashing.spark",
+        "pack": "critical-forge-expanded",
+        "category": "criticalHit",
+        "titleKey": "PF2ECFA.Cards.Spark.Title",
+        "descriptionKey": "PF2ECFA.Cards.Spark.Description",
+        "fallbackTitle": "Opening in the Guard",
+        "fallbackDescription": "The critical strike tears open the target's guard. Until the start of its next turn, the target is off-guard.",
+        "weight": 1,
+        "filters": {
+          "damageTypes": [
+            "slashing"
+          ]
+        }
+      }
+    ]
+  }
+}
