@@ -193,7 +193,7 @@
       },
       "BoneRattlingStrike": {
         "Title": "Bone-Rattling Strike",
-        "Description": "The impact shakes strength from limb and grip, leaving the target enfeebled 1 for 1 round."
+        "Description": "The impact leaves muscles and joints badly bruised, imposing a -1 circumstance penalty to Athletics checks for 1 round."
       },
       "CrushedGuard": {
         "Title": "Crushed Guard",
@@ -621,7 +621,7 @@
       },
       "FoldedDefense": {
         "Title": "Folded Defense",
-        "Description": "The blow folds the target’s guard inward, leaving it off-guard and imposing a -1 circumstance penalty to Fortitude saves for 1 round."
+        "Description": "The blow folds the target's guard inward, leaving it off-guard and imposing a -1 circumstance penalty to attack rolls for 1 round."
       },
       "NumbedSupport": {
         "Title": "Numbed Support",
@@ -729,7 +729,7 @@
       },
       "BuckledKnee": {
         "Title": "Buckled Knee",
-        "Description": "A brutal blow numbs the target’s support, reducing its land Speed by 15 feet for 1 round."
+        "Description": "A brutal blow buckles the target's knee, imposing a -1 circumstance penalty to Acrobatics checks and Reflex saves for 1 round."
       },
       "ThunderclapImpact": {
         "Title": "Thunderclap Impact",

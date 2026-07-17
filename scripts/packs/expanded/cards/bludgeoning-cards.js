@@ -159,11 +159,11 @@ export const BLUDGEONING_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Bone-Rattling Strike",
-    fallbackDescription: "The impact shakes strength from limb and grip, leaving the target enfeebled 1 for 1 round.",
+    fallbackDescription: "The impact leaves muscles and joints badly bruised, imposing a -1 circumstance penalty to Athletics checks for 1 round.",
     weight: 1,
-    tags: ["debuff"],
+    tags: ["debuff", "injury"],
     filters: {"excludedTargetTraits": ["incorporeal", "ooze"]},
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "athletics", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponCriticalCard({
     id: "bludgeoning.crushed-guard",
@@ -300,7 +300,7 @@ export const BLUDGEONING_CARDS = Object.freeze([
     tone: "serious",
     impact: "strong",
     fallbackTitle: "Folded Defense",
-    fallbackDescription: "The blow folds the target’s guard inward, leaving it off-guard and imposing a -1 circumstance penalty to Fortitude saves for 1 round.",
+    fallbackDescription: "The blow folds the target’s guard inward, leaving it off-guard and imposing a -1 circumstance penalty to attack rolls for 1 round.",
     weight: 1,
     tags: ["control", "debuff"],
     effect: {
@@ -312,7 +312,7 @@ export const BLUDGEONING_CARDS = Object.freeze([
         },
         {
           "type": "modifier",
-          "selector": "fortitude",
+          "selector": "attack-roll",
           "value": -1,
           "modifierType": "circumstance",
           "predicate": []
@@ -417,12 +417,12 @@ export const BLUDGEONING_CARDS = Object.freeze([
     damageType: "bludgeoning",
     tone: "serious",
     impact: "moderate",
-    fallbackTitle: "Dead Leg",
-    fallbackDescription: "A brutal blow numbs the target’s support, reducing its land Speed by 15 feet for 1 round.",
+    fallbackTitle: "Buckled Knee",
+    fallbackDescription: "A brutal blow buckles the target’s knee, imposing a -1 circumstance penalty to Acrobatics checks and Reflex saves for 1 round.",
     weight: 1,
-    tags: ["movement", "control"],
+    tags: ["movement", "debuff", "injury"],
     filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
-    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "land", value: -15, modifierType: "circumstance" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["acrobatics", "reflex"], value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponCriticalCard({
     id: "bludgeoning.thunderclap-impact",

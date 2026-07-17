@@ -1,6 +1,6 @@
 {
   "name": "pf2e-critical-forge-arsenal",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "private": true,
   "type": "module",
   "scripts": {

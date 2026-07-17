@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.8
+
+### Changed
+
+- Completed the Mechanical Review patch for Bludgeoning Critical Hits.
+- Reworked **Bone-Rattling Strike** to apply a circumstance penalty to Athletics instead of Enfeebled 1.
+- Reworked **Buckled Knee** to penalize Acrobatics and Reflex instead of duplicating another movement-reduction effect.
+- Reworked **Folded Defense** to penalize attack rolls instead of Fortitude saves.
+- Corrected the fallback title for **Buckled Knee**.
+- Preserved all 30 cards, draw weights, and pack structure.
+
 ## 0.3.7
 
 ### Changed

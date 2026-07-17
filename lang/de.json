@@ -193,7 +193,7 @@
       },
       "BoneRattlingStrike": {
         "Title": "Knochenrüttelnder Treffer",
-        "Description": "Der Aufprall schüttelt die Kraft aus Gliedern und Griff. Das Ziel ist 1 Runde lang entkräftet 1."
+        "Description": "Der Aufprall hinterlässt schwere Prellungen an Muskeln und Gelenken und verleiht dem Ziel 1 Runde lang einen Umstandsmalus von –1 auf Athletik."
       },
       "CrushedGuard": {
         "Title": "Zerschmetterte Deckung",
@@ -621,7 +621,7 @@
       },
       "FoldedDefense": {
         "Title": "Gefaltete Verteidigung",
-        "Description": "Der Schlag faltet die Deckung des Ziels nach innen, macht es für 1 Runde auf dem falschen Fuß und verleiht ihm einen Umstandsmalus von -1 auf Zähigkeitswürfe."
+        "Description": "Der Schlag lässt die Verteidigung des Ziels zusammenbrechen. Es ist 1 Runde lang auf dem falschen Fuß und erhält einen Umstandsmalus von –1 auf Angriffswürfe."
       },
       "NumbedSupport": {
         "Title": "Betäubte Stütze",
@@ -729,7 +729,7 @@
       },
       "BuckledKnee": {
         "Title": "Eingeknicktes Knie",
-        "Description": "Ein brutaler Treffer betäubt die Stütze des Ziels und reduziert seine Bewegungsrate an Land 1 Runde lang um 4,5 Meter."
+        "Description": "Ein brutaler Schlag lässt das Knie des Ziels einknicken und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Akrobatik und Reflexwürfe."
       },
       "ThunderclapImpact": {
         "Title": "Donnerschlag",
