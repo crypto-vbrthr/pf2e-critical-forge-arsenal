@@ -29,7 +29,7 @@ const { EXPANDED_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arsenal");
-assert.equal(manifest.version, "0.3.4");
+assert.equal(manifest.version, "0.3.6");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 
@@ -38,7 +38,7 @@ const dependency = manifest.relationships?.requires?.find(
 );
 assert.ok(dependency, "Critical Forge must be a required dependency.");
 assert.equal(dependency.type, "module");
-assert.equal(dependency.compatibility?.minimum, "0.8.0-rc.2");
+assert.equal(dependency.compatibility?.minimum, "0.9.0-dev");
 assert.ok(
   manifest.relationships?.systems?.some((entry) => entry.id === "pf2e"),
   "PF2e must be declared as the required system."
@@ -70,7 +70,7 @@ const toneCounts = new Map();
 
 for (const pack of disabledPacks) {
   assert.equal(pack.schemaVersion, 1);
-  assert.equal(pack.version, "0.3.4");
+  assert.equal(pack.version, "0.3.6");
   assert.equal(pack.cards.length, 30);
   assert.equal(pack.enabled, false);
   assert.ok(getLocalization(de, pack.titleKey), pack.titleKey);
@@ -102,7 +102,7 @@ for (const pack of disabledPacks) {
     if (card.category === "criticalFumble") {
       assert.equal(card.effect.target, "source", `${card.id} must affect the attacker.`);
     }
-    assert.equal(card.effect.definition.schemaVersion, 1);
+    assert.equal(card.effect.definition.schemaVersion, 2);
     assert.ok(card.effect.definition.duration);
     assert.ok(card.effect.definition.components.length > 0);
 
@@ -167,4 +167,4 @@ assert.match(settingsScript, /default: false/);
 assert.match(settingsScript, /type: Boolean/);
 assert.doesNotMatch(settingsScript, /BooleanField/);
 
-console.log("PF2E Critical Forge: Arsenal 0.3.4 structural validation passed.");
+console.log("PF2E Critical Forge: Arsenal 0.3.6 structural validation passed.");

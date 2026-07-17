@@ -2,7 +2,7 @@
   "id": "pf2e-critical-forge-arsenal",
   "title": "PF2E Critical Forge: Arsenal",
   "description": "Additional card packs for PF2E Critical Forge.",
-  "version": "0.3.4",
+  "version": "0.3.6",
   "authors": [
     {
       "name": "Bully"
@@ -18,7 +18,7 @@
         "id": "pf2e-critical-forge",
         "type": "module",
         "compatibility": {
-          "minimum": "0.8.0-rc.2"
+          "minimum": "0.9.0-dev"
         }
       }
     ],

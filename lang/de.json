@@ -393,7 +393,7 @@
       },
       "SeveredMomentum": {
         "Title": "Durchtrennter Schwung",
-        "Description": "Der Schnitt unterbricht jeden Versuch, wieder Tempo aufzunehmen, und reduziert für 1 Runde alle Bewegungsraten um 3 Meter."
+        "Description": "Der Schnitt unterbricht den Schwung des Ziels und verringert 1 Runde lang alle seine Bewegungsraten um 3 Meter."
       },
       "OpenedSeam": {
         "Title": "Geöffnete Naht",
@@ -633,7 +633,7 @@
       },
       "TendonSnag": {
         "Title": "Sehne erfasst",
-        "Description": "Die Schneide erfasst eine Sehne oder eine vergleichbare Stütze und reduziert 1 Runde lang alle Bewegungsraten um 3 Meter."
+        "Description": "Die Schneide erfasst eine Sehne oder eine vergleichbare Stützstruktur und verleiht 1 Runde lang einen Umstandsmalus von –1 auf Akrobatik und Reflexwürfe."
       },
       "CrimsonDistraction": {
         "Title": "Scharlachrote Ablenkung",

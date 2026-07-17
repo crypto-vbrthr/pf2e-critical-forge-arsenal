@@ -14,12 +14,12 @@ export const SLASHING_CARDS = Object.freeze([
     impact: "light",
     fallbackTitle: "Opening in the Guard",
     fallbackDescription:
-      "The critical slash tears open the target's guard, leaving it off-guard for 1 round.",
+      "The critical slash tears open the target's guard, imposing a -1 circumstance penalty to Reflex saves for 1 round.",
     weight: 2,
     tags: ["control"],
     effect: {
       duration: ONE_ROUND,
-      components: [{ type: "condition", slug: "off-guard" }]
+      components: [{ type: "modifier", selector: "reflex", value: -1, modifierType: "circumstance", predicate: [] }]
     }
   }),
   defineWeaponCriticalCard({
@@ -169,11 +169,11 @@ export const SLASHING_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "strong",
     fallbackTitle: "Rending Strike",
-    fallbackDescription: "The strike tears a ragged wound that inflicts 1d6 persistent bleed damage.",
+    fallbackDescription: "The strike tears a ragged wound that inflicts 1d4 persistent bleed damage and leaves the target enfeebled 1 for 1 round.",
     weight: 1,
     tags: ["bleed", "persistent-damage"],
     filters: {"excludedTargetTraits": ["construct", "elemental", "incorporeal", "ooze", "undead"]},
-    effect: { duration: UNLIMITED, components: [{ type: "persistentDamage", formula: "1d6", damageType: "bleed" }] }
+    effect: { duration: UNLIMITED, components: [{ type: "persistentDamage", formula: "1d4", damageType: "bleed" }, { type:"condition", slug:"enfeebled", value:1, duration: ONE_ROUND }] }
   }),
   defineWeaponCriticalCard({
     id: "slashing.sweeping-pressure",
@@ -225,14 +225,14 @@ export const SLASHING_CARDS = Object.freeze([
   defineWeaponCriticalCard({
     id: "slashing.scarlet-feint", localizationKey: "ScarletFeint", damageType: "slashing",
     tone: "dramatic", impact: "light", fallbackTitle: "Scarlet Feint",
-    fallbackDescription: "The flashing edge draws the target into the wrong defense, leaving it off-guard for 1 round.",
+    fallbackDescription: "The flashing edge draws the target into the wrong defense, imposing a -1 circumstance penalty to Reflex saves for 1 round.",
     weight: 2, tags: ["control", "setup"],
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "reflex", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponCriticalCard({
     id: "slashing.severed-momentum", localizationKey: "SeveredMomentum", damageType: "slashing",
     tone: "serious", impact: "moderate", fallbackTitle: "Severed Momentum",
-    fallbackDescription: "The cut interrupts every attempt to regain speed, reducing all Speeds by 10 feet for 1 round.",
+    fallbackDescription: "The cut interrupts the target’s momentum, reducing all its Speeds by 10 feet for 1 round.",
     weight: 1, tags: ["movement", "control"], filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
     effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
   }),
@@ -246,9 +246,9 @@ export const SLASHING_CARDS = Object.freeze([
   defineWeaponCriticalCard({
     id: "slashing.red-rhythm", localizationKey: "RedRhythm", damageType: "slashing",
     tone: "dramatic", impact: "strong", fallbackTitle: "Red Rhythm",
-    fallbackDescription: "A succession of shallow tears becomes a relentless wound, inflicting 1d4 persistent bleed damage and leaving the target clumsy 1 for 1 round.",
+    fallbackDescription: "A succession of shallow tears becomes a relentless wound, inflicting 1d4 persistent bleed damage and leaving the target off-guard for 1 round.",
     weight: 1, tags: ["bleed", "persistent-damage", "debuff"], filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
-    effect: { duration: UNLIMITED, components: [{ type: "persistentDamage", formula: "1d4", damageType: "bleed" }, { type: "condition", slug: "clumsy", value: 1 }] }
+    effect: { duration: UNLIMITED, components: [{ type: "persistentDamage", formula: "1d4", damageType: "bleed" }, { type: "condition", slug: "off-guard", duration: ONE_ROUND }] }
   }),
   defineWeaponCriticalCard({
     id: "slashing.crescent-reversal", localizationKey: "CrescentReversal", damageType: "slashing",
@@ -317,7 +317,7 @@ export const SLASHING_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Crosswise Ruin",
-    fallbackDescription: "A brutal crosscut spoils offense and defense alike, imposing a -1 circumstance penalty to attack rolls and AC for 1 round.",
+    fallbackDescription: "A brutal crosscut disrupts the target's awareness, imposing a -1 circumstance penalty to Perception for 1 round.",
     weight: 1,
     tags: ["debuff", "defense"],
     effect: {
@@ -325,10 +325,7 @@ export const SLASHING_CARDS = Object.freeze([
       components: [
         {
           "type": "modifier",
-          "selector": [
-            "attack-roll",
-            "ac"
-          ],
+          "selector":"perception",
           "value": -1,
           "modifierType": "circumstance",
           "predicate": []
@@ -343,7 +340,7 @@ export const SLASHING_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "strong",
     fallbackTitle: "Bleeding Distraction",
-    fallbackDescription: "A persistent trickle of blood or leaking essence breaks concentration, inflicting 1d4 persistent bleed damage and a -1 circumstance penalty to Will saves for 1 round.",
+    fallbackDescription: "A persistent trickle of blood or leaking essence breaks concentration, inflicting 1d4 persistent bleed damage and stupefying the target 1 for 1 round.",
     weight: 1,
     tags: ["bleed", "persistent-damage", "debuff"],
     filters: {"excludedTargetTraits": ["construct", "elemental", "incorporeal", "ooze", "undead"]},
@@ -356,11 +353,7 @@ export const SLASHING_CARDS = Object.freeze([
           "damageType": "bleed"
         },
         {
-          "type": "modifier",
-          "selector": "will",
-          "value": -1,
-          "modifierType": "circumstance",
-          "predicate": []
+          "type": "condition", "slug":"stupefied","value":1, "duration": ONE_ROUND
         }
       ]
     }
@@ -411,11 +404,11 @@ export const SLASHING_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Tendon Snag",
-    fallbackDescription: "The edge catches a tendon or equivalent support, reducing all Speeds by 10 feet for 1 round.",
+    fallbackDescription: "The edge catches a tendon or equivalent support, imposing a -1 circumstance penalty to Acrobatics and Reflex saves for 1 round.",
     weight: 1,
     tags: ["movement", "control"],
     filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
-    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["acrobatics", "reflex"], value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponCriticalCard({
     id: "slashing.crimson-distraction",
@@ -437,10 +430,10 @@ export const SLASHING_CARDS = Object.freeze([
     tone: "neutral",
     impact: "moderate",
     fallbackTitle: "Peeling Edge",
-    fallbackDescription: "The blade peels protection away from the target, giving it weakness 2 to slashing damage for 1 round.",
+    fallbackDescription: "The blade peels protection away from the target, leaving it enfeebled 1 for 1 round.",
     weight: 1,
     tags: ["vulnerability", "setup"],
-    effect: { duration: ONE_ROUND, components: [{ type: "weakness", weaknessType: "slashing", value: 2 }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }] }
   }),
   defineWeaponCriticalCard({
     id: "slashing.butchered-balance",

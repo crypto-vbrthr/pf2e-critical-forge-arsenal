@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.3.6
+
+### Fixed
+
+- Updated all Arsenal card effect definitions to Effect Schema 2 for compatibility with Critical Forge 0.9.0-dev.
+- Added component-level one-round durations to Rending Strike, Red Rhythm, and Bleeding Distraction.
+- Replaced unsupported `rollOption` components that prevented extension-pack registration.
+- Corrected Scarlet Feint so its mechanical effect matches its Reflex-penalty description.
+
+### Changed
+
+- Severed Momentum now reduces all Speeds by 10 feet for 1 round.
+- Tendon Snag now imposes a -1 circumstance penalty to Acrobatics and Reflex saves for 1 round.
+
+## v0.3.5
+- Mechanical review patch for Slashing Critical Hits.
+- Reworked duplicate cards.
+- Updated bleeding cards.
+- Fixed mixed-duration designs.
+
+# Changelog
+
 ## 0.3.4
 
 - Added five cards to each of the six core weapon packs.

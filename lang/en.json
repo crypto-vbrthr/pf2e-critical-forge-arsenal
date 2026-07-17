@@ -393,7 +393,7 @@
       },
       "SeveredMomentum": {
         "Title": "Severed Momentum",
-        "Description": "The cut interrupts every attempt to regain speed, reducing all Speeds by 10 feet for 1 round."
+        "Description": "The cut interrupts the target’s momentum, reducing all its Speeds by 10 feet for 1 round."
       },
       "OpenedSeam": {
         "Title": "Opened Seam",
@@ -633,7 +633,7 @@
       },
       "TendonSnag": {
         "Title": "Tendon Snag",
-        "Description": "The edge catches a tendon or equivalent support, reducing all Speeds by 10 feet for 1 round."
+        "Description": "The edge catches a tendon or equivalent support, imposing a -1 circumstance penalty to Acrobatics and Reflex saves for 1 round."
       },
       "CrimsonDistraction": {
         "Title": "Crimson Distraction",

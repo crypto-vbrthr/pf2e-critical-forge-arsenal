@@ -59,7 +59,7 @@ function freezeEffect(effect, localizationKey, fallbackTitle, defaultTarget) {
     nameKey: `PF2ECFA.Effects.${localizationKey}.Name`,
     fallbackName: effect.fallbackName ?? fallbackTitle,
     definition: Object.freeze({
-      schemaVersion: 1,
+      schemaVersion: 2,
       duration: effect.duration,
       components: Object.freeze(
         (effect.components ?? []).map((component) => Object.freeze({ ...component }))
