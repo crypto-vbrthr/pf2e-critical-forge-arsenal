@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.1
+
+### Fixed
+
+- Restored valid module loading after the initial 0.4.1 package contained malformed card data.
+- Corrected the source-trait filter on **Rebound Numbness**.
+
+### Changed
+
+- Completed the Mechanical Review patch for Bludgeoning Critical Fumbles.
+- Reworked **Numbing Rebound**, **Rebound Numbness**, **Heavy Drift**, **Dragging Weight**, **Dust Cloud**, **Staggered Recovery**, and **Collapsing Stance** to reduce mechanical duplication.
+- Updated English and German localization.
+
 ## 0.4.0
 
 ### Changed

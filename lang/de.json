@@ -501,7 +501,7 @@
       },
       "DustCloud": {
         "Title": "Staubwolke",
-        "Description": "Der Fehlschlag zertrümmert nahe Trümmer und füllt die Sicht des Angreifers, wodurch er für 1 Runde geblendet ist."
+        "Description": "Der Fehlschlag zertrümmert nahe Trümmer und verleiht dem Angreifer 1 Runde lang einen Umstandsmalus von –1 auf Wahrnehmung."
       },
       "BreathlessFocus": {
         "Title": "Atemlose Konzentration",
@@ -597,7 +597,7 @@
       },
       "NumbingRebound": {
         "Title": "Betäubender Rückprall",
-        "Description": "Ein heftiger Rückprall betäubt die Arme des Angreifers und macht ihn für 1 Runde entkräftet 1."
+        "Description": "Ein heftiger Rückprall betäubt die Arme des Angreifers und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Athletik."
       },
       "CrackedFocus": {
         "Title": "Gebrochene Konzentration",
@@ -605,7 +605,7 @@
       },
       "DraggingWeight": {
         "Title": "Zerrendes Gewicht",
-        "Description": "Die schwere Waffe zieht den Angreifer durch eine schlechte Erholung und reduziert alle seine Bewegungsraten für 1 Runde um 1,5 Meter."
+        "Description": "Die schwere Waffe zieht den Angreifer durch eine schlechte Erholung und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Akrobatik und Reflexwürfe."
       },
       "EchoingMiss": {
         "Title": "Hallender Fehlschlag",
@@ -701,15 +701,15 @@
       },
       "HeavyDrift": {
         "Title": "Schweres Abdriften",
-        "Description": "Das Gewicht der Waffe zieht den Angreifer aus der Linie und lässt ihn 1 Runde lang auf dem falschen Fuß."
+        "Description": "Das Gewicht der Waffe zieht den Angreifer aus der Linie und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Akrobatik."
       },
       "ReboundNumbness": {
         "Title": "Taubheit durch Rückprall",
-        "Description": "Der Rückprall läuft durch die Arme des Angreifers und macht ihn 1 Runde lang entkräftet 1."
+        "Description": "Der Rückprall läuft durch die Arme des Angreifers und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Zähigkeitswürfe."
       },
       "StaggeredRecovery": {
         "Title": "Taumelnde Erholung",
-        "Description": "Der Fehlschwung zwingt den Angreifer in eine stolpernde Erholung und reduziert 1 Runde lang alle Bewegungsraten um 3 Meter."
+        "Description": "Der Fehlschwung zwingt den Angreifer in eine stolpernde Erholung und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Reflexwürfe."
       },
       "RingingGrip": {
         "Title": "Dröhnender Griff",
@@ -717,7 +717,7 @@
       },
       "CollapsingStance": {
         "Title": "Zusammenbrechender Stand",
-        "Description": "Der eigene Schwung lässt den Stand des Angreifers einknicken. Er ist 1 Runde lang unbeholfen 1 und auf dem falschen Fuß."
+        "Description": "Der eigene Schwung lässt den Stand des Angreifers einknicken und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Athletik und Reflexwürfe."
       },
       "NeedlesPassage": {
         "Title": "Nadelöhr",

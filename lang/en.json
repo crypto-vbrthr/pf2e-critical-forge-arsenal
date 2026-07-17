@@ -501,7 +501,7 @@
       },
       "DustCloud": {
         "Title": "Dust Cloud",
-        "Description": "The miss pulverizes nearby debris and fills the attacker's sight, leaving them dazzled for 1 round."
+        "Description": "The miss pulverizes nearby debris, imposing a -1 circumstance penalty to Perception checks for 1 round."
       },
       "BreathlessFocus": {
         "Title": "Breathless Focus",
@@ -597,7 +597,7 @@
       },
       "NumbingRebound": {
         "Title": "Numbing Rebound",
-        "Description": "A violent rebound deadens the attacker’s arms, leaving them enfeebled 1 for 1 round."
+        "Description": "A violent rebound deadens the attacker’s arms, imposing a -1 circumstance penalty to Athletics checks for 1 round."
       },
       "CrackedFocus": {
         "Title": "Cracked Focus",
@@ -605,7 +605,7 @@
       },
       "DraggingWeight": {
         "Title": "Dragging Weight",
-        "Description": "The heavy weapon pulls the attacker through a poor recovery, reducing all Speeds by 5 feet for 1 round."
+        "Description": "The heavy weapon pulls the attacker through a poor recovery, imposing a -1 circumstance penalty to Acrobatics checks and Reflex saves for 1 round."
       },
       "EchoingMiss": {
         "Title": "Echoing Miss",
@@ -701,15 +701,15 @@
       },
       "HeavyDrift": {
         "Title": "Heavy Drift",
-        "Description": "The weapon’s weight drags the attacker off line, leaving it off-guard for 1 round."
+        "Description": "The weapon’s weight drags the attacker off line, imposing a -1 circumstance penalty to Acrobatics checks for 1 round."
       },
       "ReboundNumbness": {
         "Title": "Rebound Numbness",
-        "Description": "The impact rebounds through the attacker’s arms, leaving it enfeebled 1 for 1 round."
+        "Description": "The impact rebounds through the attacker’s arms, imposing a -1 circumstance penalty to Fortitude saves for 1 round."
       },
       "StaggeredRecovery": {
         "Title": "Staggered Recovery",
-        "Description": "The missed swing pulls the attacker into a stumbling recovery, reducing all Speeds by 10 feet for 1 round."
+        "Description": "The missed swing pulls the attacker into a stumbling recovery, imposing a -1 circumstance penalty to Reflex saves for 1 round."
       },
       "RingingGrip": {
         "Title": "Ringing Grip",
@@ -717,7 +717,7 @@
       },
       "CollapsingStance": {
         "Title": "Collapsing Stance",
-        "Description": "The attacker’s own momentum buckles its stance, leaving it clumsy 1 and off-guard for 1 round."
+        "Description": "The attacker’s own momentum buckles its stance, imposing a -1 circumstance penalty to Athletics checks and Reflex saves for 1 round."
       },
       "NeedlesPassage": {
         "Title": "Needle’s Passage",

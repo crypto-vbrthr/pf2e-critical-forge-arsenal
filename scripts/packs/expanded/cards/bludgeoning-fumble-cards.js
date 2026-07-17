@@ -228,9 +228,9 @@ export const BLUDGEONING_FUMBLE_CARDS = Object.freeze([
   defineWeaponFumbleCard({
     id: "bludgeoning-fumble.dust-cloud", localizationKey: "DustCloud", damageType: "bludgeoning",
     tone: "dramatic", impact: "moderate", fallbackTitle: "Dust Cloud",
-    fallbackDescription: "The miss pulverizes nearby debris and fills the attacker's sight, leaving them dazzled for 1 round.",
+    fallbackDescription: "The miss pulverizes nearby debris, imposing a -1 circumstance penalty to Perception checks for 1 round.",
     weight: 1, tags: ["senses", "recovery"],
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "dazzled" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "perception", value: -1, modifierType: "circumstance", predicate: [] }] }
   })
 ,
   defineWeaponFumbleCard({
@@ -265,16 +265,18 @@ export const BLUDGEONING_FUMBLE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Numbing Rebound",
-    fallbackDescription: "A violent rebound deadens the attacker’s arms, leaving them enfeebled 1 for 1 round.",
+    fallbackDescription: "A violent rebound deadens the attacker\’s arms, imposing a -1 circumstance penalty to Athletics checks for 1 round.",
     weight: 1,
     tags: ["recoil", "debuff"],
     effect: {
       duration: ONE_ROUND,
       components: [
         {
-          "type": "condition",
-          "slug": "enfeebled",
-          "value": 1
+          "type": "modifier",
+          "selector": "athletics",
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
         }
       ]
     }
@@ -312,17 +314,18 @@ export const BLUDGEONING_FUMBLE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "light",
     fallbackTitle: "Dragging Weight",
-    fallbackDescription: "The heavy weapon pulls the attacker through a poor recovery, reducing all Speeds by 5 feet for 1 round.",
+    fallbackDescription: "The heavy weapon pulls the attacker through a poor recovery, imposing a -1 circumstance penalty to Acrobatics checks and Reflex saves for 1 round.",
     weight: 2,
     tags: ["movement", "recovery"],
     effect: {
       duration: ONE_ROUND,
       components: [
         {
-          "type": "movement",
-          "movementType": "all",
-          "value": -5,
-          "modifierType": "circumstance"
+          "type": "modifier",
+          "selector": ["acrobatics", "reflex"],
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
         }
       ]
     }
@@ -358,10 +361,10 @@ export const BLUDGEONING_FUMBLE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "light",
     fallbackTitle: "Heavy Drift",
-    fallbackDescription: "The weapon’s weight drags the attacker off line, leaving it off-guard for 1 round.",
+    fallbackDescription: "The weapon’s weight drags the attacker off line, imposing a -1 circumstance penalty to Acrobatics checks for 1 round.",
     weight: 2,
     tags: ["control"],
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "acrobatics", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "bludgeoning-fumble.rebound-numbness",
@@ -370,11 +373,11 @@ export const BLUDGEONING_FUMBLE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Rebound Numbness",
-    fallbackDescription: "The impact rebounds through the attacker’s arms, leaving it enfeebled 1 for 1 round.",
+    fallbackDescription: "The impact rebounds through the attacker’s arms, imposing a -1 circumstance penalty to Fortitude saves for 1 round.",
     weight: 1,
     tags: ["debuff"],
-    filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }] }
+    filters: { excludedSourceTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "fortitude", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "bludgeoning-fumble.staggered-recovery",
@@ -383,10 +386,10 @@ export const BLUDGEONING_FUMBLE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "moderate",
     fallbackTitle: "Staggered Recovery",
-    fallbackDescription: "The missed swing pulls the attacker into a stumbling recovery, reducing all Speeds by 10 feet for 1 round.",
+    fallbackDescription: "The missed swing pulls the attacker into a stumbling recovery, imposing a -1 circumstance penalty to Reflex saves for 1 round.",
     weight: 1,
     tags: ["movement", "control"],
-    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "reflex", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "bludgeoning-fumble.ringing-grip",
@@ -407,9 +410,9 @@ export const BLUDGEONING_FUMBLE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "strong",
     fallbackTitle: "Collapsing Stance",
-    fallbackDescription: "The attacker’s own momentum buckles its stance, leaving it clumsy 1 and off-guard for 1 round.",
+    fallbackDescription: "The attacker’s own momentum buckles its stance, imposing a -1 circumstance penalty to Athletics checks and Reflex saves for 1 round.",
     weight: 1,
     tags: ["control", "debuff"],
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }, { type: "condition", slug: "off-guard" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["athletics", "reflex"], value: -1, modifierType: "circumstance", predicate: [] }] }
   })
 ]);
