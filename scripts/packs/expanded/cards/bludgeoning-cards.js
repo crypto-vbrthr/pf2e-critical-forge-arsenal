@@ -236,5 +236,229 @@ export const BLUDGEONING_CARDS = Object.freeze([
     fallbackDescription: "The blow knocks strength and defense out of alignment, leaving the target enfeebled 1 and off-guard for 1 round.",
     weight: 1, tags: ["control", "debuff"], filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
     effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }, { type: "condition", slug: "off-guard" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.driving-impact", localizationKey: "DrivingImpact", damageType: "bludgeoning",
+    tone: "dramatic", impact: "light", fallbackTitle: "Driving Impact",
+    fallbackDescription: "The impact forces the target into a guarded crouch, leaving it off-guard for 1 round.",
+    weight: 2, tags: ["control", "setup"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.dead-leg", localizationKey: "DeadLeg", damageType: "bludgeoning",
+    tone: "serious", impact: "moderate", fallbackTitle: "Dead Leg",
+    fallbackDescription: "A crushing hit numbs the target's stride, reducing all Speeds by 10 feet for 1 round.",
+    weight: 1, tags: ["movement", "control"], filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.bell-ringer", localizationKey: "BellRinger", damageType: "bludgeoning",
+    tone: "dramatic", impact: "moderate", fallbackTitle: "Bell Ringer",
+    fallbackDescription: "The blow fills the target's senses with thunder, leaving it dazzled and imposing a -1 circumstance penalty to Perception for 1 round.",
+    weight: 1, tags: ["senses", "debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "dazzled" }, { type: "modifier", selector: "perception", value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.crumpled-guard", localizationKey: "CrumpledGuard", damageType: "bludgeoning",
+    tone: "serious", impact: "strong", fallbackTitle: "Crumpled Guard",
+    fallbackDescription: "The strike folds the target's defense inward, leaving it clumsy 1 and imposing a -1 circumstance penalty to AC for 1 round.",
+    weight: 1, tags: ["control", "defense"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }, { type: "modifier", selector: "ac", value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.shock-through-the-frame", localizationKey: "ShockThroughTheFrame", damageType: "bludgeoning",
+    tone: "dramatic", impact: "moderate", fallbackTitle: "Shock Through the Frame",
+    fallbackDescription: "The impact travels through armor, bone, or chassis, imposing a -1 circumstance penalty to Fortitude saves and attack rolls for 1 round.",
+    weight: 1, tags: ["debuff", "control"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["fortitude", "attack-roll"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  })
+,
+  defineWeaponCriticalCard({
+    id: "bludgeoning.temple-chime",
+    localizationKey: "TempleChime",
+    damageType: "bludgeoning",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Temple Chime",
+    fallbackDescription: "The impact turns the world into a dull roar, leaving the target deafened for 1 round.",
+    weight: 1,
+    tags: ["senses", "control"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "deafened"
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.folded-defense",
+    localizationKey: "FoldedDefense",
+    damageType: "bludgeoning",
+    tone: "serious",
+    impact: "strong",
+    fallbackTitle: "Folded Defense",
+    fallbackDescription: "The blow folds the target’s guard inward, leaving it off-guard and imposing a -1 circumstance penalty to Fortitude saves for 1 round.",
+    weight: 1,
+    tags: ["control", "debuff"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "off-guard"
+        },
+        {
+          "type": "modifier",
+          "selector": "fortitude",
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.numbed-support",
+    localizationKey: "NumbedSupport",
+    damageType: "bludgeoning",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Numbed Support",
+    fallbackDescription: "A crushing strike numbs the target’s support, reducing its land Speed by 10 feet and leaving it clumsy 1 for 1 round.",
+    weight: 1,
+    tags: ["movement", "debuff"],
+    filters: {"excludedTargetTraits": ["incorporeal", "ooze"]},
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "movement",
+          "movementType": "land",
+          "value": -10,
+          "modifierType": "circumstance"
+        },
+        {
+          "type": "condition",
+          "slug": "clumsy",
+          "value": 1
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.rattled-instincts",
+    localizationKey: "RattledInstincts",
+    damageType: "bludgeoning",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Rattled Instincts",
+    fallbackDescription: "The shock scrambles threat and direction, imposing a -1 circumstance penalty to Perception and Will saves for 1 round.",
+    weight: 1,
+    tags: ["senses", "debuff"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "modifier",
+          "selector": [
+            "perception",
+            "will"
+          ],
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.cascade-of-impact",
+    localizationKey: "CascadeOfImpact",
+    damageType: "bludgeoning",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Cascade of Impact",
+    fallbackDescription: "The blow sends a chain of shocks through armor, bone, or structure, leaving the target enfeebled 1 and dazzled for 1 round.",
+    weight: 1,
+    tags: ["debuff", "senses"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "enfeebled",
+          "value": 1
+        },
+        {
+          "type": "condition",
+          "slug": "dazzled"
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.hammered-guard",
+    localizationKey: "HammeredGuard",
+    damageType: "bludgeoning",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Hammered Guard",
+    fallbackDescription: "The impact crushes the target’s guard inward, imposing a -1 circumstance penalty to AC and attack rolls for 1 round.",
+    weight: 1,
+    tags: ["defense", "debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["ac", "attack-roll"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.buckled-knee",
+    localizationKey: "BuckledKnee",
+    damageType: "bludgeoning",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Dead Leg",
+    fallbackDescription: "A brutal blow numbs the target’s support, reducing its land Speed by 15 feet for 1 round.",
+    weight: 1,
+    tags: ["movement", "control"],
+    filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "land", value: -15, modifierType: "circumstance" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.thunderclap-impact",
+    localizationKey: "ThunderclapImpact",
+    damageType: "bludgeoning",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Bell Ringer",
+    fallbackDescription: "The strike fills the target’s senses with thunder, leaving it dazzled and deafened for 1 round.",
+    weight: 1,
+    tags: ["senses", "control"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "dazzled" }, { type: "condition", slug: "deafened" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.cracked-foundation",
+    localizationKey: "CrackedFoundation",
+    damageType: "bludgeoning",
+    tone: "neutral",
+    impact: "moderate",
+    fallbackTitle: "Cracked Foundation",
+    fallbackDescription: "The blow compromises armor, shell, or stance, giving the target weakness 2 to bludgeoning damage for 1 round.",
+    weight: 1,
+    tags: ["vulnerability", "setup"],
+    effect: { duration: ONE_ROUND, components: [{ type: "weakness", weaknessType: "bludgeoning", value: 2 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "bludgeoning.reeling-frame",
+    localizationKey: "ReelingFrame",
+    damageType: "bludgeoning",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Reeling Frame",
+    fallbackDescription: "The target reels under the impact, becoming off-guard and clumsy 1 for 1 round.",
+    weight: 1,
+    tags: ["control", "debuff"],
+    filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }, { type: "condition", slug: "clumsy", value: 1 }] }
   })
 ]);

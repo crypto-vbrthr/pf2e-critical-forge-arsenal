@@ -197,5 +197,223 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
     fallbackDescription: "Weapon, clothing, and momentum knot together, reducing all Speeds by 10 feet for 1 round.",
     weight: 1, tags: ["movement"], filters: { excludedSourceTraits: ["incorporeal"] },
     effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.empty-arc", localizationKey: "EmptyArc", damageType: "slashing",
+    tone: "neutral", impact: "light", fallbackTitle: "Empty Arc",
+    fallbackDescription: "The blade cuts only air and carries the attacker past a safe guard, leaving them off-guard for 1 round.",
+    weight: 2, tags: ["control"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.dragged-edge", localizationKey: "DraggedEdge", damageType: "slashing",
+    tone: "serious", impact: "moderate", fallbackTitle: "Dragged Edge",
+    fallbackDescription: "The edge catches ground, wall, or debris and drags the attacker out of rhythm, reducing all Speeds by 10 feet for 1 round.",
+    weight: 1, tags: ["movement", "recovery"],
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.opened-center", localizationKey: "OpenedCenter", damageType: "slashing",
+    tone: "serious", impact: "moderate", fallbackTitle: "Opened Center",
+    fallbackDescription: "The overwide swing exposes the attacker's centerline, imposing a -1 circumstance penalty to AC and Reflex saves for 1 round.",
+    weight: 1, tags: ["defense", "debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["ac", "reflex"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.wrenched-shoulder", localizationKey: "WrenchedShoulder", damageType: "slashing",
+    tone: "serious", impact: "strong", fallbackTitle: "Wrenched Shoulder",
+    fallbackDescription: "The failed cut wrenches the attacker's shoulder, leaving them enfeebled 1 and imposing a -1 circumstance penalty to attack rolls for 1 round.",
+    weight: 1, tags: ["debuff", "recovery"], filters: { excludedSourceTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }, { type: "modifier", selector: "attack-roll", value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.flash-of-steel", localizationKey: "FlashOfSteel", damageType: "slashing",
+    tone: "dramatic", impact: "moderate", fallbackTitle: "Flash of Steel",
+    fallbackDescription: "A wild reflection or burst of debris crosses the attacker's sight, leaving them dazzled for 1 round.",
+    weight: 1, tags: ["senses", "recovery"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "dazzled" }] }
+  })
+,
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.dragged-by-the-edge",
+    localizationKey: "DraggedByTheEdge",
+    damageType: "slashing",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Dragged by the Edge",
+    fallbackDescription: "The missed swing keeps pulling after the target is gone, leaving the attacker off-guard and reducing their land Speed by 5 feet for 1 round.",
+    weight: 1,
+    tags: ["control", "movement"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "off-guard"
+        },
+        {
+          "type": "movement",
+          "movementType": "land",
+          "value": -5,
+          "modifierType": "circumstance"
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.nicked-guard",
+    localizationKey: "NickedGuard",
+    damageType: "slashing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Nicked Guard",
+    fallbackDescription: "The edge catches the attacker’s own guard or equipment, imposing a -1 circumstance penalty to AC and Reflex saves for 1 round.",
+    weight: 1,
+    tags: ["defense", "debuff"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "modifier",
+          "selector": [
+            "ac",
+            "reflex"
+          ],
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.wild-recovery",
+    localizationKey: "WildRecovery",
+    damageType: "slashing",
+    tone: "neutral",
+    impact: "light",
+    fallbackTitle: "Wild Recovery",
+    fallbackDescription: "The attacker wrenches the weapon back into line, becoming clumsy 1 for 1 round.",
+    weight: 2,
+    tags: ["recovery", "debuff"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "clumsy",
+          "value": 1
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.blinded-by-the-arc",
+    localizationKey: "BlindedByTheArc",
+    damageType: "slashing",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Blinded by the Arc",
+    fallbackDescription: "The broad miss whips dust, cloth, or debris across the attacker’s vision, leaving them dazzled for 1 round.",
+    weight: 1,
+    tags: ["senses"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "dazzled"
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.spent-momentum",
+    localizationKey: "SpentMomentum",
+    damageType: "slashing",
+    tone: "serious",
+    impact: "strong",
+    fallbackTitle: "Spent Momentum",
+    fallbackDescription: "The full force of the swing is wasted, leaving the attacker enfeebled 1 and imposing a -1 circumstance penalty to attack rolls for 1 round.",
+    weight: 1,
+    tags: ["debuff", "recovery"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "enfeebled",
+          "value": 1
+        },
+        {
+          "type": "modifier",
+          "selector": "attack-roll",
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.overcut-opening",
+    localizationKey: "OvercutOpening",
+    damageType: "slashing",
+    tone: "neutral",
+    impact: "light",
+    fallbackTitle: "Overcut Opening",
+    fallbackDescription: "The swing travels too far and leaves the attacker off-guard for 1 round.",
+    weight: 2,
+    tags: ["control"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.grounded-blade",
+    localizationKey: "GroundedBlade",
+    damageType: "slashing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Dragged Edge",
+    fallbackDescription: "The blade drags across ground or obstruction, imposing a -1 circumstance penalty to attack rolls for 1 round.",
+    weight: 1,
+    tags: ["debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "attack-roll", value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.tangled-footwork",
+    localizationKey: "TangledFootwork",
+    damageType: "slashing",
+    tone: "neutral",
+    impact: "moderate",
+    fallbackTitle: "Tangled Footwork",
+    fallbackDescription: "The failed arc tangles stance and stride, reducing all Speeds by 10 feet for 1 round.",
+    weight: 1,
+    tags: ["movement", "control"],
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.jarred-shoulder",
+    localizationKey: "JarredShoulder",
+    damageType: "slashing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Jarred Shoulder",
+    fallbackDescription: "The abrupt stop jars the attacker’s shoulder, leaving it enfeebled 1 for 1 round.",
+    weight: 1,
+    tags: ["debuff"],
+    filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "slashing-fumble.whirling-exposure",
+    localizationKey: "WhirlingExposure",
+    damageType: "slashing",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Whirling Exposure",
+    fallbackDescription: "Momentum spins the attacker out of position, leaving it off-guard and imposing a -1 circumstance penalty to Reflex saves for 1 round.",
+    weight: 1,
+    tags: ["control", "debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }, { type: "modifier", selector: "reflex", value: -1, modifierType: "circumstance", predicate: [] }] }
   })
 ]);

@@ -386,6 +386,366 @@
       "SprainedWrist": {
         "Title": "Twisted Wrist",
         "Description": "The failed thrust twists the attacker’s wrist. They are enfeebled 1 for 1 round."
+      },
+      "ScarletFeint": {
+        "Title": "Scarlet Feint",
+        "Description": "The flashing edge draws the target into the wrong defense, leaving it off-guard for 1 round."
+      },
+      "SeveredMomentum": {
+        "Title": "Severed Momentum",
+        "Description": "The cut interrupts every attempt to regain speed, reducing all Speeds by 10 feet for 1 round."
+      },
+      "OpenedSeam": {
+        "Title": "Opened Seam",
+        "Description": "The edge opens a seam in armor, hide, or magical protection, imposing a -1 circumstance penalty to AC and Fortitude saves for 1 round."
+      },
+      "RedRhythm": {
+        "Title": "Red Rhythm",
+        "Description": "A succession of shallow tears becomes a relentless wound, inflicting 1d4 persistent bleed damage and leaving the target clumsy 1 for 1 round."
+      },
+      "CrescentReversal": {
+        "Title": "Crescent Reversal",
+        "Description": "The returning arc catches the target during recovery, imposing a -1 circumstance penalty to attack rolls and Perception for 1 round."
+      },
+      "ThreadTheGuard": {
+        "Title": "Thread the Guard",
+        "Description": "The point slips through the smallest opening, leaving the target off-guard for 1 round."
+      },
+      "PinnedStep": {
+        "Title": "Pinned Step",
+        "Description": "The strike catches foot, garment, or gear at exactly the wrong moment, reducing land Speed by 15 feet for 1 round."
+      },
+      "NerveLine": {
+        "Title": "Nerve Line",
+        "Description": "The point grazes a nerve cluster, leaving the target clumsy 1 and imposing a -1 circumstance penalty to Reflex saves for 1 round."
+      },
+      "BreachedCore": {
+        "Title": "Breached Core",
+        "Description": "The thrust finds a vital seam, giving the target weakness 3 to piercing damage for 1 round."
+      },
+      "DrivingImpact": {
+        "Title": "Driving Impact",
+        "Description": "The impact forces the target into a guarded crouch, leaving it off-guard for 1 round."
+      },
+      "DeadLeg": {
+        "Title": "Dead Leg",
+        "Description": "A crushing hit numbs the target's stride, reducing all Speeds by 10 feet for 1 round."
+      },
+      "BellRinger": {
+        "Title": "Bell Ringer",
+        "Description": "The blow fills the target's senses with thunder, leaving it dazzled and imposing a -1 circumstance penalty to Perception for 1 round."
+      },
+      "CrumpledGuard": {
+        "Title": "Crumpled Guard",
+        "Description": "The strike folds the target's defense inward, leaving it clumsy 1 and imposing a -1 circumstance penalty to AC for 1 round."
+      },
+      "ShockThroughTheFrame": {
+        "Title": "Shock Through the Frame",
+        "Description": "The impact travels through armor, bone, or chassis, imposing a -1 circumstance penalty to Fortitude saves and attack rolls for 1 round."
+      },
+      "EmptyArc": {
+        "Title": "Empty Arc",
+        "Description": "The blade cuts only air and carries the attacker past a safe guard, leaving them off-guard for 1 round."
+      },
+      "DraggedEdge": {
+        "Title": "Dragged Edge",
+        "Description": "The edge catches ground, wall, or debris and drags the attacker out of rhythm, reducing all Speeds by 10 feet for 1 round."
+      },
+      "OpenedCenter": {
+        "Title": "Opened Center",
+        "Description": "The overwide swing exposes the attacker's centerline, imposing a -1 circumstance penalty to AC and Reflex saves for 1 round."
+      },
+      "WrenchedShoulder": {
+        "Title": "Wrenched Shoulder",
+        "Description": "The failed cut wrenches the attacker's shoulder, leaving them enfeebled 1 and imposing a -1 circumstance penalty to attack rolls for 1 round."
+      },
+      "FlashOfSteel": {
+        "Title": "Flash of Steel",
+        "Description": "A wild reflection or burst of debris crosses the attacker's sight, leaving them dazzled for 1 round."
+      },
+      "FalseDistance": {
+        "Title": "False Distance",
+        "Description": "The attacker misjudges the final inch and leans into empty space, leaving them off-guard for 1 round."
+      },
+      "LockedKnee": {
+        "Title": "Locked Knee",
+        "Description": "The failed lunge jars the attacker's stance, reducing land Speed by 10 feet for 1 round."
+      },
+      "CrossedLine": {
+        "Title": "Crossed Line",
+        "Description": "The point travels across the attacker's own guard, imposing a -1 circumstance penalty to attack rolls and AC for 1 round."
+      },
+      "NumbedFingers": {
+        "Title": "Numbed Fingers",
+        "Description": "The weapon rebounds through the attacker's grip, leaving them clumsy 1 and imposing a -1 circumstance penalty to Reflex saves for 1 round."
+      },
+      "LostPoint": {
+        "Title": "Lost Point",
+        "Description": "The attacker loses sight of the weapon's point amid the failed thrust, becoming dazzled for 1 round."
+      },
+      "WeightedPastCenter": {
+        "Title": "Weighted Past Center",
+        "Description": "The weapon's weight carries the attacker beyond their guard, leaving them off-guard for 1 round."
+      },
+      "StumblingRecovery": {
+        "Title": "Stumbling Recovery",
+        "Description": "Recovering the heavy weapon costs the attacker their footing, reducing all Speeds by 10 feet for 1 round."
+      },
+      "JarredGuard": {
+        "Title": "Jarred Guard",
+        "Description": "The failed impact jars the attacker's arms and guard, imposing a -1 circumstance penalty to attack rolls and AC for 1 round."
+      },
+      "RecoilThroughTheBones": {
+        "Title": "Recoil Through the Bones",
+        "Description": "The full recoil travels back through the attacker, leaving them enfeebled 1 and imposing a -1 circumstance penalty to Fortitude saves for 1 round."
+      },
+      "DustCloud": {
+        "Title": "Dust Cloud",
+        "Description": "The miss pulverizes nearby debris and fills the attacker's sight, leaving them dazzled for 1 round."
+      },
+      "BreathlessFocus": {
+        "Title": "Breathless Focus",
+        "Description": "A precise impact steals breath and focus, imposing a -1 circumstance penalty to Fortitude saves and spell attack rolls for 1 round."
+      },
+      "CutToTheQuick": {
+        "Title": "Cut to the Quick",
+        "Description": "The edge finds a painfully sensitive line, leaving the target enfeebled 1 for 1 round."
+      },
+      "ShreddedFooting": {
+        "Title": "Shredded Footing",
+        "Description": "The slash tears through straps, clothing, or stance, reducing the target’s land Speed by 10 feet and imposing a -1 circumstance penalty to Reflex saves for 1 round."
+      },
+      "CrosswiseRuin": {
+        "Title": "Crosswise Ruin",
+        "Description": "A brutal crosscut spoils offense and defense alike, imposing a -1 circumstance penalty to attack rolls and AC for 1 round."
+      },
+      "BleedingDistraction": {
+        "Title": "Bleeding Distraction",
+        "Description": "A persistent trickle of blood or leaking essence breaks concentration, inflicting 1d4 persistent bleed damage and a -1 circumstance penalty to Will saves for 1 round."
+      },
+      "PartedGuard": {
+        "Title": "Parted Guard",
+        "Description": "The blade parts the target’s guard from shoulder to hip, leaving it off-guard and reducing all Speeds by 5 feet for 1 round."
+      },
+      "PinpointShock": {
+        "Title": "Pinpoint Shock",
+        "Description": "The point strikes a nerve cluster or delicate joint, leaving the target clumsy 1 for 1 round."
+      },
+      "NailedStep": {
+        "Title": "Nailed Step",
+        "Description": "A precise strike catches foot, limb, or trailing gear, reducing the target’s land Speed by 10 feet and leaving it off-guard for 1 round."
+      },
+      "BreachedJoint": {
+        "Title": "Breached Joint",
+        "Description": "The thrust slips into a joint or structural gap, giving the target weakness 2 to bludgeoning damage for 1 round."
+      },
+      "ThreadedDefense": {
+        "Title": "Threaded Defense",
+        "Description": "The weapon threads cleanly through the defense, leaving the target off-guard and imposing a -1 circumstance penalty to Reflex saves for 1 round."
+      },
+      "RattledInstincts": {
+        "Title": "Rattled Instincts",
+        "Description": "The shock scrambles threat and direction, imposing a -1 circumstance penalty to Perception and Will saves for 1 round."
+      },
+      "CascadeOfImpact": {
+        "Title": "Cascade of Impact",
+        "Description": "The blow sends a chain of shocks through armor, bone, or structure, leaving the target enfeebled 1 and dazzled for 1 round."
+      },
+      "DraggedByTheEdge": {
+        "Title": "Dragged by the Edge",
+        "Description": "The missed swing keeps pulling after the target is gone, leaving the attacker off-guard and reducing their land Speed by 5 feet for 1 round."
+      },
+      "NickedGuard": {
+        "Title": "Nicked Guard",
+        "Description": "The edge catches the attacker’s own guard or equipment, imposing a -1 circumstance penalty to AC and Reflex saves for 1 round."
+      },
+      "WildRecovery": {
+        "Title": "Wild Recovery",
+        "Description": "The attacker wrenches the weapon back into line, becoming clumsy 1 for 1 round."
+      },
+      "BlindedByTheArc": {
+        "Title": "Blinded by the Arc",
+        "Description": "The broad miss whips dust, cloth, or debris across the attacker’s vision, leaving them dazzled for 1 round."
+      },
+      "SpentMomentum": {
+        "Title": "Spent Momentum",
+        "Description": "The full force of the swing is wasted, leaving the attacker enfeebled 1 and imposing a -1 circumstance penalty to attack rolls for 1 round."
+      },
+      "FalseMeasure": {
+        "Title": "False Measure",
+        "Description": "The attacker misjudges distance and timing, taking a -1 circumstance penalty to attack rolls and Perception for 1 round."
+      },
+      "OverextendedPoint": {
+        "Title": "Overextended Point",
+        "Description": "The thrust reaches far past safety, leaving the attacker off-guard and clumsy 1 for 1 round."
+      },
+      "JammedLine": {
+        "Title": "Jammed Line",
+        "Description": "The point catches on ground, armor, or scenery, reducing the attacker’s land Speed by 10 feet for 1 round."
+      },
+      "StungWrist": {
+        "Title": "Stung Wrist",
+        "Description": "The failed thrust snaps back through the wrist, leaving the attacker enfeebled 1 for 1 round."
+      },
+      "TunnelVision": {
+        "Title": "Tunnel Vision",
+        "Description": "Fixation on the missed opening narrows the attacker’s awareness, leaving them dazzled and imposing a -1 circumstance penalty to Will saves for 1 round."
+      },
+      "HammeredStance": {
+        "Title": "Hammered Stance",
+        "Description": "The weapon’s weight drives the attacker out of alignment, leaving them clumsy 1 and off-guard for 1 round."
+      },
+      "NumbingRebound": {
+        "Title": "Numbing Rebound",
+        "Description": "A violent rebound deadens the attacker’s arms, leaving them enfeebled 1 for 1 round."
+      },
+      "CrackedFocus": {
+        "Title": "Cracked Focus",
+        "Description": "The miss lands with a jarring crash, imposing a -1 circumstance penalty to Will saves and spell attack rolls for 1 round."
+      },
+      "DraggingWeight": {
+        "Title": "Dragging Weight",
+        "Description": "The heavy weapon pulls the attacker through a poor recovery, reducing all Speeds by 5 feet for 1 round."
+      },
+      "EchoingMiss": {
+        "Title": "Echoing Miss",
+        "Description": "The impact erupts beside the attacker and overwhelms their senses, leaving them dazzled and deafened for 1 round."
+      },
+      "BreathStealingThrust": {
+        "Title": "Breath-Stealing Thrust",
+        "Description": "The point lands where every breath hurts, imposing a -1 circumstance penalty to Fortitude saves and spell attack rolls for 1 round."
+      },
+      "TempleChime": {
+        "Title": "Temple Chime",
+        "Description": "The impact turns the world into a dull roar, leaving the target deafened for 1 round."
+      },
+      "FoldedDefense": {
+        "Title": "Folded Defense",
+        "Description": "The blow folds the target’s guard inward, leaving it off-guard and imposing a -1 circumstance penalty to Fortitude saves for 1 round."
+      },
+      "NumbedSupport": {
+        "Title": "Numbed Support",
+        "Description": "A crushing strike numbs the target’s support, reducing its land Speed by 10 feet and leaving it clumsy 1 for 1 round."
+      },
+      "CrosswiseGash": {
+        "Title": "Crosswise Gash",
+        "Description": "A broad cut crosses the target’s guard and footing, imposing a -1 circumstance penalty to AC and Reflex saves for 1 round."
+      },
+      "TendonSnag": {
+        "Title": "Tendon Snag",
+        "Description": "The edge catches a tendon or equivalent support, reducing all Speeds by 10 feet for 1 round."
+      },
+      "CrimsonDistraction": {
+        "Title": "Crimson Distraction",
+        "Description": "The sudden spray and pain break the target’s focus, imposing a -1 circumstance penalty to Perception and Will saves for 1 round."
+      },
+      "PeelingEdge": {
+        "Title": "Peeling Edge",
+        "Description": "The blade peels protection away from the target, giving it weakness 2 to slashing damage for 1 round."
+      },
+      "ButcheredBalance": {
+        "Title": "Butchered Balance",
+        "Description": "The cut ruins the target’s stance, leaving it clumsy 1 and off-guard for 1 round."
+      },
+      "ShockToTheNerve": {
+        "Title": "Shock to the Nerve",
+        "Description": "The point strikes a sensitive junction, leaving the target clumsy 1 for 1 round."
+      },
+      "MarkedVital": {
+        "Title": "Marked Vital",
+        "Description": "The thrust exposes a vulnerable line, giving the target weakness 2 to piercing damage for 1 round."
+      },
+      "BreathCaught": {
+        "Title": "Breath Caught",
+        "Description": "A perfectly placed hit steals breath and timing, leaving the target enfeebled 1 and imposing a -1 circumstance penalty to attack rolls for 1 round."
+      },
+      "HammeredGuard": {
+        "Title": "Hammered Guard",
+        "Description": "The impact crushes the target’s guard inward, imposing a -1 circumstance penalty to AC and attack rolls for 1 round."
+      },
+      "CrackedFoundation": {
+        "Title": "Cracked Foundation",
+        "Description": "The blow compromises armor, shell, or stance, giving the target weakness 2 to bludgeoning damage for 1 round."
+      },
+      "ReelingFrame": {
+        "Title": "Reeling Frame",
+        "Description": "The target reels under the impact, becoming off-guard and clumsy 1 for 1 round."
+      },
+      "OvercutOpening": {
+        "Title": "Overcut Opening",
+        "Description": "The swing travels too far and leaves the attacker off-guard for 1 round."
+      },
+      "TangledFootwork": {
+        "Title": "Tangled Footwork",
+        "Description": "The failed arc tangles stance and stride, reducing all Speeds by 10 feet for 1 round."
+      },
+      "JarredShoulder": {
+        "Title": "Jarred Shoulder",
+        "Description": "The abrupt stop jars the attacker’s shoulder, leaving it enfeebled 1 for 1 round."
+      },
+      "WhirlingExposure": {
+        "Title": "Whirling Exposure",
+        "Description": "Momentum spins the attacker out of position, leaving it off-guard and imposing a -1 circumstance penalty to Reflex saves for 1 round."
+      },
+      "ShortMeasure": {
+        "Title": "Short Measure",
+        "Description": "The thrust falls short and exposes the attacker, leaving it off-guard for 1 round."
+      },
+      "WrenchedPoint": {
+        "Title": "Wrenched Point",
+        "Description": "The weapon twists against resistance, imposing a -1 circumstance penalty to attack rolls for 1 round."
+      },
+      "OverlongLunge": {
+        "Title": "Overlong Lunge",
+        "Description": "The attacker lunges beyond a stable base, reducing its land Speed by 10 feet and leaving it clumsy 1 for 1 round."
+      },
+      "HeavyDrift": {
+        "Title": "Heavy Drift",
+        "Description": "The weapon’s weight drags the attacker off line, leaving it off-guard for 1 round."
+      },
+      "ReboundNumbness": {
+        "Title": "Rebound Numbness",
+        "Description": "The impact rebounds through the attacker’s arms, leaving it enfeebled 1 for 1 round."
+      },
+      "StaggeredRecovery": {
+        "Title": "Staggered Recovery",
+        "Description": "The missed swing pulls the attacker into a stumbling recovery, reducing all Speeds by 10 feet for 1 round."
+      },
+      "RingingGrip": {
+        "Title": "Ringing Grip",
+        "Description": "The weapon shudders violently in the attacker’s hands, imposing a -1 circumstance penalty to attack rolls and Reflex saves for 1 round."
+      },
+      "CollapsingStance": {
+        "Title": "Collapsing Stance",
+        "Description": "The attacker’s own momentum buckles its stance, leaving it clumsy 1 and off-guard for 1 round."
+      },
+      "NeedlesPassage": {
+        "Title": "Needle’s Passage",
+        "Description": "The point slips through a narrow opening, imposing a -1 circumstance penalty to AC and Fortitude saves for 1 round."
+      },
+      "NailedStride": {
+        "Title": "Nailed Stride",
+        "Description": "A precise thrust catches foot, hem, or harness, reducing the target’s land Speed by 15 feet for 1 round."
+      },
+      "BuckledKnee": {
+        "Title": "Buckled Knee",
+        "Description": "A brutal blow numbs the target’s support, reducing its land Speed by 15 feet for 1 round."
+      },
+      "ThunderclapImpact": {
+        "Title": "Thunderclap Impact",
+        "Description": "The strike fills the target’s senses with thunder, leaving it dazzled and deafened for 1 round."
+      },
+      "GroundedBlade": {
+        "Title": "Grounded Blade",
+        "Description": "The blade drags across ground or obstruction, imposing a -1 circumstance penalty to attack rolls for 1 round."
+      },
+      "ShakenGrip": {
+        "Title": "Shaken Grip",
+        "Description": "A harsh vibration runs through the grip, leaving the attacker clumsy 1 for 1 round."
+      },
+      "BrokenAlignment": {
+        "Title": "Broken Alignment",
+        "Description": "The failed thrust ruins distance and timing, imposing a -1 circumstance penalty to attack rolls and Perception for 1 round."
       }
     },
     "Effects": {
@@ -658,6 +1018,276 @@
       },
       "SprainedWrist": {
         "Name": "Twisted Wrist"
+      },
+      "ScarletFeint": {
+        "Name": "Scarlet Feint"
+      },
+      "SeveredMomentum": {
+        "Name": "Severed Momentum"
+      },
+      "OpenedSeam": {
+        "Name": "Opened Seam"
+      },
+      "RedRhythm": {
+        "Name": "Red Rhythm"
+      },
+      "CrescentReversal": {
+        "Name": "Crescent Reversal"
+      },
+      "ThreadTheGuard": {
+        "Name": "Thread the Guard"
+      },
+      "PinnedStep": {
+        "Name": "Pinned Step"
+      },
+      "NerveLine": {
+        "Name": "Nerve Line"
+      },
+      "BreachedCore": {
+        "Name": "Breached Core"
+      },
+      "DrivingImpact": {
+        "Name": "Driving Impact"
+      },
+      "DeadLeg": {
+        "Name": "Dead Leg"
+      },
+      "BellRinger": {
+        "Name": "Bell Ringer"
+      },
+      "CrumpledGuard": {
+        "Name": "Crumpled Guard"
+      },
+      "ShockThroughTheFrame": {
+        "Name": "Shock Through the Frame"
+      },
+      "EmptyArc": {
+        "Name": "Empty Arc"
+      },
+      "DraggedEdge": {
+        "Name": "Dragged Edge"
+      },
+      "OpenedCenter": {
+        "Name": "Opened Center"
+      },
+      "WrenchedShoulder": {
+        "Name": "Wrenched Shoulder"
+      },
+      "FlashOfSteel": {
+        "Name": "Flash of Steel"
+      },
+      "FalseDistance": {
+        "Name": "False Distance"
+      },
+      "LockedKnee": {
+        "Name": "Locked Knee"
+      },
+      "CrossedLine": {
+        "Name": "Crossed Line"
+      },
+      "NumbedFingers": {
+        "Name": "Numbed Fingers"
+      },
+      "LostPoint": {
+        "Name": "Lost Point"
+      },
+      "WeightedPastCenter": {
+        "Name": "Weighted Past Center"
+      },
+      "StumblingRecovery": {
+        "Name": "Stumbling Recovery"
+      },
+      "JarredGuard": {
+        "Name": "Jarred Guard"
+      },
+      "RecoilThroughTheBones": {
+        "Name": "Recoil Through the Bones"
+      },
+      "DustCloud": {
+        "Name": "Dust Cloud"
+      },
+      "BreathlessFocus": {
+        "Name": "Breathless Focus"
+      },
+      "CutToTheQuick": {
+        "Name": "Cut to the Quick"
+      },
+      "ShreddedFooting": {
+        "Name": "Shredded Footing"
+      },
+      "CrosswiseRuin": {
+        "Name": "Crosswise Ruin"
+      },
+      "BleedingDistraction": {
+        "Name": "Bleeding Distraction"
+      },
+      "PartedGuard": {
+        "Name": "Parted Guard"
+      },
+      "PinpointShock": {
+        "Name": "Pinpoint Shock"
+      },
+      "NailedStep": {
+        "Name": "Nailed Step"
+      },
+      "BreachedJoint": {
+        "Name": "Breached Joint"
+      },
+      "ThreadedDefense": {
+        "Name": "Threaded Defense"
+      },
+      "RattledInstincts": {
+        "Name": "Rattled Instincts"
+      },
+      "CascadeOfImpact": {
+        "Name": "Cascade of Impact"
+      },
+      "DraggedByTheEdge": {
+        "Name": "Dragged by the Edge"
+      },
+      "NickedGuard": {
+        "Name": "Nicked Guard"
+      },
+      "WildRecovery": {
+        "Name": "Wild Recovery"
+      },
+      "BlindedByTheArc": {
+        "Name": "Blinded by the Arc"
+      },
+      "SpentMomentum": {
+        "Name": "Spent Momentum"
+      },
+      "FalseMeasure": {
+        "Name": "False Measure"
+      },
+      "OverextendedPoint": {
+        "Name": "Overextended Point"
+      },
+      "JammedLine": {
+        "Name": "Jammed Line"
+      },
+      "StungWrist": {
+        "Name": "Stung Wrist"
+      },
+      "TunnelVision": {
+        "Name": "Tunnel Vision"
+      },
+      "HammeredStance": {
+        "Name": "Hammered Stance"
+      },
+      "NumbingRebound": {
+        "Name": "Numbing Rebound"
+      },
+      "CrackedFocus": {
+        "Name": "Cracked Focus"
+      },
+      "DraggingWeight": {
+        "Name": "Dragging Weight"
+      },
+      "EchoingMiss": {
+        "Name": "Echoing Miss"
+      },
+      "BreathStealingThrust": {
+        "Name": "Breath-Stealing Thrust"
+      },
+      "TempleChime": {
+        "Name": "Temple Chime"
+      },
+      "FoldedDefense": {
+        "Name": "Folded Defense"
+      },
+      "NumbedSupport": {
+        "Name": "Numbed Support"
+      },
+      "CrosswiseGash": {
+        "Name": "Crosswise Gash"
+      },
+      "TendonSnag": {
+        "Name": "Tendon Snag"
+      },
+      "CrimsonDistraction": {
+        "Name": "Crimson Distraction"
+      },
+      "PeelingEdge": {
+        "Name": "Peeling Edge"
+      },
+      "ButcheredBalance": {
+        "Name": "Butchered Balance"
+      },
+      "ShockToTheNerve": {
+        "Name": "Shock to the Nerve"
+      },
+      "MarkedVital": {
+        "Name": "Marked Vital"
+      },
+      "BreathCaught": {
+        "Name": "Breath Caught"
+      },
+      "HammeredGuard": {
+        "Name": "Hammered Guard"
+      },
+      "CrackedFoundation": {
+        "Name": "Cracked Foundation"
+      },
+      "ReelingFrame": {
+        "Name": "Reeling Frame"
+      },
+      "OvercutOpening": {
+        "Name": "Overcut Opening"
+      },
+      "TangledFootwork": {
+        "Name": "Tangled Footwork"
+      },
+      "JarredShoulder": {
+        "Name": "Jarred Shoulder"
+      },
+      "WhirlingExposure": {
+        "Name": "Whirling Exposure"
+      },
+      "ShortMeasure": {
+        "Name": "Short Measure"
+      },
+      "WrenchedPoint": {
+        "Name": "Wrenched Point"
+      },
+      "OverlongLunge": {
+        "Name": "Overlong Lunge"
+      },
+      "HeavyDrift": {
+        "Name": "Heavy Drift"
+      },
+      "ReboundNumbness": {
+        "Name": "Rebound Numbness"
+      },
+      "StaggeredRecovery": {
+        "Name": "Staggered Recovery"
+      },
+      "RingingGrip": {
+        "Name": "Ringing Grip"
+      },
+      "CollapsingStance": {
+        "Name": "Collapsing Stance"
+      },
+      "NeedlesPassage": {
+        "Name": "Needle’s Passage"
+      },
+      "NailedStride": {
+        "Name": "Nailed Stride"
+      },
+      "BuckledKnee": {
+        "Name": "Buckled Knee"
+      },
+      "ThunderclapImpact": {
+        "Name": "Thunderclap Impact"
+      },
+      "GroundedBlade": {
+        "Name": "Grounded Blade"
+      },
+      "ShakenGrip": {
+        "Name": "Shaken Grip"
+      },
+      "BrokenAlignment": {
+        "Name": "Broken Alignment"
       }
     },
     "Notifications": {
@@ -667,27 +1297,27 @@
     "Settings": {
       "ExpandedSlashingCriticalHits": {
         "Name": "Critical Forge Expanded: Slashing Critical Hits",
-        "Hint": "Enable the five additional cards for critical hits that deal slashing damage."
+        "Hint": "Enable this Arsenal card pack for critical hits that deal slashing damage."
       },
       "ExpandedPiercingCriticalHits": {
         "Name": "Critical Forge Expanded: Piercing Critical Hits",
-        "Hint": "Enable the five additional cards for critical hits that deal piercing damage."
+        "Hint": "Enable this Arsenal card pack for critical hits that deal piercing damage."
       },
       "ExpandedBludgeoningCriticalHits": {
         "Name": "Critical Forge Expanded: Bludgeoning Critical Hits",
-        "Hint": "Enable the five additional cards for critical hits that deal bludgeoning damage."
+        "Hint": "Enable this Arsenal card pack for critical hits that deal bludgeoning damage."
       },
       "ExpandedSlashingCriticalFumbles": {
         "Name": "Critical Forge Expanded: Slashing Critical Fumbles",
-        "Hint": "Enable the five additional cards for critical failures on attacks that deal slashing damage."
+        "Hint": "Enable this Arsenal card pack for critical failures on attacks that deal slashing damage."
       },
       "ExpandedPiercingCriticalFumbles": {
         "Name": "Critical Forge Expanded: Piercing Critical Fumbles",
-        "Hint": "Enable the five additional cards for critical failures on attacks that deal piercing damage."
+        "Hint": "Enable this Arsenal card pack for critical failures on attacks that deal piercing damage."
       },
       "ExpandedBludgeoningCriticalFumbles": {
         "Name": "Critical Forge Expanded: Bludgeoning Critical Fumbles",
-        "Hint": "Enable the five additional cards for critical failures on attacks that deal bludgeoning damage."
+        "Hint": "Enable this Arsenal card pack for critical failures on attacks that deal bludgeoning damage."
       }
     }
   }

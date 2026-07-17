@@ -228,5 +228,228 @@ export const PIERCING_CARDS = Object.freeze([
     fallbackDescription: "The point flashes past the target's eyes and breaks its focus, leaving it dazzled for 1 round.",
     weight: 1, tags: ["senses", "precision"], filters: { excludedTargetTraits: ["mindless", "ooze"] },
     effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "dazzled" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.thread-the-guard", localizationKey: "ThreadTheGuard", damageType: "piercing",
+    tone: "neutral", impact: "light", fallbackTitle: "Thread the Guard",
+    fallbackDescription: "The point slips through the smallest opening, leaving the target off-guard for 1 round.",
+    weight: 2, tags: ["precision", "setup"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.pinned-step", localizationKey: "PinnedStep", damageType: "piercing",
+    tone: "serious", impact: "moderate", fallbackTitle: "Pinned Step",
+    fallbackDescription: "The strike catches foot, garment, or gear at exactly the wrong moment, reducing land Speed by 15 feet for 1 round.",
+    weight: 1, tags: ["movement", "control"], filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "land", value: -15, modifierType: "circumstance" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.nerve-line", localizationKey: "NerveLine", damageType: "piercing",
+    tone: "serious", impact: "moderate", fallbackTitle: "Nerve Line",
+    fallbackDescription: "The point grazes a nerve cluster, leaving the target clumsy 1 and imposing a -1 circumstance penalty to Reflex saves for 1 round.",
+    weight: 1, tags: ["precision", "debuff"], filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }, { type: "modifier", selector: "reflex", value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.breached-core", localizationKey: "BreachedCore", damageType: "piercing",
+    tone: "dramatic", impact: "strong", fallbackTitle: "Breached Core",
+    fallbackDescription: "The thrust finds a vital seam, giving the target weakness 3 to piercing damage for 1 round.",
+    weight: 1, tags: ["vulnerability", "precision"],
+    effect: { duration: ONE_ROUND, components: [{ type: "weakness", weaknessType: "piercing", value: 3 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.breathless-focus", localizationKey: "BreathlessFocus", damageType: "piercing",
+    tone: "dramatic", impact: "moderate", fallbackTitle: "Breathless Focus",
+    fallbackDescription: "A precise impact steals breath and focus, imposing a -1 circumstance penalty to Fortitude saves and spell attack rolls for 1 round.",
+    weight: 1, tags: ["precision", "debuff"], filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["fortitude", "spell-attack-roll"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  })
+,
+  defineWeaponCriticalCard({
+    id: "piercing.pinpoint-shock",
+    localizationKey: "PinpointShock",
+    damageType: "piercing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Pinpoint Shock",
+    fallbackDescription: "The point strikes a nerve cluster or delicate joint, leaving the target clumsy 1 for 1 round.",
+    weight: 1,
+    tags: ["precision", "debuff"],
+    filters: {"excludedTargetTraits": ["construct", "elemental", "incorporeal", "ooze", "undead"]},
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "clumsy",
+          "value": 1
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.nailed-step",
+    localizationKey: "NailedStep",
+    damageType: "piercing",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Nailed Step",
+    fallbackDescription: "A precise strike catches foot, limb, or trailing gear, reducing the target’s land Speed by 10 feet and leaving it off-guard for 1 round.",
+    weight: 1,
+    tags: ["precision", "movement", "control"],
+    filters: {"excludedTargetTraits": ["incorporeal", "ooze"]},
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "movement",
+          "movementType": "land",
+          "value": -10,
+          "modifierType": "circumstance"
+        },
+        {
+          "type": "condition",
+          "slug": "off-guard"
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.breached-joint",
+    localizationKey: "BreachedJoint",
+    damageType: "piercing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Breached Joint",
+    fallbackDescription: "The thrust slips into a joint or structural gap, giving the target weakness 2 to bludgeoning damage for 1 round.",
+    weight: 1,
+    tags: ["precision", "vulnerability", "setup"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "weakness",
+          "weaknessType": "bludgeoning",
+          "value": 2
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.breath-stealing-thrust",
+    localizationKey: "BreathStealingThrust",
+    damageType: "piercing",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Breath-Stealing Thrust",
+    fallbackDescription: "The point lands where every breath hurts, imposing a -1 circumstance penalty to Fortitude saves and spell attack rolls for 1 round.",
+    weight: 1,
+    tags: ["precision", "debuff"],
+    filters: {"excludedTargetTraits": ["construct", "elemental", "incorporeal", "ooze", "undead"]},
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "modifier",
+          "selector": [
+            "fortitude",
+            "spell-attack-roll"
+          ],
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.threaded-defense",
+    localizationKey: "ThreadedDefense",
+    damageType: "piercing",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Threaded Defense",
+    fallbackDescription: "The weapon threads cleanly through the defense, leaving the target off-guard and imposing a -1 circumstance penalty to Reflex saves for 1 round.",
+    weight: 1,
+    tags: ["precision", "control", "debuff"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "off-guard"
+        },
+        {
+          "type": "modifier",
+          "selector": "reflex",
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.needles-passage",
+    localizationKey: "NeedlesPassage",
+    damageType: "piercing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Thread the Gap",
+    fallbackDescription: "The point slips through a narrow opening, imposing a -1 circumstance penalty to AC and Fortitude saves for 1 round.",
+    weight: 1,
+    tags: ["precision", "defense"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["ac", "fortitude"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.nailed-stride",
+    localizationKey: "NailedStride",
+    damageType: "piercing",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Pinned Step",
+    fallbackDescription: "A precise thrust catches foot, hem, or harness, reducing the target’s land Speed by 15 feet for 1 round.",
+    weight: 1,
+    tags: ["movement", "control"],
+    filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "land", value: -15, modifierType: "circumstance" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.shock-to-the-nerve",
+    localizationKey: "ShockToTheNerve",
+    damageType: "piercing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Shock to the Nerve",
+    fallbackDescription: "The point strikes a sensitive junction, leaving the target clumsy 1 for 1 round.",
+    weight: 1,
+    tags: ["precision", "debuff"],
+    filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.marked-vital",
+    localizationKey: "MarkedVital",
+    damageType: "piercing",
+    tone: "neutral",
+    impact: "moderate",
+    fallbackTitle: "Marked Vital",
+    fallbackDescription: "The thrust exposes a vulnerable line, giving the target weakness 2 to piercing damage for 1 round.",
+    weight: 1,
+    tags: ["vulnerability", "setup"],
+    effect: { duration: ONE_ROUND, components: [{ type: "weakness", weaknessType: "piercing", value: 2 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.breath-caught",
+    localizationKey: "BreathCaught",
+    damageType: "piercing",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Breath Caught",
+    fallbackDescription: "A perfectly placed hit steals breath and timing, leaving the target enfeebled 1 and imposing a -1 circumstance penalty to attack rolls for 1 round.",
+    weight: 1,
+    tags: ["precision", "debuff"],
+    filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }, { type: "modifier", selector: "attack-roll", value: -1, modifierType: "circumstance", predicate: [] }] }
   })
 ]);

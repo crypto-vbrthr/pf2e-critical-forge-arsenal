@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.3.4
+
+- Added five cards to each of the six core weapon packs.
+- Completed the initial core collection at 30 cards per pack and 180 cards total.
+- Added complete English and German localization for all new cards.
+- Preserved all existing pack and card identifiers.
+
+## 0.3.4
+
+- Added five new cards to each of the six core weapon packs.
+- Expanded every core pack from 20 to 25 cards.
+- Increased the total card count from 120 to 150.
+- Added complete German and English localization for all new cards.
+- Preserved all existing card and pack IDs.
+
+## 0.3.2
+
+- Added the third five-card expansion block to all six weapon packs.
+- Each pack now contains 20 cards, for a total of 120 cards.
+- Added English and German localization for all 30 new cards and effects.
+- Expanded tactical movement, sensory disruption, exposed-defense, precision, recoil, and recovery themes.
+- Updated pack-setting hints so they no longer refer to the original five-card size.
+- Preserved all existing card and pack IDs.
+
+
 ## 0.3.1
 
 - Added the second five-card expansion block to all six weapon packs.
@@ -9,7 +34,7 @@
 - Preserved all existing card and pack IDs.
 
 
-## 0.3.1
+## 0.3.0
 
 - Added the first five-card expansion block to all six weapon packs.
 - Each pack now contains 10 cards, for a total of 60 cards.

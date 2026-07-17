@@ -221,5 +221,238 @@ export const SLASHING_CARDS = Object.freeze([
     fallbackDescription: "The sweeping blow tears the target's offense and defense apart, leaving it off-guard and imposing a -1 circumstance penalty to attack rolls for 1 round.",
     weight: 1, tags: ["control", "debuff"],
     effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }, { type: "modifier", selector: "attack-roll", value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.scarlet-feint", localizationKey: "ScarletFeint", damageType: "slashing",
+    tone: "dramatic", impact: "light", fallbackTitle: "Scarlet Feint",
+    fallbackDescription: "The flashing edge draws the target into the wrong defense, leaving it off-guard for 1 round.",
+    weight: 2, tags: ["control", "setup"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.severed-momentum", localizationKey: "SeveredMomentum", damageType: "slashing",
+    tone: "serious", impact: "moderate", fallbackTitle: "Severed Momentum",
+    fallbackDescription: "The cut interrupts every attempt to regain speed, reducing all Speeds by 10 feet for 1 round.",
+    weight: 1, tags: ["movement", "control"], filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.opened-seam", localizationKey: "OpenedSeam", damageType: "slashing",
+    tone: "neutral", impact: "moderate", fallbackTitle: "Opened Seam",
+    fallbackDescription: "The edge opens a seam in armor, hide, or magical protection, imposing a -1 circumstance penalty to AC and Fortitude saves for 1 round.",
+    weight: 1, tags: ["defense", "setup"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["ac", "fortitude"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.red-rhythm", localizationKey: "RedRhythm", damageType: "slashing",
+    tone: "dramatic", impact: "strong", fallbackTitle: "Red Rhythm",
+    fallbackDescription: "A succession of shallow tears becomes a relentless wound, inflicting 1d4 persistent bleed damage and leaving the target clumsy 1 for 1 round.",
+    weight: 1, tags: ["bleed", "persistent-damage", "debuff"], filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: UNLIMITED, components: [{ type: "persistentDamage", formula: "1d4", damageType: "bleed" }, { type: "condition", slug: "clumsy", value: 1 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.crescent-reversal", localizationKey: "CrescentReversal", damageType: "slashing",
+    tone: "dramatic", impact: "moderate", fallbackTitle: "Crescent Reversal",
+    fallbackDescription: "The returning arc catches the target during recovery, imposing a -1 circumstance penalty to attack rolls and Perception for 1 round.",
+    weight: 1, tags: ["debuff", "senses"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["attack-roll", "perception"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  })
+,
+  defineWeaponCriticalCard({
+    id: "slashing.cut-to-the-quick",
+    localizationKey: "CutToTheQuick",
+    damageType: "slashing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Cut to the Quick",
+    fallbackDescription: "The edge finds a painfully sensitive line, leaving the target enfeebled 1 for 1 round.",
+    weight: 1,
+    tags: ["debuff"],
+    filters: {"excludedTargetTraits": ["construct", "elemental", "incorporeal", "ooze", "undead"]},
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "enfeebled",
+          "value": 1
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.shredded-footing",
+    localizationKey: "ShreddedFooting",
+    damageType: "slashing",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Shredded Footing",
+    fallbackDescription: "The slash tears through straps, clothing, or stance, reducing the target’s land Speed by 10 feet and imposing a -1 circumstance penalty to Reflex saves for 1 round.",
+    weight: 1,
+    tags: ["movement", "debuff"],
+    filters: {"excludedTargetTraits": ["incorporeal", "ooze"]},
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "movement",
+          "movementType": "land",
+          "value": -10,
+          "modifierType": "circumstance"
+        },
+        {
+          "type": "modifier",
+          "selector": "reflex",
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.crosswise-ruin",
+    localizationKey: "CrosswiseRuin",
+    damageType: "slashing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Crosswise Ruin",
+    fallbackDescription: "A brutal crosscut spoils offense and defense alike, imposing a -1 circumstance penalty to attack rolls and AC for 1 round.",
+    weight: 1,
+    tags: ["debuff", "defense"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "modifier",
+          "selector": [
+            "attack-roll",
+            "ac"
+          ],
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.bleeding-distraction",
+    localizationKey: "BleedingDistraction",
+    damageType: "slashing",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Bleeding Distraction",
+    fallbackDescription: "A persistent trickle of blood or leaking essence breaks concentration, inflicting 1d4 persistent bleed damage and a -1 circumstance penalty to Will saves for 1 round.",
+    weight: 1,
+    tags: ["bleed", "persistent-damage", "debuff"],
+    filters: {"excludedTargetTraits": ["construct", "elemental", "incorporeal", "ooze", "undead"]},
+    effect: {
+      duration: UNLIMITED,
+      components: [
+        {
+          "type": "persistentDamage",
+          "formula": "1d4",
+          "damageType": "bleed"
+        },
+        {
+          "type": "modifier",
+          "selector": "will",
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.parted-guard",
+    localizationKey: "PartedGuard",
+    damageType: "slashing",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Parted Guard",
+    fallbackDescription: "The blade parts the target’s guard from shoulder to hip, leaving it off-guard and reducing all Speeds by 5 feet for 1 round.",
+    weight: 1,
+    tags: ["control", "movement"],
+    filters: {"excludedTargetTraits": ["incorporeal", "ooze"]},
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "off-guard"
+        },
+        {
+          "type": "movement",
+          "movementType": "all",
+          "value": -5,
+          "modifierType": "circumstance"
+        }
+      ]
+    }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.crosswise-gash",
+    localizationKey: "CrosswiseGash",
+    damageType: "slashing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Crosswise Gash",
+    fallbackDescription: "A broad cut crosses the target’s guard and footing, imposing a -1 circumstance penalty to AC and Reflex saves for 1 round.",
+    weight: 1,
+    tags: ["defense", "debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["ac", "reflex"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.tendon-snag",
+    localizationKey: "TendonSnag",
+    damageType: "slashing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Tendon Snag",
+    fallbackDescription: "The edge catches a tendon or equivalent support, reducing all Speeds by 10 feet for 1 round.",
+    weight: 1,
+    tags: ["movement", "control"],
+    filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.crimson-distraction",
+    localizationKey: "CrimsonDistraction",
+    damageType: "slashing",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Crimson Distraction",
+    fallbackDescription: "The sudden spray and pain break the target’s focus, imposing a -1 circumstance penalty to Perception and Will saves for 1 round.",
+    weight: 1,
+    tags: ["senses", "debuff"],
+    filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["perception", "will"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.peeling-edge",
+    localizationKey: "PeelingEdge",
+    damageType: "slashing",
+    tone: "neutral",
+    impact: "moderate",
+    fallbackTitle: "Peeling Edge",
+    fallbackDescription: "The blade peels protection away from the target, giving it weakness 2 to slashing damage for 1 round.",
+    weight: 1,
+    tags: ["vulnerability", "setup"],
+    effect: { duration: ONE_ROUND, components: [{ type: "weakness", weaknessType: "slashing", value: 2 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "slashing.butchered-balance",
+    localizationKey: "ButcheredBalance",
+    damageType: "slashing",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Butchered Balance",
+    fallbackDescription: "The cut ruins the target’s stance, leaving it clumsy 1 and off-guard for 1 round.",
+    weight: 1,
+    tags: ["control", "debuff"],
+    filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }, { type: "condition", slug: "off-guard" }] }
   })
 ]);

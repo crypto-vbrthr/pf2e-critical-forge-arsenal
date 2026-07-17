@@ -196,5 +196,220 @@ export const BLUDGEONING_FUMBLE_CARDS = Object.freeze([
     fallbackDescription: "The heavy miss caves in the attacker's own defense, leaving them off-guard and imposing a -1 circumstance penalty to Reflex saves for 1 round.",
     weight: 1, tags: ["defense", "debuff"],
     effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }, { type: "modifier", selector: "reflex", value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.weighted-past-center", localizationKey: "WeightedPastCenter", damageType: "bludgeoning",
+    tone: "neutral", impact: "light", fallbackTitle: "Weighted Past Center",
+    fallbackDescription: "The weapon's weight carries the attacker beyond their guard, leaving them off-guard for 1 round.",
+    weight: 2, tags: ["control"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.stumbling-recovery", localizationKey: "StumblingRecovery", damageType: "bludgeoning",
+    tone: "serious", impact: "moderate", fallbackTitle: "Stumbling Recovery",
+    fallbackDescription: "Recovering the heavy weapon costs the attacker their footing, reducing all Speeds by 10 feet for 1 round.",
+    weight: 1, tags: ["movement", "recovery"],
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.jarred-guard", localizationKey: "JarredGuard", damageType: "bludgeoning",
+    tone: "serious", impact: "moderate", fallbackTitle: "Jarred Guard",
+    fallbackDescription: "The failed impact jars the attacker's arms and guard, imposing a -1 circumstance penalty to attack rolls and AC for 1 round.",
+    weight: 1, tags: ["debuff", "defense"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["attack-roll", "ac"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.recoil-through-the-bones", localizationKey: "RecoilThroughTheBones", damageType: "bludgeoning",
+    tone: "dramatic", impact: "strong", fallbackTitle: "Recoil Through the Bones",
+    fallbackDescription: "The full recoil travels back through the attacker, leaving them enfeebled 1 and imposing a -1 circumstance penalty to Fortitude saves for 1 round.",
+    weight: 1, tags: ["debuff", "recovery"], filters: { excludedSourceTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }, { type: "modifier", selector: "fortitude", value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.dust-cloud", localizationKey: "DustCloud", damageType: "bludgeoning",
+    tone: "dramatic", impact: "moderate", fallbackTitle: "Dust Cloud",
+    fallbackDescription: "The miss pulverizes nearby debris and fills the attacker's sight, leaving them dazzled for 1 round.",
+    weight: 1, tags: ["senses", "recovery"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "dazzled" }] }
+  })
+,
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.hammered-stance",
+    localizationKey: "HammeredStance",
+    damageType: "bludgeoning",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Hammered Stance",
+    fallbackDescription: "The weapon’s weight drives the attacker out of alignment, leaving them clumsy 1 and off-guard for 1 round.",
+    weight: 1,
+    tags: ["control", "debuff"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "clumsy",
+          "value": 1
+        },
+        {
+          "type": "condition",
+          "slug": "off-guard"
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.numbing-rebound",
+    localizationKey: "NumbingRebound",
+    damageType: "bludgeoning",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Numbing Rebound",
+    fallbackDescription: "A violent rebound deadens the attacker’s arms, leaving them enfeebled 1 for 1 round.",
+    weight: 1,
+    tags: ["recoil", "debuff"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "enfeebled",
+          "value": 1
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.cracked-focus",
+    localizationKey: "CrackedFocus",
+    damageType: "bludgeoning",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Cracked Focus",
+    fallbackDescription: "The miss lands with a jarring crash, imposing a -1 circumstance penalty to Will saves and spell attack rolls for 1 round.",
+    weight: 1,
+    tags: ["recoil", "debuff"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "modifier",
+          "selector": [
+            "will",
+            "spell-attack-roll"
+          ],
+          "value": -1,
+          "modifierType": "circumstance",
+          "predicate": []
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.dragging-weight",
+    localizationKey: "DraggingWeight",
+    damageType: "bludgeoning",
+    tone: "neutral",
+    impact: "light",
+    fallbackTitle: "Dragging Weight",
+    fallbackDescription: "The heavy weapon pulls the attacker through a poor recovery, reducing all Speeds by 5 feet for 1 round.",
+    weight: 2,
+    tags: ["movement", "recovery"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "movement",
+          "movementType": "all",
+          "value": -5,
+          "modifierType": "circumstance"
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.echoing-miss",
+    localizationKey: "EchoingMiss",
+    damageType: "bludgeoning",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Echoing Miss",
+    fallbackDescription: "The impact erupts beside the attacker and overwhelms their senses, leaving them dazzled and deafened for 1 round.",
+    weight: 1,
+    tags: ["senses", "recoil"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          "type": "condition",
+          "slug": "dazzled"
+        },
+        {
+          "type": "condition",
+          "slug": "deafened"
+        }
+      ]
+    }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.heavy-drift",
+    localizationKey: "HeavyDrift",
+    damageType: "bludgeoning",
+    tone: "neutral",
+    impact: "light",
+    fallbackTitle: "Heavy Drift",
+    fallbackDescription: "The weapon’s weight drags the attacker off line, leaving it off-guard for 1 round.",
+    weight: 2,
+    tags: ["control"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.rebound-numbness",
+    localizationKey: "ReboundNumbness",
+    damageType: "bludgeoning",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Rebound Numbness",
+    fallbackDescription: "The impact rebounds through the attacker’s arms, leaving it enfeebled 1 for 1 round.",
+    weight: 1,
+    tags: ["debuff"],
+    filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.staggered-recovery",
+    localizationKey: "StaggeredRecovery",
+    damageType: "bludgeoning",
+    tone: "neutral",
+    impact: "moderate",
+    fallbackTitle: "Staggered Recovery",
+    fallbackDescription: "The missed swing pulls the attacker into a stumbling recovery, reducing all Speeds by 10 feet for 1 round.",
+    weight: 1,
+    tags: ["movement", "control"],
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.ringing-grip",
+    localizationKey: "RingingGrip",
+    damageType: "bludgeoning",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Ringing Grip",
+    fallbackDescription: "The weapon shudders violently in the attacker’s hands, imposing a -1 circumstance penalty to attack rolls and Reflex saves for 1 round.",
+    weight: 1,
+    tags: ["debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["attack-roll", "reflex"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponFumbleCard({
+    id: "bludgeoning-fumble.collapsing-stance",
+    localizationKey: "CollapsingStance",
+    damageType: "bludgeoning",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Collapsing Stance",
+    fallbackDescription: "The attacker’s own momentum buckles its stance, leaving it clumsy 1 and off-guard for 1 round.",
+    weight: 1,
+    tags: ["control", "debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }, { type: "condition", slug: "off-guard" }] }
   })
 ]);

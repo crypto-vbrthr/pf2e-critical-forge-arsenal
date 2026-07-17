@@ -29,7 +29,7 @@ const { EXPANDED_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arsenal");
-assert.equal(manifest.version, "0.3.1");
+assert.equal(manifest.version, "0.3.4");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 
@@ -70,8 +70,8 @@ const toneCounts = new Map();
 
 for (const pack of disabledPacks) {
   assert.equal(pack.schemaVersion, 1);
-  assert.equal(pack.version, "0.3.1");
-  assert.equal(pack.cards.length, 15);
+  assert.equal(pack.version, "0.3.4");
+  assert.equal(pack.cards.length, 30);
   assert.equal(pack.enabled, false);
   assert.ok(getLocalization(de, pack.titleKey), pack.titleKey);
   assert.ok(getLocalization(en, pack.titleKey), pack.titleKey);
@@ -114,14 +114,14 @@ for (const pack of disabledPacks) {
   }
 }
 
-assert.equal(cardIds.size, 90);
+assert.equal(cardIds.size, 180);
 assert.deepEqual(Object.fromEntries(categoryCounts), {
-  criticalHit: 45,
-  criticalFumble: 45
+  criticalHit: 90,
+  criticalFumble: 90
 });
 for (const category of ["criticalHit", "criticalFumble"]) {
   for (const damageType of ["slashing", "piercing", "bludgeoning"]) {
-    assert.equal(damageCounts.get(`${category}:${damageType}`), 15);
+    assert.equal(damageCounts.get(`${category}:${damageType}`), 30);
   }
 }
 assert.ok((impactCounts.get("light") ?? 0) > 0);
@@ -167,4 +167,4 @@ assert.match(settingsScript, /default: false/);
 assert.match(settingsScript, /type: Boolean/);
 assert.doesNotMatch(settingsScript, /BooleanField/);
 
-console.log("PF2E Critical Forge: Arsenal 0.3.1 structural validation passed.");
+console.log("PF2E Critical Forge: Arsenal 0.3.4 structural validation passed.");
