@@ -25,6 +25,10 @@ Each pack is registered separately and remains protected and read-only in the Cr
 
 All packs are disabled by default, allowing the GM to choose only the decks wanted for the campaign.
 
+## Card design
+
+The binding design rules for future packs are documented in [docs/CARD_BIBLE.md](docs/CARD_BIBLE.md).
+
 ## Development
 
 ```bash

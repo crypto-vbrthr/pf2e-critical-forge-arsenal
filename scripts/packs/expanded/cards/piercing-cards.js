@@ -130,5 +130,103 @@ export const PIERCING_CARDS = Object.freeze([
         }
       ]
     }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.exposed-joint",
+    localizationKey: "ExposedJoint",
+    damageType: "piercing",
+    tone: "serious",
+    impact: "light",
+    fallbackTitle: "Exposed Joint",
+    fallbackDescription: "The point finds a working joint, imposing a -1 circumstance penalty to Reflex saves for 1 round.",
+    weight: 2,
+    tags: ["debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "reflex", value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.pinpoint-pain",
+    localizationKey: "PinpointPain",
+    damageType: "piercing",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Pinpoint Pain",
+    fallbackDescription: "A needle-fine burst of pain breaks concentration, imposing a -1 circumstance penalty to Will saves and spell attack rolls for 1 round.",
+    weight: 1,
+    tags: ["debuff", "mental-disruption"],
+    filters: {"excludedTargetTraits": ["construct", "elemental", "incorporeal", "mindless", "ooze", "undead"]},
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["will", "spell-attack-roll"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.faltering-grip",
+    localizationKey: "FalteringGrip",
+    damageType: "piercing",
+    tone: "neutral",
+    impact: "light",
+    fallbackTitle: "Faltering Grip",
+    fallbackDescription: "The thrust strikes hand, wrist, or leverage, leaving the target enfeebled 1 for 1 round.",
+    weight: 2,
+    tags: ["debuff"],
+    filters: {"excludedTargetTraits": ["incorporeal", "ooze"]},
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.precise-thrust",
+    localizationKey: "PreciseThrust",
+    damageType: "piercing",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Precise Thrust",
+    fallbackDescription: "The point slips through a narrow opening, imposing a -1 circumstance penalty to AC and Fortitude saves for 1 round.",
+    weight: 1,
+    tags: ["defense", "debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["ac", "fortitude"], value: -1, modifierType: "circumstance", predicate: [] }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.pinned-momentum",
+    localizationKey: "PinnedMomentum",
+    damageType: "piercing",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Pinned Momentum",
+    fallbackDescription: "The point catches the target at the worst possible angle, leaving it immobilized for 1 round.",
+    weight: 1,
+    tags: ["control", "movement"],
+    filters: {"excludedTargetTraits": ["incorporeal", "ooze"]},
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "immobilized" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.numbed-arm", localizationKey: "NumbedArm", damageType: "piercing",
+    tone: "serious", impact: "moderate", fallbackTitle: "Numbed Arm",
+    fallbackDescription: "The point strikes a nerve or joint, leaving the target clumsy 1 for 1 round.",
+    weight: 2, tags: ["precision", "debuff"], filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.stolen-breath", localizationKey: "StolenBreath", damageType: "piercing",
+    tone: "dramatic", impact: "strong", fallbackTitle: "Stolen Breath",
+    fallbackDescription: "The thrust finds a breath-stealing point, leaving the target slowed 1 for 1 round.",
+    weight: 1, tags: ["precision", "control"], filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "slowed", value: 1 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.anchored-foot", localizationKey: "AnchoredFoot", damageType: "piercing",
+    tone: "neutral", impact: "light", fallbackTitle: "Anchored Foot",
+    fallbackDescription: "The strike catches foot, hem, or footing, reducing the target's land Speed by 10 feet for 1 round.",
+    weight: 2, tags: ["movement", "precision"], filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "land", value: -10, modifierType: "circumstance" }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.threaded-gap", localizationKey: "ThreadedGap", damageType: "piercing",
+    tone: "serious", impact: "moderate", fallbackTitle: "Threaded Gap",
+    fallbackDescription: "The point marks a precise route through the target's protection, giving it weakness 2 to piercing damage for 1 round.",
+    weight: 1, tags: ["vulnerability", "precision"],
+    effect: { duration: ONE_ROUND, components: [{ type: "weakness", weaknessType: "piercing", value: 2 }] }
+  }),
+  defineWeaponCriticalCard({
+    id: "piercing.eye-line", localizationKey: "EyeLine", damageType: "piercing",
+    tone: "dramatic", impact: "moderate", fallbackTitle: "Eye-Line",
+    fallbackDescription: "The point flashes past the target's eyes and breaks its focus, leaving it dazzled for 1 round.",
+    weight: 1, tags: ["senses", "precision"], filters: { excludedTargetTraits: ["mindless", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "dazzled" }] }
   })
 ]);

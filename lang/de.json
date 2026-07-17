@@ -113,7 +113,7 @@
       },
       "LostLine": {
         "Title": "Verlorene Linie",
-        "Description": "Die Spitze verlässt ihre Linie. Der Angreifer erleidet 1 Runde lang einen Situationsmalus von –1 auf Angriffswürfe und Wahrnehmung."
+        "Description": "Der misslungene Schwung zerstört die Angriffslinie. Der Angreifer erhält 1 Runde lang einen Umstandsmalus von –1 auf Angriffswürfe und RK."
       },
       "LockedShoulder": {
         "Title": "Blockierte Schulter",
@@ -146,6 +146,246 @@
       "GroundWins": {
         "Title": "Der Boden gewinnt",
         "Description": "Der verfehlte Nahkampfschlag zieht das Gleichgewicht des Angreifers mit sich. Er geht zu Boden."
+      },
+      "CleavingArc": {
+        "Title": "Spaltender Bogen",
+        "Description": "Der breite Klingenbogen zwingt das Ziel zurück. Es erleidet 1 Runde lang einen Umstandsmalus von –1 auf seine RK."
+      },
+      "Hamstrung": {
+        "Title": "Sehnenhieb",
+        "Description": "Ein tiefer Schnitt raubt dem Schritt des Ziels die Kraft. Es ist 1 Runde lang unbeholfen 1."
+      },
+      "TornGuard": {
+        "Title": "Zerrissene Deckung",
+        "Description": "Die Schneide zerreißt Deckung und Haltung. Das Ziel erleidet 1 Runde lang einen Umstandsmalus von –1 auf Angriffswürfe und RK."
+      },
+      "RendingStrike": {
+        "Title": "Reißender Treffer",
+        "Description": "Der Treffer hinterlässt eine ausgefranste Wunde und verursacht 1W6 anhaltenden Blutungsschaden."
+      },
+      "SweepingPressure": {
+        "Title": "Fegender Druck",
+        "Description": "Der unablässige Schwung lässt keine sichere Haltung zu. Das Ziel erleidet 1 Runde lang einen Umstandsmalus von –1 auf Reflexwürfe."
+      },
+      "ExposedJoint": {
+        "Title": "Freigelegtes Gelenk",
+        "Description": "Die Spitze findet ein belastetes Gelenk. Das Ziel erleidet 1 Runde lang einen Umstandsmalus von –1 auf Reflexwürfe."
+      },
+      "PinpointPain": {
+        "Title": "Punktgenauer Schmerz",
+        "Description": "Ein nadelfeiner Schmerzstoß bricht die Konzentration. Das Ziel erleidet 1 Runde lang einen Umstandsmalus von –1 auf Willenswürfe und Zauberangriffswürfe."
+      },
+      "FalteringGrip": {
+        "Title": "Unsicherer Griff",
+        "Description": "Der Stich trifft Hand, Handgelenk oder Hebelpunkt. Das Ziel ist 1 Runde lang entkräftet 1."
+      },
+      "PreciseThrust": {
+        "Title": "Präziser Stoß",
+        "Description": "Die Spitze gleitet durch eine schmale Lücke. Das Ziel erleidet 1 Runde lang einen Umstandsmalus von –1 auf RK und Zähigkeitswürfe."
+      },
+      "PinnedMomentum": {
+        "Title": "Festgesetzter Schwung",
+        "Description": "Die Spitze erwischt das Ziel im ungünstigsten Winkel. Es ist 1 Runde lang bewegungsunfähig."
+      },
+      "DrivingSmash": {
+        "Title": "Treibender Schlag",
+        "Description": "Der Treffer drückt das Ziel aus seiner eigenen Haltung. Es ist 1 Runde lang unbeholfen 1."
+      },
+      "BoneRattlingStrike": {
+        "Title": "Knochenrüttelnder Treffer",
+        "Description": "Der Aufprall schüttelt die Kraft aus Gliedern und Griff. Das Ziel ist 1 Runde lang entkräftet 1."
+      },
+      "CrushedGuard": {
+        "Title": "Zerschmetterte Deckung",
+        "Description": "Die Verteidigung des Ziels bricht unter dem Aufprall zusammen. Es erleidet 1 Runde lang einen Umstandsmalus von –1 auf seine RK."
+      },
+      "StaggeringImpact": {
+        "Title": "Taumelnder Aufprall",
+        "Description": "Der Schlag kippt das Schlachtfeld zur Seite und wirft das Ziel zu Boden."
+      },
+      "RattledFocus": {
+        "Title": "Erschütterter Fokus",
+        "Description": "Der Aufprall zerstreut Gedanken und Zielvermögen. Das Ziel erleidet 1 Runde lang einen Umstandsmalus von –1 auf Angriffswürfe und Wahrnehmung."
+      },
+      "SlipperyGrip": {
+        "Title": "Rutschiger Griff",
+        "Description": "Der Griff verrutscht im schlechtesten Moment. Der Angreifer erleidet 1 Runde lang einen Umstandsmalus von –1 auf Athletik und Angriffswürfe."
+      },
+      "WildFollowThrough": {
+        "Title": "Wilder Nachschwung",
+        "Description": "Der Hieb zieht den Angreifer in eine ausladende Erholung. Alle Bewegungsraten sinken 1 Runde lang um 1,5 Meter."
+      },
+      "BlindedByMotion": {
+        "Title": "Von der Bewegung geblendet",
+        "Description": "Waffe, Kleidung oder Trümmer kreuzen die Sichtlinie. Der Angreifer ist 1 Runde lang geblendet."
+      },
+      "CutShort": {
+        "Title": "Jäh gestoppt",
+        "Description": "Der misslungene Schwung erschüttert den Rhythmus. Der Angreifer erleidet 1 Runde lang einen Umstandsmalus von –1 auf Reflexwürfe."
+      },
+      "SpinningRecovery": {
+        "Title": "Taumelnde Erholung",
+        "Description": "Der verfehlte Bogen lässt den Angreifer schwindeln und offen stehen. Er ist 1 Runde lang unbeholfen 1 und auf dem falschen Fuß."
+      },
+      "TwistedWrist": {
+        "Title": "Verdrehtes Handgelenk",
+        "Description": "Der Stoß dreht sich gegen das Handgelenk. Der Angreifer ist 1 Runde lang unbeholfen 1."
+      },
+      "BrokenMeasure": {
+        "Title": "Gebrochenes Maß",
+        "Description": "Der misslungene Stich zerstört Distanz und Timing. Der Angreifer erleidet 1 Runde lang einen Umstandsmalus von –1 auf seine RK."
+      },
+      "SnaggedPoint": {
+        "Title": "Verhakete Spitze",
+        "Description": "Die Spitze verfängt sich in Rüstung, Gelände oder der eigenen Linie. Alle Bewegungsraten sinken 1 Runde lang um 1,5 Meter."
+      },
+      "FalteringFocus": {
+        "Title": "Wankender Fokus",
+        "Description": "Die verfehlte Linie lässt den Angreifer jede Öffnung anzweifeln. Er erleidet 1 Runde lang einen Umstandsmalus von –1 auf Willenswürfe."
+      },
+      "FullCommitment": {
+        "Title": "Voller Einsatz",
+        "Description": "Der Angreifer wirft alles in leeren Raum und ist 1 Runde lang verlangsamt 1."
+      },
+      "HeavyRecovery": {
+        "Title": "Schwere Erholung",
+        "Description": "Das Gewicht der Waffe zieht den Angreifer hinter den Kampf zurück. Alle Bewegungsraten sinken 1 Runde lang um 1,5 Meter."
+      },
+      "JarringMiss": {
+        "Title": "Erschütternder Fehlschlag",
+        "Description": "Der misslungene Aufprall erschüttert die Sinne. Der Angreifer erleidet 1 Runde lang einen Umstandsmalus von –1 auf Wahrnehmung und Reflexwürfe."
+      },
+      "OvercommittedSmash": {
+        "Title": "Überzogener Schlag",
+        "Description": "Der ganze Körper folgt dem Fehlschlag. Der Angreifer ist 1 Runde lang unbeholfen 1."
+      },
+      "RattledGuardFumble": {
+        "Title": "Erschütterte Deckung",
+        "Description": "Der Rückstoß bringt Waffe und Verteidigung aus der Linie. Der Angreifer erleidet 1 Runde lang einen Umstandsmalus von –1 auf seine RK."
+      },
+      "CrushingRecoil": {
+        "Title": "Zerschmetternder Rückstoß",
+        "Description": "Der Fehlschlag bestraft den Angreifer mit der eigenen Wucht. Er ist 1 Runde lang entkräftet 1 und auf dem falschen Fuß."
+      },
+      "SeveredStance": {
+        "Title": "Zerrissener Stand",
+        "Description": "Der Schnitt zerreißt Gleichgewicht und Körperspannung. Das Ziel erhält 1 Runde lang einen Umstandsmalus von –1 auf Zähigkeits- und Reflexwürfe."
+      },
+      "BloodInTheEyes": {
+        "Title": "Blut in den Augen",
+        "Description": "Der Hieb schleudert Blut, Splitter oder zerrissenes Material in die Sicht des Ziels. Es ist 1 Runde lang geblendet."
+      },
+      "HookedCut": {
+        "Title": "Hakender Schnitt",
+        "Description": "Die Schneide verfängt sich in Kleidung, Rüstung oder Fleisch. Die Landbewegungsrate des Ziels sinkt 1 Runde lang um 3 Meter."
+      },
+      "RaggedOpening": {
+        "Title": "Gezackte Öffnung",
+        "Description": "Der Schnitt reißt eine unregelmäßige Lücke in die Verteidigung. Das Ziel erhält 1 Runde lang Schwäche 2 gegen Stichschaden."
+      },
+      "SplitDefense": {
+        "Title": "Gespaltene Verteidigung",
+        "Description": "Der weite Hieb reißt Angriff und Abwehr auseinander. Das Ziel ist 1 Runde lang auf dem falschen Fuß und erhält einen Umstandsmalus von –1 auf Angriffswürfe."
+      },
+      "NumbedArm": {
+        "Title": "Tauber Arm",
+        "Description": "Die Spitze trifft einen Nerv oder ein Gelenk. Das Ziel ist 1 Runde lang unbeholfen 1."
+      },
+      "StolenBreath": {
+        "Title": "Geraubter Atem",
+        "Description": "Der Stich trifft einen Punkt, der dem Ziel den Atem nimmt. Es ist 1 Runde lang verlangsamt 1."
+      },
+      "AnchoredFoot": {
+        "Title": "Festgenagelter Fuß",
+        "Description": "Der Treffer erwischt Fuß, Saum oder Standfläche. Die Landbewegungsrate des Ziels sinkt 1 Runde lang um 3 Meter."
+      },
+      "ThreadedGap": {
+        "Title": "Markierte Lücke",
+        "Description": "Die Spitze zeichnet einen präzisen Weg durch den Schutz des Ziels. Es erhält 1 Runde lang Schwäche 2 gegen Stichschaden."
+      },
+      "EyeLine": {
+        "Title": "Durch die Sichtlinie",
+        "Description": "Die Spitze zuckt an den Augen des Ziels vorbei und bricht seinen Fokus. Es ist 1 Runde lang geblendet."
+      },
+      "Winded": {
+        "Title": "Atemlos",
+        "Description": "Der Einschlag presst dem Ziel die Luft aus den Lungen. Es ist 1 Runde lang verlangsamt 1."
+      },
+      "RingingEars": {
+        "Title": "Klingelnde Ohren",
+        "Description": "Der Schlag überflutet die Sinne des Ziels mit Lärm. Es ist 1 Runde lang geblendet."
+      },
+      "BuckledKnees": {
+        "Title": "Eingeknickte Knie",
+        "Description": "Der Treffer lässt den Stand des Ziels einknicken. Alle seine Bewegungsraten sinken 1 Runde lang um 1,5 Meter."
+      },
+      "ConcussiveGap": {
+        "Title": "Erschütterte Lücke",
+        "Description": "Der Einschlag bricht Körper und Deckung auf. Das Ziel erhält 1 Runde lang einen Umstandsmalus von –1 auf RK und Zähigkeitswürfe."
+      },
+      "DislocatedGuard": {
+        "Title": "Verrissene Deckung",
+        "Description": "Der Schlag bringt Kraft und Verteidigung aus der Linie. Das Ziel ist 1 Runde lang entkräftet 1 und auf dem falschen Fuß."
+      },
+      "KissedTheFloor": {
+        "Title": "Bodenkontakt",
+        "Description": "Die Klinge beißt in Boden oder Trümmer und reißt den Angreifer mit. Er geht zu Boden."
+      },
+      "OpenFlank": {
+        "Title": "Offene Flanke",
+        "Description": "Der weite Fehlschlag entblößt die Seite des Angreifers. Er ist 1 Runde lang auf dem falschen Fuß."
+      },
+      "SnaggedEdge": {
+        "Title": "Verfangene Schneide",
+        "Description": "Die Schneide verfängt sich in Rüstung, Umgebung oder der eigenen Bewegung. Der Angreifer ist 1 Runde lang unbeholfen 1."
+      },
+      "TangledRecovery": {
+        "Title": "Verhedderte Erholung",
+        "Description": "Waffe, Kleidung und Schwung verknoten sich. Alle Bewegungsraten des Angreifers sinken 1 Runde lang um 3 Meter."
+      },
+      "WrongDistance": {
+        "Title": "Falsche Distanz",
+        "Description": "Der Angreifer verschätzt sich grob bei Reichweite und Timing. Er erhält 1 Runde lang einen Umstandsmalus von –1 auf Angriffswürfe."
+      },
+      "CrossedEyes": {
+        "Title": "Gekreuzter Blick",
+        "Description": "Die Spitze zuckt durch die eigene Sichtlinie zurück. Der Angreifer ist 1 Runde lang geblendet."
+      },
+      "StuckInTheMoment": {
+        "Title": "Im Moment verhakt",
+        "Description": "Die Spitze bleibt hängen und der Angreifer erstarrt um sie herum. Er ist 1 Runde lang verlangsamt 1."
+      },
+      "DeadWeight": {
+        "Title": "Totes Gewicht",
+        "Description": "Der Schwung der Waffe wird zu totem Gewicht. Der Angreifer ist 1 Runde lang verlangsamt 1."
+      },
+      "ReboundShock": {
+        "Title": "Rückprallschock",
+        "Description": "Der Schlag prallt durch Arme und Schultern zurück. Der Angreifer ist 1 Runde lang entkräftet 1."
+      },
+      "ShatteredFooting": {
+        "Title": "Zerschlagener Stand",
+        "Description": "Der Fehlschlag hämmert den Stand des Angreifers auseinander. Alle seine Bewegungsraten sinken 1 Runde lang um 3 Meter."
+      },
+      "RingingSkull": {
+        "Title": "Dröhnender Schädel",
+        "Description": "Der Rückstoß erschüttert die Sinne des Angreifers. Er ist 1 Runde lang geblendet."
+      },
+      "CavedInGuard": {
+        "Title": "Eingebrochene Deckung",
+        "Description": "Der schwere Fehlschlag lässt die eigene Verteidigung einbrechen. Der Angreifer ist 1 Runde lang auf dem falschen Fuß und erhält einen Umstandsmalus von –1 auf Reflexwürfe."
+      },
+      "ExposedSide": {
+        "Title": "Offene Flanke",
+        "Description": "Der weite Fehlschlag entblößt die Seite des Angreifers. Er ist 1 Runde lang auf dem falschen Fuß."
+      },
+      "RecklessLunge": {
+        "Title": "Überdehnter Ausfall",
+        "Description": "Der Angreifer stößt über sein Gleichgewicht hinaus und geht zu Boden."
+      },
+      "SprainedWrist": {
+        "Title": "Verdrehtes Handgelenk",
+        "Description": "Der misslungene Stich verdreht das Handgelenk des Angreifers. Er ist 1 Runde lang entkräftet 1."
       }
     },
     "Effects": {
@@ -238,6 +478,186 @@
       },
       "GroundWins": {
         "Name": "Der Boden gewinnt"
+      },
+      "CleavingArc": {
+        "Name": "Spaltender Bogen"
+      },
+      "Hamstrung": {
+        "Name": "Sehnenhieb"
+      },
+      "TornGuard": {
+        "Name": "Zerrissene Deckung"
+      },
+      "RendingStrike": {
+        "Name": "Reißender Treffer"
+      },
+      "SweepingPressure": {
+        "Name": "Fegender Druck"
+      },
+      "ExposedJoint": {
+        "Name": "Freigelegtes Gelenk"
+      },
+      "PinpointPain": {
+        "Name": "Punktgenauer Schmerz"
+      },
+      "FalteringGrip": {
+        "Name": "Unsicherer Griff"
+      },
+      "PreciseThrust": {
+        "Name": "Präziser Stoß"
+      },
+      "PinnedMomentum": {
+        "Name": "Festgesetzter Schwung"
+      },
+      "DrivingSmash": {
+        "Name": "Treibender Schlag"
+      },
+      "BoneRattlingStrike": {
+        "Name": "Knochenrüttelnder Treffer"
+      },
+      "CrushedGuard": {
+        "Name": "Zerschmetterte Deckung"
+      },
+      "StaggeringImpact": {
+        "Name": "Taumelnder Aufprall"
+      },
+      "RattledFocus": {
+        "Name": "Erschütterter Fokus"
+      },
+      "SlipperyGrip": {
+        "Name": "Rutschiger Griff"
+      },
+      "WildFollowThrough": {
+        "Name": "Wilder Nachschwung"
+      },
+      "BlindedByMotion": {
+        "Name": "Von der Bewegung geblendet"
+      },
+      "CutShort": {
+        "Name": "Jäh gestoppt"
+      },
+      "SpinningRecovery": {
+        "Name": "Taumelnde Erholung"
+      },
+      "TwistedWrist": {
+        "Name": "Verdrehtes Handgelenk"
+      },
+      "BrokenMeasure": {
+        "Name": "Gebrochenes Maß"
+      },
+      "SnaggedPoint": {
+        "Name": "Verhakete Spitze"
+      },
+      "FalteringFocus": {
+        "Name": "Wankender Fokus"
+      },
+      "FullCommitment": {
+        "Name": "Voller Einsatz"
+      },
+      "HeavyRecovery": {
+        "Name": "Schwere Erholung"
+      },
+      "JarringMiss": {
+        "Name": "Erschütternder Fehlschlag"
+      },
+      "OvercommittedSmash": {
+        "Name": "Überzogener Schlag"
+      },
+      "RattledGuardFumble": {
+        "Name": "Erschütterte Deckung"
+      },
+      "CrushingRecoil": {
+        "Name": "Zerschmetternder Rückstoß"
+      },
+      "SeveredStance": {
+        "Name": "Zerrissener Stand"
+      },
+      "BloodInTheEyes": {
+        "Name": "Blut in den Augen"
+      },
+      "HookedCut": {
+        "Name": "Hakender Schnitt"
+      },
+      "RaggedOpening": {
+        "Name": "Gezackte Öffnung"
+      },
+      "SplitDefense": {
+        "Name": "Gespaltene Verteidigung"
+      },
+      "NumbedArm": {
+        "Name": "Tauber Arm"
+      },
+      "StolenBreath": {
+        "Name": "Geraubter Atem"
+      },
+      "AnchoredFoot": {
+        "Name": "Festgenagelter Fuß"
+      },
+      "ThreadedGap": {
+        "Name": "Markierte Lücke"
+      },
+      "EyeLine": {
+        "Name": "Durch die Sichtlinie"
+      },
+      "Winded": {
+        "Name": "Atemlos"
+      },
+      "RingingEars": {
+        "Name": "Klingelnde Ohren"
+      },
+      "BuckledKnees": {
+        "Name": "Eingeknickte Knie"
+      },
+      "ConcussiveGap": {
+        "Name": "Erschütterte Lücke"
+      },
+      "DislocatedGuard": {
+        "Name": "Verrissene Deckung"
+      },
+      "KissedTheFloor": {
+        "Name": "Bodenkontakt"
+      },
+      "OpenFlank": {
+        "Name": "Offene Flanke"
+      },
+      "SnaggedEdge": {
+        "Name": "Verfangene Schneide"
+      },
+      "TangledRecovery": {
+        "Name": "Verhedderte Erholung"
+      },
+      "WrongDistance": {
+        "Name": "Falsche Distanz"
+      },
+      "CrossedEyes": {
+        "Name": "Gekreuzter Blick"
+      },
+      "StuckInTheMoment": {
+        "Name": "Im Moment verhakt"
+      },
+      "DeadWeight": {
+        "Name": "Totes Gewicht"
+      },
+      "ReboundShock": {
+        "Name": "Rückprallschock"
+      },
+      "ShatteredFooting": {
+        "Name": "Zerschlagener Stand"
+      },
+      "RingingSkull": {
+        "Name": "Dröhnender Schädel"
+      },
+      "CavedInGuard": {
+        "Name": "Eingebrochene Deckung"
+      },
+      "ExposedSide": {
+        "Name": "Offene Flanke"
+      },
+      "RecklessLunge": {
+        "Name": "Überdehnter Ausfall"
+      },
+      "SprainedWrist": {
+        "Name": "Verdrehtes Handgelenk"
       }
     },
     "Notifications": {

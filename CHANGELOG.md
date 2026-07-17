@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.3.1
+
+- Added the second five-card expansion block to all six weapon packs.
+- Each pack now contains 15 cards, for a total of 90 cards.
+- Added English and German localization for all 30 new cards and effects.
+- Continued the distinct slashing, piercing, and bludgeoning identities defined by the Card Bible.
+- Preserved all existing card and pack IDs.
+
+
+## 0.3.1
+
+- Added the first five-card expansion block to all six weapon packs.
+- Each pack now contains 10 cards, for a total of 60 cards.
+- Added English and German localization for all 30 new cards and effects.
+- Preserved all existing card and pack IDs.
+
+
+## 0.2.2
+
+- Translated the Card Bible into English.
+- Standardized all project documentation on English while retaining German and English runtime localization.
+
+## 0.2.1
+
+- Added the Arsenal Card Bible as the binding design guide for expanding every pack to 30 cards.
+- Defined damage-type identity, impact distribution, effect budgets, duration rules, filters, tags, naming conventions, localization standards, excluded designs, and a review checklist.
+- Documented the target scope of 180 cards across the first six weapon packs.
+
 ## 0.2.0
 
 - Added three independently selectable weapon-fumble packs for slashing, piercing, and bludgeoning attacks.

@@ -77,4 +77,4 @@ assert.equal(registeredPackBatches[0].packs.length, 6);
 assert.ok(registeredPackBatches[0].packs.every((pack) => pack.enabled === false));
 assert.equal(registeredPackBatches[0].options.replace, false);
 
-console.log("PF2E Critical Forge: Arsenal 0.2.0 startup-order validation passed.");
+console.log("PF2E Critical Forge: Arsenal 0.3.1 startup-order validation passed.");
