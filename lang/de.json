@@ -125,7 +125,7 @@
       },
       "SightlineSnared": {
         "Title": "Verfangene Sichtlinie",
-        "Description": "Spitze, Schaft, Sehne oder Ärmel geraten in die Sichtlinie. Der Angreifer ist 1 Runde lang Geblendet."
+        "Description": "Spitze, Schaft, Sehne oder Ärmel geraten in die Sichtlinie und verleihen dem Angreifer 1 Runde lang einen Umstandsmalus von –1 auf Wahrnehmung."
       },
       "RecoilShock": {
         "Title": "Rückstoßschock",
@@ -237,7 +237,7 @@
       },
       "SnaggedPoint": {
         "Title": "Verhakete Spitze",
-        "Description": "Die Spitze verfängt sich in Rüstung, Gelände oder der eigenen Linie. Alle Bewegungsraten sinken 1 Runde lang um 1,5 Meter."
+        "Description": "Die Spitze verfängt sich in Rüstung, Gelände oder der eigenen Linie und verleiht dem Angreifer 1 Runde lang einen Umstandsmalus von –1 auf Athletik."
       },
       "FalteringFocus": {
         "Title": "Wankender Fokus",
@@ -385,7 +385,7 @@
       },
       "SprainedWrist": {
         "Title": "Verdrehtes Handgelenk",
-        "Description": "Der misslungene Stich verdreht das Handgelenk des Angreifers. Er ist 1 Runde lang entkräftet 1."
+        "Description": "Der misslungene Stich verdreht das Handgelenk des Angreifers und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Diebeskunst."
       },
       "ScarletFeint": {
         "Title": "Scharlachrote Finte",
@@ -465,7 +465,7 @@
       },
       "FalseDistance": {
         "Title": "Falsche Distanz",
-        "Description": "Der Angreifer verschätzt sich um den letzten Fingerbreit und lehnt sich ins Leere, wodurch er für 1 Runde auf dem falschen Fuß ist."
+        "Description": "Der Angreifer verschätzt sich um den letzten Fingerbreit und lehnt sich ins Leere. Er erhält 1 Runde lang einen Umstandsmalus von –1 auf Akrobatik."
       },
       "LockedKnee": {
         "Title": "Durchgedrücktes Knie",
@@ -481,7 +481,7 @@
       },
       "LostPoint": {
         "Title": "Verlorene Spitze",
-        "Description": "Der Angreifer verliert während des misslungenen Stoßes die eigene Waffenspitze aus den Augen und ist für 1 Runde geblendet."
+        "Description": "Der Angreifer verliert während des misslungenen Stoßes Waffenspitze und Angriffslinie. Er erhält 1 Runde lang einen Umstandsmalus von –1 auf Angriffswürfe."
       },
       "WeightedPastCenter": {
         "Title": "Über den Schwerpunkt",
@@ -689,7 +689,7 @@
       },
       "ShortMeasure": {
         "Title": "Zu kurz bemessen",
-        "Description": "Der Stoß greift zu kurz und lässt den Angreifer 1 Runde lang auf dem falschen Fuß."
+        "Description": "Der Stoß greift zu kurz und stört die Einschätzung des Kampfgeschehens. Der Angreifer erhält 1 Runde lang einen Umstandsmalus von –1 auf Wissen abrufen."
       },
       "WrenchedPoint": {
         "Title": "Verdrehte Spitze",
@@ -745,7 +745,7 @@
       },
       "BrokenAlignment": {
         "Title": "Gebrochene Linie",
-        "Description": "Der misslungene Stoß ruiniert Distanz und Timing und verleiht dem Angreifer 1 Runde lang einen Umstandsmalus von –1 auf Angriffswürfe und Wahrnehmung."
+        "Description": "Der misslungene Stoß ruiniert Ausrichtung und Erholung und verleiht dem Angreifer 1 Runde lang einen Umstandsmalus von –1 auf Reflexwürfe."
       }
     },
     "Effects": {

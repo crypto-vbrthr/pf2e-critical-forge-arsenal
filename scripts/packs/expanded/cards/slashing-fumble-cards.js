@@ -19,7 +19,7 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
     tags: ["control"],
     effect: {
       duration: ONE_ROUND,
-      components: [{ type: "condition", slug: "off-guard" }]
+      components: [{ type: "modifier", selector: "perception", value: -1, modifierType: "circumstance", predicate: [] }]
     }
   }),
   defineWeaponFumbleCard({
@@ -30,7 +30,7 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
     impact: "light",
     fallbackTitle: "Twisted Edge",
     fallbackDescription:
-      "The weapon turns awkwardly in the grip, imposing a -1 circumstance penalty to attack rolls for 1 round.",
+      "The weapon turns awkwardly in the grip, imposing a -1 circumstance penalty to Reflex saves for 1 round.",
     weight: 2,
     tags: ["debuff"],
     effect: {
@@ -133,10 +133,10 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Blinded by Motion",
-    fallbackDescription: "The sweeping weapon, cloak, or debris crosses the attacker's vision, leaving them dazzled for 1 round.",
+    fallbackDescription: "The sweeping weapon, cloak, or debris crosses the attacker's vision, imposing a -1 circumstance penalty to Will saves for 1 round.",
     weight: 1,
     tags: ["control", "senses"],
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "dazzled" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "will", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "slashing-fumble.cut-short",
@@ -161,7 +161,7 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
     weight: 1,
     tags: ["control", "debuff"],
     filters: {"excludedSourceTraits": ["incorporeal"]},
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }, { type: "condition", slug: "off-guard" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }, { type: "modifier", selector: "athletics", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "slashing-fumble.kissed-the-floor", localizationKey: "KissedTheFloor", damageType: "slashing",
@@ -173,7 +173,7 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
   defineWeaponFumbleCard({
     id: "slashing-fumble.exposed-side", localizationKey: "ExposedSide", damageType: "slashing",
     tone: "serious", impact: "light", fallbackTitle: "Open Flank",
-    fallbackDescription: "The wide miss exposes the attacker's side, leaving them off-guard for 1 round.",
+    fallbackDescription: "The wide miss exposes the attacker's side, imposing a -1 circumstance penalty to Perception checks for 1 round.",
     weight: 2, tags: ["defense", "control"],
     effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
   }),
@@ -194,20 +194,20 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
   defineWeaponFumbleCard({
     id: "slashing-fumble.tangled-recovery", localizationKey: "TangledRecovery", damageType: "slashing",
     tone: "dramatic", impact: "moderate", fallbackTitle: "Tangled Recovery",
-    fallbackDescription: "Weapon, clothing, and momentum knot together, reducing all Speeds by 10 feet for 1 round.",
+    fallbackDescription: "Weapon, clothing, and momentum knot together, imposing a -1 circumstance penalty to Acrobatics checks for 1 round.",
     weight: 1, tags: ["movement"], filters: { excludedSourceTraits: ["incorporeal"] },
-    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "acrobatics", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "slashing-fumble.empty-arc", localizationKey: "EmptyArc", damageType: "slashing",
     tone: "neutral", impact: "light", fallbackTitle: "Empty Arc",
-    fallbackDescription: "The blade cuts only air and carries the attacker past a safe guard, leaving them off-guard for 1 round.",
+    fallbackDescription: "The blade cuts only air and leaves the attacker off balance, imposing a -1 circumstance penalty to Athletics checks for 1 round.",
     weight: 2, tags: ["control"],
     effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
   }),
   defineWeaponFumbleCard({
     id: "slashing-fumble.dragged-edge", localizationKey: "DraggedEdge", damageType: "slashing",
-    tone: "serious", impact: "moderate", fallbackTitle: "Dragged Edge",
+    tone: "serious", impact: "moderate", fallbackTitle: "Grounded Blade",
     fallbackDescription: "The edge catches ground, wall, or debris and drags the attacker out of rhythm, reducing all Speeds by 10 feet for 1 round.",
     weight: 1, tags: ["movement", "recovery"],
     effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -10, modifierType: "circumstance" }] }
@@ -224,7 +224,7 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
     tone: "serious", impact: "strong", fallbackTitle: "Wrenched Shoulder",
     fallbackDescription: "The failed cut wrenches the attacker's shoulder, leaving them enfeebled 1 and imposing a -1 circumstance penalty to attack rolls for 1 round.",
     weight: 1, tags: ["debuff", "recovery"], filters: { excludedSourceTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }, { type: "modifier", selector: "attack-roll", value: -1, modifierType: "circumstance", predicate: [] }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "athletics", value: -1, modifierType: "circumstance", predicate: [] }, { type: "modifier", selector: "attack-roll", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "slashing-fumble.flash-of-steel", localizationKey: "FlashOfSteel", damageType: "slashing",
@@ -347,7 +347,7 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
         },
         {
           "type": "modifier",
-          "selector": "attack-roll",
+          "selector": "reflex",
           "value": -1,
           "modifierType": "circumstance",
           "predicate": []
@@ -398,7 +398,7 @@ export const SLASHING_FUMBLE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Jarred Shoulder",
-    fallbackDescription: "The abrupt stop jars the attacker’s shoulder, leaving it enfeebled 1 for 1 round.",
+    fallbackDescription: "The abrupt stop jars the attacker’s shoulder, imposing a -1 circumstance penalty to Athletics checks for 1 round.",
     weight: 1,
     tags: ["debuff"],
     filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },

@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.4.0
+
+### Changed
+
+- Completed the Mechanical Review patch for Piercing Critical Fumbles.
+- Reworked **False Distance** to penalize Acrobatics instead of applying off-guard.
+- Reworked **Sightline Snared** to penalize Perception instead of applying dazzled.
+- Reworked **Sprained Wrist** to penalize Thievery instead of applying enfeebled 1.
+- Reworked **Broken Alignment** to penalize Reflex saves instead of duplicating attack and Perception penalties.
+- Reworked **Snagged Point** to penalize Athletics instead of reducing Speed.
+- Reworked **Lost Point** to penalize attack rolls instead of applying dazzled.
+- Reworked **Short Measure** to penalize Recall Knowledge instead of applying off-guard.
+- Preserved all 30 cards, draw weights, and pack structure.
+
 ## 0.3.8
 
 ### Changed

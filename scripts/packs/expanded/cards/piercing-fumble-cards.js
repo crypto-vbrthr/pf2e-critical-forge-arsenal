@@ -104,12 +104,12 @@ export const PIERCING_FUMBLE_CARDS = Object.freeze([
     impact: "moderate",
     fallbackTitle: "Sightline Snared",
     fallbackDescription:
-      "Point, shaft, string, or sleeve crosses the attacker's sightline, leaving them dazzled for 1 round.",
+      "Point, shaft, string, or sleeve crosses the attacker's sightline, imposing a -1 circumstance penalty to Perception for 1 round.",
     weight: 1,
-    tags: ["control", "senses"],
+    tags: ["debuff", "senses"],
     effect: {
       duration: ONE_ROUND,
-      components: [{ type: "condition", slug: "dazzled" }]
+      components: [{ type: "modifier", selector: "perception", value: -1, modifierType: "circumstance", predicate: [] }]
     }
   }),
   defineWeaponFumbleCard({
@@ -144,11 +144,11 @@ export const PIERCING_FUMBLE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Snagged Point",
-    fallbackDescription: "The point catches on armor, terrain, or its own line, reducing all Speeds by 5 feet for 1 round.",
+    fallbackDescription: "The point catches on armor, terrain, or its own line, imposing a -1 circumstance penalty to Athletics checks for 1 round.",
     weight: 1,
-    tags: ["movement"],
+    tags: ["debuff", "recovery"],
     filters: {"excludedSourceTraits": ["incorporeal"]},
-    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "all", value: -5, modifierType: "circumstance" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "athletics", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "piercing-fumble.faltering-focus",
@@ -192,9 +192,9 @@ export const PIERCING_FUMBLE_CARDS = Object.freeze([
   defineWeaponFumbleCard({
     id: "piercing-fumble.sprained-wrist", localizationKey: "SprainedWrist", damageType: "piercing",
     tone: "serious", impact: "moderate", fallbackTitle: "Twisted Wrist",
-    fallbackDescription: "The failed thrust twists the attacker's wrist and leaves them enfeebled 1 for 1 round.",
-    weight: 1, tags: ["debuff"], filters: { excludedSourceTraits: ["incorporeal", "ooze"] },
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }] }
+    fallbackDescription: "The failed thrust twists the attacker's wrist, imposing a -1 circumstance penalty to Thievery checks for 1 round.",
+    weight: 1, tags: ["debuff", "precision"], filters: { excludedSourceTraits: ["incorporeal", "ooze"] },
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "thievery", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "piercing-fumble.crossed-eyes", localizationKey: "CrossedEyes", damageType: "piercing",
@@ -213,9 +213,9 @@ export const PIERCING_FUMBLE_CARDS = Object.freeze([
   defineWeaponFumbleCard({
     id: "piercing-fumble.false-distance", localizationKey: "FalseDistance", damageType: "piercing",
     tone: "neutral", impact: "light", fallbackTitle: "False Distance",
-    fallbackDescription: "The attacker misjudges the final inch and leans into empty space, leaving them off-guard for 1 round.",
-    weight: 2, tags: ["control"],
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+    fallbackDescription: "The attacker misjudges the final inch and leans into empty space, imposing a -1 circumstance penalty to Acrobatics checks for 1 round.",
+    weight: 2, tags: ["debuff", "recovery"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "acrobatics", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "piercing-fumble.locked-knee", localizationKey: "LockedKnee", damageType: "piercing",
@@ -241,9 +241,9 @@ export const PIERCING_FUMBLE_CARDS = Object.freeze([
   defineWeaponFumbleCard({
     id: "piercing-fumble.lost-point", localizationKey: "LostPoint", damageType: "piercing",
     tone: "dramatic", impact: "moderate", fallbackTitle: "Lost Point",
-    fallbackDescription: "The attacker loses sight of the weapon's point amid the failed thrust, becoming dazzled for 1 round.",
-    weight: 1, tags: ["senses", "recovery"],
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "dazzled" }] }
+    fallbackDescription: "The attacker loses the weapon's point and attack line amid the failed thrust, imposing a -1 circumstance penalty to attack rolls for 1 round.",
+    weight: 1, tags: ["debuff", "precision"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "attack-roll", value: -1, modifierType: "circumstance", predicate: [] }] }
   })
 ,
   defineWeaponFumbleCard({
@@ -374,10 +374,10 @@ export const PIERCING_FUMBLE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "light",
     fallbackTitle: "Short Measure",
-    fallbackDescription: "The thrust falls short and exposes the attacker, leaving it off-guard for 1 round.",
+    fallbackDescription: "The thrust falls short and disrupts the attacker's read of the engagement, imposing a -1 circumstance penalty to Recall Knowledge checks for 1 round.",
     weight: 2,
-    tags: ["control"],
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
+    tags: ["debuff", "precision"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "recall-knowledge", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponFumbleCard({
     id: "piercing-fumble.wrenched-point",
@@ -423,9 +423,9 @@ export const PIERCING_FUMBLE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "moderate",
     fallbackTitle: "Lost Line",
-    fallbackDescription: "The failed thrust ruins distance and timing, imposing a -1 circumstance penalty to attack rolls and Perception for 1 round.",
+    fallbackDescription: "The failed thrust ruins alignment and recovery, imposing a -1 circumstance penalty to Reflex saves for 1 round.",
     weight: 1,
-    tags: ["debuff", "senses"],
-    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["attack-roll", "perception"], value: -1, modifierType: "circumstance", predicate: [] }] }
+    tags: ["debuff", "recovery"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "reflex", value: -1, modifierType: "circumstance", predicate: [] }] }
   })
 ]);

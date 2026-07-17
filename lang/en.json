@@ -125,7 +125,7 @@
       },
       "SightlineSnared": {
         "Title": "Sightline Snared",
-        "Description": "Point, shaft, string, or sleeve crosses the sightline. The attacker is dazzled for 1 round."
+        "Description": "Point, shaft, string, or sleeve crosses the sightline, imposing a -1 circumstance penalty to Perception for 1 round."
       },
       "RecoilShock": {
         "Title": "Recoil Shock",
@@ -237,7 +237,7 @@
       },
       "SnaggedPoint": {
         "Title": "Snagged Point",
-        "Description": "The point catches on armor, terrain, or its own line, reducing all Speeds by 5 feet for 1 round."
+        "Description": "The point catches on armor, terrain, or its own line, imposing a -1 circumstance penalty to Athletics checks for 1 round."
       },
       "FalteringFocus": {
         "Title": "Faltering Focus",
@@ -385,7 +385,7 @@
       },
       "SprainedWrist": {
         "Title": "Twisted Wrist",
-        "Description": "The failed thrust twists the attacker’s wrist. They are enfeebled 1 for 1 round."
+        "Description": "The failed thrust twists the attacker's wrist, imposing a -1 circumstance penalty to Thievery checks for 1 round."
       },
       "ScarletFeint": {
         "Title": "Scarlet Feint",
@@ -465,7 +465,7 @@
       },
       "FalseDistance": {
         "Title": "False Distance",
-        "Description": "The attacker misjudges the final inch and leans into empty space, leaving them off-guard for 1 round."
+        "Description": "The attacker misjudges the final inch and leans into empty space, imposing a -1 circumstance penalty to Acrobatics checks for 1 round."
       },
       "LockedKnee": {
         "Title": "Locked Knee",
@@ -481,7 +481,7 @@
       },
       "LostPoint": {
         "Title": "Lost Point",
-        "Description": "The attacker loses sight of the weapon's point amid the failed thrust, becoming dazzled for 1 round."
+        "Description": "The attacker loses the weapon's point and attack line amid the failed thrust, imposing a -1 circumstance penalty to attack rolls for 1 round."
       },
       "WeightedPastCenter": {
         "Title": "Weighted Past Center",
@@ -689,7 +689,7 @@
       },
       "ShortMeasure": {
         "Title": "Short Measure",
-        "Description": "The thrust falls short and exposes the attacker, leaving it off-guard for 1 round."
+        "Description": "The thrust falls short and disrupts the attacker's read of the engagement, imposing a -1 circumstance penalty to Recall Knowledge checks for 1 round."
       },
       "WrenchedPoint": {
         "Title": "Wrenched Point",
@@ -745,7 +745,7 @@
       },
       "BrokenAlignment": {
         "Title": "Broken Alignment",
-        "Description": "The failed thrust ruins distance and timing, imposing a -1 circumstance penalty to attack rolls and Perception for 1 round."
+        "Description": "The failed thrust ruins alignment and recovery, imposing a -1 circumstance penalty to Reflex saves for 1 round."
       }
     },
     "Effects": {
