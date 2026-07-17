@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.3.7
+
+### Changed
+
+- Reworked six Piercing Critical Hit cards following the mechanical review.
+- Threaded Gap now penalizes Reflex saves instead of duplicating piercing weakness.
+- Marked Vital now leaves the target off-guard instead of duplicating piercing weakness.
+- Needle's Passage now penalizes Perception instead of duplicating AC and Fortitude penalties.
+- Nailed Stride now penalizes Acrobatics and Reflex saves, giving it a distinct supported control effect.
+- Shock to the Nerve now applies enfeebled 1 instead of duplicating clumsy 1.
+- Breath-Stealing Thrust now penalizes Fortitude and Will saves instead of duplicating Breathless Focus.
+
+### Fixed
+
+- Corrected fallback titles for Needle's Passage and Nailed Stride.
+
 ## 0.3.6
 
 ### Fixed

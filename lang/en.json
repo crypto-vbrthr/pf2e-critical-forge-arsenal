@@ -301,7 +301,7 @@
       },
       "ThreadedGap": {
         "Title": "Threaded Gap",
-        "Description": "The point marks a precise route through the target’s protection. It gains weakness 2 to piercing damage for 1 round."
+        "Description": "The point forces the target into a compromised dodge, imposing a -1 circumstance penalty to Reflex saves for 1 round."
       },
       "EyeLine": {
         "Title": "Eye-Line",
@@ -613,7 +613,7 @@
       },
       "BreathStealingThrust": {
         "Title": "Breath-Stealing Thrust",
-        "Description": "The point lands where every breath hurts, imposing a -1 circumstance penalty to Fortitude saves and spell attack rolls for 1 round."
+        "Description": "The point lands where every breath hurts, imposing a -1 circumstance penalty to Fortitude and Will saves for 1 round."
       },
       "TempleChime": {
         "Title": "Temple Chime",
@@ -649,11 +649,11 @@
       },
       "ShockToTheNerve": {
         "Title": "Shock to the Nerve",
-        "Description": "The point strikes a sensitive junction, leaving the target clumsy 1 for 1 round."
+        "Description": "The point strikes a sensitive junction, leaving the target enfeebled 1 for 1 round."
       },
       "MarkedVital": {
         "Title": "Marked Vital",
-        "Description": "The thrust exposes a vulnerable line, giving the target weakness 2 to piercing damage for 1 round."
+        "Description": "The thrust marks a vital opening, leaving the target off-guard for 1 round."
       },
       "BreathCaught": {
         "Title": "Breath Caught",
@@ -721,11 +721,11 @@
       },
       "NeedlesPassage": {
         "Title": "Needle’s Passage",
-        "Description": "The point slips through a narrow opening, imposing a -1 circumstance penalty to AC and Fortitude saves for 1 round."
+        "Description": "The point slips through a narrow opening and breaks the target’s focus, imposing a -1 circumstance penalty to Perception for 1 round."
       },
       "NailedStride": {
         "Title": "Nailed Stride",
-        "Description": "A precise thrust catches foot, hem, or harness, reducing the target’s land Speed by 15 feet for 1 round."
+        "Description": "A precise thrust compromises the target’s footing, imposing a -1 circumstance penalty to Acrobatics and Reflex saves for 1 round."
       },
       "BuckledKnee": {
         "Title": "Buckled Knee",

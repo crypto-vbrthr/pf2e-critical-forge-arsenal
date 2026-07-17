@@ -301,7 +301,7 @@
       },
       "ThreadedGap": {
         "Title": "Markierte Lücke",
-        "Description": "Die Spitze zeichnet einen präzisen Weg durch den Schutz des Ziels. Es erhält 1 Runde lang Schwäche 2 gegen Stichschaden."
+        "Description": "Die Spitze zwingt das Ziel zu einer unsicheren Ausweichbewegung und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Reflexwürfe."
       },
       "EyeLine": {
         "Title": "Durch die Sichtlinie",
@@ -613,7 +613,7 @@
       },
       "BreathStealingThrust": {
         "Title": "Atemraubender Stoß",
-        "Description": "Die Spitze trifft dort, wo jeder Atemzug schmerzt, und verleiht für 1 Runde einen Umstandsmalus von -1 auf Zähigkeitswürfe und Zauberangriffswürfe."
+        "Description": "Die Spitze trifft dort, wo jeder Atemzug schmerzt, und verleiht 1 Runde lang einen Umstandsmalus von –1 auf Zähigkeits- und Willenswürfe."
       },
       "TempleChime": {
         "Title": "Tempelglocke",
@@ -649,11 +649,11 @@
       },
       "ShockToTheNerve": {
         "Title": "Nervenschock",
-        "Description": "Die Spitze trifft eine empfindliche Stelle und macht das Ziel 1 Runde lang unbeholfen 1."
+        "Description": "Die Spitze trifft eine empfindliche Stelle und macht das Ziel 1 Runde lang entkräftet 1."
       },
       "MarkedVital": {
         "Title": "Markierte Schwachstelle",
-        "Description": "Der Stoß legt eine verwundbare Linie frei und verleiht dem Ziel 1 Runde lang Schwäche 2 gegen Stichschaden."
+        "Description": "Der Stoß markiert eine empfindliche Öffnung und macht das Ziel 1 Runde lang auf dem falschen Fuß."
       },
       "BreathCaught": {
         "Title": "Atem geraubt",
@@ -721,11 +721,11 @@
       },
       "NeedlesPassage": {
         "Title": "Nadelöhr",
-        "Description": "Die Spitze gleitet durch eine schmale Öffnung und verleiht dem Ziel 1 Runde lang einen Umstandsmalus von –1 auf RK und Zähigkeitswürfe."
+        "Description": "Die Spitze gleitet durch eine schmale Öffnung und stört die Aufmerksamkeit des Ziels. Es erhält 1 Runde lang einen Umstandsmalus von –1 auf Wahrnehmung."
       },
       "NailedStride": {
         "Title": "Festgenagelter Schritt",
-        "Description": "Ein präziser Stoß trifft Fuß, Saum oder Gurtzeug und reduziert die Bewegungsrate an Land des Ziels 1 Runde lang um 4,5 Meter."
+        "Description": "Ein präziser Stoß beeinträchtigt den Stand des Ziels und verleiht ihm 1 Runde lang einen Umstandsmalus von –1 auf Akrobatik und Reflexwürfe."
       },
       "BuckledKnee": {
         "Title": "Eingeknicktes Knie",

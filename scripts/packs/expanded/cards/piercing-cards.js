@@ -218,9 +218,9 @@ export const PIERCING_CARDS = Object.freeze([
   defineWeaponCriticalCard({
     id: "piercing.threaded-gap", localizationKey: "ThreadedGap", damageType: "piercing",
     tone: "serious", impact: "moderate", fallbackTitle: "Threaded Gap",
-    fallbackDescription: "The point marks a precise route through the target's protection, giving it weakness 2 to piercing damage for 1 round.",
-    weight: 1, tags: ["vulnerability", "precision"],
-    effect: { duration: ONE_ROUND, components: [{ type: "weakness", weaknessType: "piercing", value: 2 }] }
+    fallbackDescription: "The point forces the target into a compromised dodge, imposing a -1 circumstance penalty to Reflex saves for 1 round.",
+    weight: 1, tags: ["precision", "debuff"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "reflex", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponCriticalCard({
     id: "piercing.eye-line", localizationKey: "EyeLine", damageType: "piercing",
@@ -342,7 +342,7 @@ export const PIERCING_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Breath-Stealing Thrust",
-    fallbackDescription: "The point lands where every breath hurts, imposing a -1 circumstance penalty to Fortitude saves and spell attack rolls for 1 round.",
+    fallbackDescription: "The point lands where every breath hurts, imposing a -1 circumstance penalty to Fortitude and Will saves for 1 round.",
     weight: 1,
     tags: ["precision", "debuff"],
     filters: {"excludedTargetTraits": ["construct", "elemental", "incorporeal", "ooze", "undead"]},
@@ -353,7 +353,7 @@ export const PIERCING_CARDS = Object.freeze([
           "type": "modifier",
           "selector": [
             "fortitude",
-            "spell-attack-roll"
+            "will"
           ],
           "value": -1,
           "modifierType": "circumstance",
@@ -395,11 +395,11 @@ export const PIERCING_CARDS = Object.freeze([
     damageType: "piercing",
     tone: "serious",
     impact: "moderate",
-    fallbackTitle: "Thread the Gap",
-    fallbackDescription: "The point slips through a narrow opening, imposing a -1 circumstance penalty to AC and Fortitude saves for 1 round.",
+    fallbackTitle: "Needle's Passage",
+    fallbackDescription: "The point slips through a narrow opening and breaks the target's focus, imposing a -1 circumstance penalty to Perception for 1 round.",
     weight: 1,
-    tags: ["precision", "defense"],
-    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["ac", "fortitude"], value: -1, modifierType: "circumstance", predicate: [] }] }
+    tags: ["precision", "senses"],
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: "perception", value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponCriticalCard({
     id: "piercing.nailed-stride",
@@ -407,12 +407,12 @@ export const PIERCING_CARDS = Object.freeze([
     damageType: "piercing",
     tone: "dramatic",
     impact: "moderate",
-    fallbackTitle: "Pinned Step",
-    fallbackDescription: "A precise thrust catches foot, hem, or harness, reducing the target’s land Speed by 15 feet for 1 round.",
+    fallbackTitle: "Nailed Stride",
+    fallbackDescription: "A precise thrust compromises the target's footing, imposing a -1 circumstance penalty to Acrobatics and Reflex saves for 1 round.",
     weight: 1,
-    tags: ["movement", "control"],
+    tags: ["movement", "control", "debuff"],
     filters: { excludedTargetTraits: ["incorporeal", "ooze"] },
-    effect: { duration: ONE_ROUND, components: [{ type: "movement", movementType: "land", value: -15, modifierType: "circumstance" }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "modifier", selector: ["acrobatics", "reflex"], value: -1, modifierType: "circumstance", predicate: [] }] }
   }),
   defineWeaponCriticalCard({
     id: "piercing.shock-to-the-nerve",
@@ -421,11 +421,11 @@ export const PIERCING_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Shock to the Nerve",
-    fallbackDescription: "The point strikes a sensitive junction, leaving the target clumsy 1 for 1 round.",
+    fallbackDescription: "The point strikes a sensitive junction, leaving the target enfeebled 1 for 1 round.",
     weight: 1,
     tags: ["precision", "debuff"],
     filters: { excludedTargetTraits: ["construct", "elemental", "incorporeal", "ooze", "undead"] },
-    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "clumsy", value: 1 }] }
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "enfeebled", value: 1 }] }
   }),
   defineWeaponCriticalCard({
     id: "piercing.marked-vital",
@@ -434,10 +434,10 @@ export const PIERCING_CARDS = Object.freeze([
     tone: "neutral",
     impact: "moderate",
     fallbackTitle: "Marked Vital",
-    fallbackDescription: "The thrust exposes a vulnerable line, giving the target weakness 2 to piercing damage for 1 round.",
+    fallbackDescription: "The thrust marks a vital opening, leaving the target off-guard for 1 round.",
     weight: 1,
-    tags: ["vulnerability", "setup"],
-    effect: { duration: ONE_ROUND, components: [{ type: "weakness", weaknessType: "piercing", value: 2 }] }
+    tags: ["precision", "setup"],
+    effect: { duration: ONE_ROUND, components: [{ type: "condition", slug: "off-guard" }] }
   }),
   defineWeaponCriticalCard({
     id: "piercing.breath-caught",
