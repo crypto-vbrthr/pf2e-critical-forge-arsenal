@@ -45,5 +45,8 @@
     }
   ],
   "readme": "README.md",
-  "license": "LICENSE"
+  "license": "LICENSE",
+  "url": "https://github.com/crypto-vbrthr/pf2e-critical-forge-arsenal",
+  "manifest": "https://raw.githubusercontent.com/crypto-vbrthr/pf2e-critical-forge-arsenal/main/module.json",
+  "download": "https://github.com/crypto-vbrthr/pf2e-critical-forge-arsenal/releases/download/0.4.1-rc1/pf2e-critical-forge-arsenal.zip"
 }
