@@ -14,12 +14,12 @@ Foundry treats PF2E Critical Forge as a required module dependency and prevents 
 
 **Critical Forge Expanded** currently contains six independent packs:
 
-- Slashing Critical Hits: 5 cards
-- Piercing Critical Hits: 5 cards
-- Bludgeoning Critical Hits: 5 cards
-- Slashing Critical Fumbles: 5 cards
-- Piercing Critical Fumbles: 5 cards
-- Bludgeoning Critical Fumbles: 5 cards
+- Slashing Critical Hits: 30 cards
+- Piercing Critical Hits: 30 cards
+- Bludgeoning Critical Hits: 30 cards
+- Slashing Critical Fumbles: 30 cards
+- Piercing Critical Fumbles: 30 cards
+- Bludgeoning Critical Fumbles: 30 cards
 
 Each pack is registered separately and remains protected and read-only in the Critical Forge Card Pack Editor. Its active state is controlled through **Configure Settings → Module Settings → PF2E Critical Forge: Arsenal**. Changes are applied immediately and are stored for the current world.
 
